@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+import BasicHead from "./BasicHead.astro";
+import Header from "../react/components/Header";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <BasicHead  title={ title }/>
+	<body>
+        <Header/>
+		<slot/>
+	</body>
+</html>
+
+
+<style is:global>
+	:root {
+  --primary-bg: #6364f1;
+  --secondary-bg: #edf2fe;
+  --bg-light-yellow: #fff5d2;
+  --bg-dark-purple: #5d22d7;
+  --bg-light-green: #e1f5e7;
+  --bg-light-purple: #eee8fc;
+  --bg-light-purple-2: #e2dbf9;
+  --bg-light-red: #fbe9e9;
+  --bg-dark-yellow: #ffcb66;
+  --bg-dark-yellow-2: #ffd262;
+  --bg-light-blue: #e0f3ff;
+  --bg-light-orange: #ffe1cb;
+  --bg--light-grey: #eceff5;
+  --bg-light-pink: #fbe2f3;
+}
+</style>
