@@ -43,7 +43,7 @@ const navData: Array<Props> = [
 export default function Nav() {
   return (
     <nav className="w-full border-b-[1.5px] border-slate-200 h-[50px]">
-      <ul className="flex gap-16 w-full justify-center items-center h-full">
+      <ul className="flex gap-16 w-full justify-center items-center h-full flex-wrap">
         {navData &&
           navData.map((section) => (
             <li className="active-section flex gap-2 justify-center items-center h-full">
