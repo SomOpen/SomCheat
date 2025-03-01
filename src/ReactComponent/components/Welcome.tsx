@@ -10,21 +10,22 @@ import {
 const welcome_messages: Array<object> = [
   {
     icon: <SmileIcon color="#6364f1" />,
-    message:
-      "Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam Hello Adam",
+    message: 
+    <>
+      Ku soo dhowow  <span className="text-indigo-400">SomCheat</span>! Xasuusin degdeg ah oo koodhkaaga fududeynaya. 🚀
+    </>
   },
   {
     icon: <SmileBeamIcon color="#6364f1" />,
     message: (
       <>
-        <span>Welcome</span>{" "}
-        <span className="text-indigo-400">Adam</span>
+        Ma u baahan tahay xasuusin degdeg ah? <span className="text-indigo-400">SomCheat</span> waa diyaar! 💡
       </>
     ),
   },
   {
     icon: <WinkFaceIcon color="#6364f1" />,
-    message: "Enjoy coding",
+    message: "Koodhkaaga fududee oo xasuuso waxa muhiimka ah! ⚡",
   },
 ];
 
@@ -37,19 +38,19 @@ export default function Welcome() {
       counter++;
       if (counter === 3) counter = 0;
       setState(welcome_messages[counter]);
-    }, 3000);
+    }, 10000);
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [counter]);
   const { icon, message } = state;
   return (
-    <div className="flex flex-col gap-4 justify-center items-center">
+    <div className="flex flex-col gap-4 justify-center items-center p-3">
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{icon}</span>
           <p
-            className="italic font-bold text-center"
+            className="italic font-bold text-center text-slate-700 text-[1.2rem]"
           >
             {message}
           </p>
