@@ -11,7 +11,6 @@ export const languagesData = [
       return dynamicPath(this.name);
     },
     icon: <JsIcon dimension={32} />,
-    tags: ["Web Development", "Programming Language"],
     lastUpdate: "Feb 27, 2025",
   },
   {
@@ -20,7 +19,6 @@ export const languagesData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["General Purpose", "Programming Language"],
     lastUpdate: "Feb 27, 2025",
   },
   {
@@ -29,7 +27,6 @@ export const languagesData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Backend", "Programming Language"],
     lastUpdate: "Feb 27, 2025",
   },
   {
@@ -38,7 +35,6 @@ export const languagesData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Game Development", "Programming Language"],
     lastUpdate: "Feb 27, 2025",
   },
   {
@@ -47,7 +43,6 @@ export const languagesData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Game Development", "Programming Language"],
     lastUpdate: "Feb 27, 2025",
   },
 ];
@@ -60,7 +55,6 @@ export const databasesData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Backend", "Databases"],
     lastUpdate: "Feb 27, 2025",
   },
 ];
@@ -73,7 +67,6 @@ export const webDevelopmentData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Frontend", "Web Development"],
     lastUpdate: "Feb 27, 2025",
   },
 ];
@@ -86,7 +79,6 @@ export const operatingSystemData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Operating System"],
     lastUpdate: "Feb 27, 2025",
   },
 ];
@@ -99,7 +91,6 @@ export const versionControlData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Version Control"],
     lastUpdate: "Feb 27, 2025",
   },
 ];
@@ -112,7 +103,6 @@ export const devToolsData = [
       return dynamicPath(this.name);
     },
     icon: "",
-    tags: ["Dev Tools"],
     lastUpdate: "Feb 27, 2025",
   },
 ];
