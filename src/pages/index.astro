@@ -1,10 +1,10 @@
 ---
 import BasicLayout from "../Layouts/BasicLayout.astro";
-import Categories from "../ReactComponent/components/Categories";
+import Wrapper from "../ReactComponent/components/Wrapper";
 import CheatSheet from "../ReactComponent/components/Cheatsheet";
 ---
 
 <BasicLayout title="SomCheat-Home">
-  <Categories />
-  <CheatSheet />
+  <Wrapper client:load/>
+  <CheatSheet client:load/>
 </BasicLayout>
