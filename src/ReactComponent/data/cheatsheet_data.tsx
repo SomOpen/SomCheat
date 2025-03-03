@@ -1,7 +1,10 @@
 import { JsIcon } from "../icons/Icon";
+
 function dynamicPath(path: string) {
   return `cheatsheets/${path.split(" ")[0].toLowerCase()}`;
 }
+
+
 
 // Programming Languages
 export const languagesData = [
@@ -12,6 +15,7 @@ export const languagesData = [
     },
     icon: <JsIcon dimension={32} />,
     lastUpdate: "Feb 27, 2025",
+    progress: 0
   },
   {
     name: "C",
