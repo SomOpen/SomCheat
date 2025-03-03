@@ -139,12 +139,12 @@ async function calculateTask() {
 const output = await calculateTask();
 
 async function createJsonFile() {
-  try {
-    const fileData = output.map(d => d);
+try {
+    const fileData = JSON.stringify(output, null, 2);
     await fs.writeFile(
-      "tasks/tasks.json",
-      `${JSON.stringify(fileData)}`,
-      (err) => {
+        "tasks/tasks.json",
+        fileData,
+        (err) => {
         if (err) {
           console.error("Error writing file:", err);
           return;
