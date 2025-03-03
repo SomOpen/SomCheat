@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lua": "lua handle_cheatsheet_tasks/handle_task.lua"
+    "handle": "node handle_cheatsheet_tasks/handle_tasks.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
