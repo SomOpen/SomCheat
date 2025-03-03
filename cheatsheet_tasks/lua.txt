@@ -1,4 +1,4 @@
-TASK: Variables & Data Types - []  
+TASK: Variables & Data Types - [done]  
 TASK: Control Flow - [] 
 TASK: Loops & Iteration - []
 TASK: Functions & Methods - []  
