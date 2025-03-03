@@ -28,13 +28,14 @@
   },
   {
     "lua": {
-      "finished_tasks_progress": "0",
-      "unfinished_tasks_progress": "100",
-      "done_len": 0,
-      "empty_len": 15,
-      "done_indices": [],
+      "finished_tasks_progress": "7",
+      "unfinished_tasks_progress": "93",
+      "done_len": 1,
+      "empty_len": 14,
+      "done_indices": [
+        15
+      ],
       "empty_indices": [
-        15,
         16,
         17,
         18,
