@@ -103,12 +103,12 @@ export default function CheatSheet() {
                 {number_of_cheatsheets}
               </span>
             </div>
-          <div className="flex gap-5 flex-wrap items-center justify-center">
+          <div id="section-bar" className="flex gap-5 flex-wrap items-center justify-center">
             {data
               ? data.map((cheatsheet: any, id: number) => (
                   <div
                     key={id}
-                    className="border-[1.5px] border-slate-200 shadow-md p-4 rounded-md min-w-[300px]"
+                    className="bg-white border-[1.5px] border-slate-200 shadow-md p-4 rounded-md min-w-[300px]"
                   >
                     <div className="flex gap-2 flex-col">
                       <div className="flex gap-2 items-center">
@@ -122,7 +122,11 @@ export default function CheatSheet() {
                         {cheatsheet.lastUpdate}
                       </span>
                     </div>
-                    <hr className="border-b border-slate-100 mt-2" />
+                    <hr className="border-b border-slate-100 my-1" />
+                    <div className="w-full flex gap-2 items-center">
+                      <div className="w-full h-1 bg-green-300 rounded-sm"></div>
+                      <span className="italic text-slate-400 font-medium">{"45%"}</span>
+                    </div>
                   </div>
                 ))
               : null}
