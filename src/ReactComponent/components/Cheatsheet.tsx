@@ -126,7 +126,7 @@ export default function CheatSheet() {
                     <hr className="border-b border-slate-100 my-1" />
                     <div className="w-full flex gap-2 items-center">
                       <StatusIcon color="#cdf"/>
-                      <div style={{width: `${cheatsheet.progress ? cheatsheet.progress + "%" : "0%"}`}} className="w-full h-1 bg-green-300 rounded-sm"></div>
+                      <div style={{width: `${cheatsheet.progress ? cheatsheet.progress + "%" : "0%"}`}} className="w-full h-[6px] bg-green-300 rounded-sm"></div>
                       <span className="italic text-slate-400 font-medium">{cheatsheet.progress ? cheatsheet.progress + "%" : "0%"}</span>
                     </div>
                   </div>
