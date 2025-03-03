@@ -16,6 +16,7 @@ import {
   OSIcon,
   DevToolsIcon,
   SheetIcon,
+  StatusIcon
 } from "../icons/Icon";
 
 export default function CheatSheet() {
@@ -119,13 +120,14 @@ export default function CheatSheet() {
                       </div>
                       <span className="text-slate-500 text-[0.8rem] ml-2 flex gap-2 items-center">
                         <DateIcon dimension={15} color="#aaa" />
-                        {cheatsheet.lastUpdate}
+                        <span title={"Last Update: " + cheatsheet.lastUpdate} className="font-mono">{cheatsheet.lastUpdate}</span>
                       </span>
                     </div>
                     <hr className="border-b border-slate-100 my-1" />
                     <div className="w-full flex gap-2 items-center">
-                      <div className="w-full h-1 bg-green-300 rounded-sm"></div>
-                      <span className="italic text-slate-400 font-medium">{"45%"}</span>
+                      <StatusIcon color="#cdf"/>
+                      <div style={{width: `${cheatsheet.progress ? cheatsheet.progress + "%" : "0%"}`}} className="w-full h-1 bg-green-300 rounded-sm"></div>
+                      <span className="italic text-slate-400 font-medium">{cheatsheet.progress ? cheatsheet.progress + "%" : "0%"}</span>
                     </div>
                   </div>
                 ))
