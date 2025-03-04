@@ -7,42 +7,64 @@ function dynamicPath(path: string) {
   return `cheatsheets/${path.split(" ")[0].toLowerCase()}`;
 }
 
+async function lastUpdate() {
+  try {
+    const response = await fetch(
+      "https://api.github.com/repos/Adam-Elmi/SomCheat/commits?sha=master&path=src/pages/cheatsheets/js.md&per_page=5"
+    );
+    const commits = await response.json();
+
+    console.log("Fetched commits:", commits); // Debugging
+
+    if (commits.length > 0) {
+      let lastUpdate = commits[0].commit.committer.date;
+      console.log("Last updated:", lastUpdate);
+      return lastUpdate;
+    } else {
+      console.log("No updates found for js.md");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+lastUpdate();
+
+
 function getIndex(file: any): any {
   try {
-    const index = jsonData.findIndex(d => d?.hasOwnProperty(file));
+    const index = jsonData.findIndex((d) => d?.hasOwnProperty(file));
     return index !== -1 ? index : null;
   } catch (error) {
     console.error(error);
     return null;
   }
 }
-console.log(getData(getIndex('lua'))?.lua.unfinished_tasks_progress);
-
+console.log(getData(getIndex("lua"))?.lua.unfinished_tasks_progress);
 
 function getData(file?: any): any {
   try {
-    if(jsonData) {
-      return jsonData[file]
+    if (jsonData) {
+      return jsonData[file];
     }
-  } catch (error) {
-    
-  }
+  } catch (error) {}
 }
 
 // Programming Languages
 export const languagesData = [
   {
     id: "js",
-    name: "Javascript", 
+    name: "Javascript",
     get path() {
       return dynamicPath(this.name);
     },
-    icon: <JsIcon dimension={32} />,
-    lastUpdate: "Feb 27, 2025",
+    lastUpdate: (async () => (await lastUpdate()))(),
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
   {
     id: "c",
@@ -54,8 +76,10 @@ export const languagesData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
   {
     id: "go",
@@ -67,8 +91,10 @@ export const languagesData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
   {
     id: "lua",
@@ -80,8 +106,10 @@ export const languagesData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
   {
     id: "lua",
@@ -93,8 +121,10 @@ export const languagesData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
 ];
 
@@ -110,8 +140,10 @@ export const databasesData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
 ];
 
@@ -127,8 +159,10 @@ export const webDevelopmentData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
 ];
 
@@ -144,8 +178,10 @@ export const operatingSystemData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
 ];
 
@@ -161,8 +197,10 @@ export const versionControlData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
 ];
 
@@ -178,7 +216,9 @@ export const devToolsData = [
     lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
-      return index !== null ? parseInt(getData(index)[this.id]?.finished_tasks_progress) : 0;
-    }
+      return index !== null
+        ? parseInt(getData(index)[this.id]?.finished_tasks_progress)
+        : 0;
+    },
   },
 ];
