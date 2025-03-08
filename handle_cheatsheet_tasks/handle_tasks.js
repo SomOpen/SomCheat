@@ -4,7 +4,7 @@ const dirname = "cheatsheet_tasks";
 
 async function readFolder() {
   try {
-    const data = await fs.readdir("./cheatsheet_tasks");
+    const data = await fs.readdir(`./${dirname}`);
     return data;
   } catch (error) {
     console.error(error);

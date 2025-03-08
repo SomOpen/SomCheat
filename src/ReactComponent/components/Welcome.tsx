@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import '../../styles/global.css';
 import {
   SmileIcon,
   SmileBeamIcon,
@@ -50,7 +51,7 @@ export default function Welcome() {
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{icon}</span>
           <p
-            className="italic font-bold text-center text-slate-700 text-[1.2rem]"
+            className="roboto italic font-bold text-center text-slate-700 text-[1.2rem]"
           >
             {message}
           </p>

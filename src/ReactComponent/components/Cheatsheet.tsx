@@ -66,11 +66,11 @@ export default function CheatSheet() {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-5 pb-3">
+    <div className="w-full flex flex-col pb-3">
       {dataList.map(({ id, data, _name, icon, number_of_cheatsheets }) => (
         <div
           key={id}
-          className="flex flex-col gap-3 flex-wrap"
+          className="flex flex-col flex-wrap"
         >
             <div
               key={id}
@@ -104,7 +104,7 @@ export default function CheatSheet() {
                 {number_of_cheatsheets}
               </span>
             </div>
-          <div id="section-bar" className="flex gap-5 flex-wrap items-center justify-center">
+          <div id="section-bar" className="flex gap-5 py-3 flex-wrap items-center justify-center">
             {data
               ? data.map((cheatsheet: any, id: number) => (
                   <div

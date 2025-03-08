@@ -20,7 +20,7 @@ export default function TopLayer() {
       className="p-[4px_8px] bg-[#ffcb66] rounded-[10px] flex justify-center items-center gap-[10px] cursor-pointer"
     >
       <CliIcon dimension={20}  color="#333"/>
-      <span className="text-[#333] italic font-medium text-[1rem]"> Version 1.1.5 </span>
+      <span className="text-[#333] italic font-medium text-[1rem]"> v1.1.5 </span>
     </button>
   </div>
 </div>

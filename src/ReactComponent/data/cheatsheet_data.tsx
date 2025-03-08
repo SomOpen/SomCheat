@@ -10,7 +10,7 @@ function dynamicPath(path: string) {
 async function lastUpdate() {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/Adam-Elmi/SomCheat/commits?sha=master&path=src/pages/cheatsheets/js.md&per_page=5"
+      "https://api.github.com/repos/Adam-Elmi/SomCheat/commits?sha=master&path=src/pages/cheatsheets/js.md&per_page=1"
     );
     const commits = await response.json();
 
@@ -18,8 +18,9 @@ async function lastUpdate() {
 
     if (commits.length > 0) {
       let lastUpdate = commits[0].commit.committer.date;
-      console.log("Last updated:", lastUpdate);
-      return lastUpdate;
+      let onlyDate = lastUpdate.split("T")[0];
+      console.log("Last updated:", onlyDate);
+      return onlyDate;
     } else {
       console.log("No updates found for js.md");
     }
@@ -29,7 +30,6 @@ async function lastUpdate() {
 }
 
 lastUpdate();
-
 
 function getIndex(file: any): any {
   try {
@@ -58,7 +58,8 @@ export const languagesData = [
     get path() {
       return dynamicPath(this.name);
     },
-    lastUpdate: (async () => (await lastUpdate()))(),
+    icon: <JsIcon />,
+    lastUpdate: "Feb 27, 2025",
     get progress() {
       const index = getIndex(this.id);
       return index !== null
@@ -132,7 +133,7 @@ export const languagesData = [
 export const databasesData = [
   {
     id: "mongodb",
-    name: "mongoDB",
+    name: "MongoDB",
     get path() {
       return dynamicPath(this.name);
     },
