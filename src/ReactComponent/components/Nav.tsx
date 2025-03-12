@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import {
   HomeIcon,
   UpdateIcon,
@@ -50,7 +50,7 @@ export default function Nav() {
   }
   console.log(isVisible)
   return (
-    <nav className="w-full border-b-[1.5px] border-slate-200 min-h-[50px] flex flex-col">
+    <nav className="w-full border-b-[1.5px] border-slate-200 min-h-[50px] flex flex-col bg-amber-50">
       <button onClick={changeState} className="min-h-[50px] hidden max-sm:flex cursor-pointer w-full border-b-2 border-slate-100 p-2">
         <MenuIcon dimension={35} />
       </button>
