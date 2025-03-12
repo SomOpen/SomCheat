@@ -10,7 +10,7 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   markdown: {
     shikiConfig: {
-      theme: 'dracula',
+      theme: 'one-dark-pro',
     }},
   devToolbar: {
     enabled: false
