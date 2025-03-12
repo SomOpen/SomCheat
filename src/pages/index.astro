@@ -1,10 +1,12 @@
 ---
 import BasicLayout from "../Layouts/BasicLayout.astro";
+import Header from "../Components/Header.astro";
 import Wrapper from "../ReactComponent/components/Wrapper";
 import CheatSheet from "../ReactComponent/components/Cheatsheet";
 ---
 
 <BasicLayout title="SomCheat-Home">
+  <Header/>
   <Wrapper client:load/>
   <CheatSheet client:load/>
 </BasicLayout>
