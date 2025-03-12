@@ -46,17 +46,28 @@ export default function Welcome() {
   }, [counter]);
   const { icon, message } = state;
   return (
+    // Main Container
     <div className="flex flex-col gap-4 justify-center items-center p-3">
+      {/* 
+        ------------------
+        Welcome message 
+        ------------------
+      */}
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{icon}</span>
           <p
-            className="roboto italic font-bold text-center text-slate-700 text-[1.2rem]"
+            className="roboto italic font-bold text-center text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]"
           >
             {message}
           </p>
         </div>
       ) : null}
+      {/* 
+        ------------------
+        Buttons 
+        ------------------
+      */}
       <div className="flex gap-3">
         <button className="cursor-pointer flex gap-2 items-center border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
           <span className="font-semibold text-slate-200 hover:text-blue-300">Contribute</span>
