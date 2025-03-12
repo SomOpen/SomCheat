@@ -1,10 +1,10 @@
 const defaultProps = {
-  dimenstion: 24,
+  dimension: 24,
   color: "currentColor",
 };
 
 export function GithubIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -23,7 +23,7 @@ export function GithubIcon({
 }
 
 export function CliIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -42,7 +42,7 @@ export function CliIcon({
 }
 
 export function FireIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -61,7 +61,7 @@ export function FireIcon({
 }
 
 export function SmileIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -80,7 +80,7 @@ export function SmileIcon({
 }
 
 export function SmileBeamIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -99,7 +99,7 @@ export function SmileBeamIcon({
 }
 
 export function WinkFaceIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -118,7 +118,7 @@ export function WinkFaceIcon({
 }
 
 export function SearchIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -141,7 +141,7 @@ export function SearchIcon({
 }
 
 export function HomeIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -159,8 +159,27 @@ export function HomeIcon({
   );
 }
 
+export function HomeIcon2({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 24 24"
+      >
+      <path
+        fill={color}
+        d="m16 8.41l-4.5-4.5L4.41 11H6v8h3v-6h5v6h3v-8h1.59L17 9.41V6h-1zM2 12l9.5-9.5L15 6V5h3v4l3 3h-3v8h-5v-6h-3v6H5v-8z"
+      ></path>
+    </svg>
+  );
+}
+
 export function UpdateIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -183,7 +202,7 @@ export function UpdateIcon({
 }
 
 export function DictionaryIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -202,7 +221,7 @@ export function DictionaryIcon({
 }
 
 export function AboutIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -221,7 +240,7 @@ export function AboutIcon({
 }
 
 export function WebIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -255,7 +274,7 @@ export function WebIcon({
 }
 
 export function CodeIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -274,7 +293,7 @@ export function CodeIcon({
 }
 
 export function DatabaseIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -295,7 +314,7 @@ export function DatabaseIcon({
 }
 
 export function GitIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = "#f34f29",
 }) {
   return (
@@ -315,7 +334,7 @@ export function GitIcon({
 
 // Operating System Icon
 export function OSIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -334,7 +353,7 @@ export function OSIcon({
 }
 
 export function DevToolsIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -353,7 +372,7 @@ export function DevToolsIcon({
 }
 
 export function SheetIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -372,7 +391,7 @@ export function SheetIcon({
 }
 
 export function DiscordIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = "#fff",
 }) {
   return (
@@ -400,7 +419,7 @@ export function DiscordIcon({
   );
 }
 
-export function JsIcon({ dimension = defaultProps.dimenstion }) {
+export function JsIcon({ dimension = 32 }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -418,7 +437,7 @@ export function JsIcon({ dimension = defaultProps.dimenstion }) {
 }
 
 export function DateIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -457,7 +476,7 @@ export function FileCodeIcon({ dimension = 32, color = "#6364f1" }) {
 }
 
 export function MenuIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -476,7 +495,7 @@ export function MenuIcon({
 }
 
 export function DocsIcon({
-  dimension = defaultProps.dimenstion,
+  dimension = defaultProps.dimension,
   color = defaultProps.color,
 }) {
   return (
@@ -494,7 +513,10 @@ export function DocsIcon({
   );
 }
 
-export function StatusIcon({dimension = defaultProps.dimenstion, color = defaultProps.color}) {
+export function StatusIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -507,6 +529,29 @@ export function StatusIcon({dimension = defaultProps.dimenstion, color = default
         fillRule="evenodd"
         d="M7.999 1a.75.75 0 0 1 .715.521L12 11.79l1.286-4.018A.75.75 0 0 1 14 7.25h1.25a.75.75 0 0 1 0 1.5h-.703l-1.833 5.729a.75.75 0 0 1-1.428 0L8.005 4.226l-2.29 7.25a.75.75 0 0 1-1.42.03L3.031 8.03l-.07.208a.75.75 0 0 1-.711.513H.75a.75.75 0 0 1 0-1.5h.96l.578-1.737a.75.75 0 0 1 1.417-.02L4.95 8.919l2.335-7.394A.75.75 0 0 1 7.999 1"
         clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+}
+
+export function RightArrow({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m10 17l5-5l-5-5"
+        strokeWidth={1}
       ></path>
     </svg>
   );
