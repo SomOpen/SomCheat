@@ -1,14 +1,38 @@
 ---
+layout: "../../Layouts/BasicLayout.astro"
 number: 404
 ---
-import "../../styles/global.css"
+import TopLayer from "../../Components/TopLayer.astro"
 import Welcome from "../../ReactComponent/components/Welcome.tsx";
 
-<Welcome/>
+<TopLayer/>
 <pre class="p-2">
 ```js
-    console.log("Hello World");
+    // @ts-check
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+
+import tailwindcss from '@tailwindcss/vite';
+
+import mdx from '@astrojs/mdx';
+
+// https://astro.build/config
+export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      theme: 'solarized-light',
+    }},
+  devToolbar: {
+    enabled: false
+  },
+
+  vite: {
+    plugins: [tailwindcss()]
+  },
+
+  integrations: [react(), mdx()]
+});
 ```
 </pre>
-<h2 class="text-slate-500">Hello, Venus!</h2>
+<h2  class="text-slate-500">Hello, Venus!</h2>
 <h2>{new Date().getFullYear()}</h2>
