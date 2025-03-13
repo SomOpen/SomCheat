@@ -1,0 +1,8 @@
+---
+import { CodeBlock } from "../ReactComponent/components/Layout";
+const { fileName } = Astro.props;
+---
+
+<CodeBlock fileName={fileName} client:load>
+  <slot />
+</CodeBlock>
