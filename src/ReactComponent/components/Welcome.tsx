@@ -8,13 +8,16 @@ import {
   DocsIcon,
 } from "../icons/Icon";
 
+/* ------------------
+    Welcome Messages
+------------------ */
 const welcome_messages: Array<object> = [
   {
     icon: <SmileIcon color="#6364f1" />,
     message: 
     <>
       Ku soo dhowow  <span className="text-indigo-400">SomCheat</span>! Xasuusin degdeg ah oo koodhkaaga fududeynaya. 🚀
-    </>
+    </>,
   },
   {
     icon: <SmileBeamIcon color="#6364f1" />,
@@ -31,6 +34,9 @@ const welcome_messages: Array<object> = [
 ];
 
 export default function Welcome() {
+  /* ------------------
+      State Management
+  ------------------ */
   const [state, setState] = useState<any>(welcome_messages[0]);
 
   let counter = 0;
@@ -44,15 +50,16 @@ export default function Welcome() {
       clearInterval(interval);
     };
   }, [counter]);
+
   const { icon, message } = state;
   return (
-    // Main Container
+    /* ------------------
+        Main Container
+    ------------------ */
     <div className="flex flex-col gap-4 justify-center items-center p-3">
-      {/* 
-        ------------------
-        Welcome message 
-        ------------------
-      */}
+      {/* ------------------
+          Welcome Message
+      ------------------ */}
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{icon}</span>
@@ -63,16 +70,20 @@ export default function Welcome() {
           </p>
         </div>
       ) : null}
-      {/* 
-        ------------------
-        Buttons 
-        ------------------
-      */}
+      {/* ------------------
+          Action Buttons
+      ------------------ */}
       <div className="flex gap-3">
+        {/* ------------------
+           Contribute Button
+        ------------------ */}
         <button className="cursor-pointer flex gap-2 items-center border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
           <span className="font-semibold text-slate-200 hover:text-blue-300">Contribute</span>
           <GithubIcon color="#e2e8f0"/>
         </button>
+        {/* ------------------
+           Read Docs Button
+        ------------------ */}
         <button className="flex gap-2 items-center cursor-pointer border-2 border-slate-300 p-2 rounded-md bg-slate-100">
           <span className="font-semibold text-indigo-400 hover:text-blue-300">Read Docs</span>
           <DocsIcon color="oklch(0.673 0.182 276.935)"/>
