@@ -1,8 +1,18 @@
+/* 
+  ------------------
+  Default values
+  ------------------
+*/
 const defaultProps = {
   dimension: 24,
   color: "currentColor",
 };
 
+/*
+  ------------------
+  Github Icon Component
+  ------------------
+*/
 export function GithubIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -22,6 +32,11 @@ export function GithubIcon({
   );
 }
 
+/*
+  ------------------
+  CLI Icon Component
+  ------------------
+*/
 export function CliIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -41,6 +56,11 @@ export function CliIcon({
   );
 }
 
+/*
+  ------------------
+  Fire Icon Component
+  ------------------
+*/
 export function FireIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -54,12 +74,17 @@ export function FireIcon({
     >
       <path
         fill={color}
-        d="M17.66 11.2c-.23-.3-.51-.56-.77-.82c-.67-.6-1.43-1.03-2.07-1.66C13.33 7.26 13 4.85 13.95 3c-.95.23-1.78.75-2.49 1.32c-2.59 2.08-3.61 5.75-2.39 8.9c.04.1.08.2.08.33c0 .22-.15.42-.35.5c-.23.1-.47.04-.66-.12a.6.6 0 0 1-.14-.17c-1.13-1.43-1.31-3.48-.55-5.12C5.78 10 4.87 12.3 5 14.47c.06.5.12 1 .29 1.5c.14.6.41 1.2.71 1.73c1.08 1.73 2.95 2.97 4.96 3.22c2.14.27 4.43-.12 6.07-1.6c1.83-1.66 2.47-4.32 1.53-6.6l-.13-.26c-.21-.46-.77-1.26-.77-1.26m-3.16 6.3c-.28.24-.74.5-1.1.6c-1.12.4-2.24-.16-2.9-.82c1.19-.28 1.9-1.16 2.11-2.05c.17-.8-.15-1.46-.28-2.23c-.12-.74-.1-1.37.17-2.06c.19.38.39.76.63 1.06c.77 1 1.98 1.44 2.24 2.8c.04.14.06.28.06.43c.03.82-.33 1.72-.93 2.27"
+        d="M17.66 11.2c-.23-.3-.51-.56-.77-.82c-.67-.6-1.43-1.03-2.07-1.66C13.33 7.26 13 4.85 13.95 3c-.95.23-1.78.75-2.49 1.32c-2.59 2.08-3.61 5.75-2.39 8.9c.04.1.08.2.08.33c0 .22-.15.42-.35.5c-.23.1-.47.04-.66-.12a.6.6 0 0 1-.14-.17c-1.13-1.43-1.31-3.48-.55-5.12C5.78 10 4.87 12.3 5 14.47c.06.5.12 1 .29 1.5c.14.6.41 1.2.71 1.73c1.08 1.73 2.95 2.97 4.96 3.22c2.14.27 4.43-.12 6.07-1.6c1.83-1.66 2.47-4.32 1.53-6.6l-.13-.26c-.21-.46-.77-1.26-.77-1.26"
       ></path>
     </svg>
   );
 }
 
+/*
+  ------------------
+  Smile Icon Component
+  ------------------
+*/
 export function SmileIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -73,12 +98,17 @@ export function SmileIcon({
     >
       <path
         fill={color}
-        d="M248 8C111 8 0 119 0 256s111 248 248 248s248-111 248-248S385 8 248 8m80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32m-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32m194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5c22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5"
+        d="M248 8C111 8 0 119 0 256s111 248 248 248s248-111 248-248S385 8 248 8m80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32m-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32"
       ></path>
     </svg>
   );
 }
 
+/* 
+------------------
+Smile Beam Icon
+------------------
+*/
 export function SmileBeamIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -98,6 +128,11 @@ export function SmileBeamIcon({
   );
 }
 
+/* 
+------------------
+Wink Face Icon
+------------------
+*/
 export function WinkFaceIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -111,12 +146,17 @@ export function WinkFaceIcon({
     >
       <path
         fill={color}
-        d="M256 512a256 256 0 1 0 0-512a256 256 0 1 0 0 512m-91.9-186.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6c-22.3 25.6-61 53.5-116.1 53.5s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6M144.4 208a32 32 0 1 1 64 0a32 32 0 1 1-64 0m156.4 25.6c-5.3 7.1-15.3 8.5-22.4 3.2s-8.5-15.3-3.2-22.4c30.4-40.5 91.2-40.5 121.6 0c5.3 7.1 3.9 17.1-3.2 22.4s-17.1 3.9-22.4-3.2c-17.6-23.5-52.8-23.5-70.4 0"
+        d="M256 512a256 256 0 1 0 0-512a256 256 0 1 0 0 512m-91.9-186.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6c-22.3 25.6-61 53.5-116.1 53.5s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6M144.4 208a32 32 0 1 1 64 0a32 32 0 1 1-64 0m156.4 25.6c-5.3 7.1-15.3 8.5-22.4 3.2s-8.5-15.3-3.2-22.4c30.4-40.5 91.2-40.5 121.6 0c5.3 7.1 3.9 17.1-3.2 22.4s-17.1 3.9-22.4-3.2"
       ></path>
     </svg>
   );
 }
 
+/* 
+------------------
+Search Icon
+------------------
+*/
 export function SearchIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -140,6 +180,11 @@ export function SearchIcon({
   );
 }
 
+/* 
+------------------
+Home Icon
+------------------
+*/
 export function HomeIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -159,6 +204,11 @@ export function HomeIcon({
   );
 }
 
+/* 
+------------------
+Home Icon
+------------------
+*/
 export function HomeIcon2({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -169,7 +219,7 @@ export function HomeIcon2({
       width={dimension}
       height={dimension}
       viewBox="0 0 24 24"
-      >
+    >
       <path
         fill={color}
         d="m16 8.41l-4.5-4.5L4.41 11H6v8h3v-6h5v6h3v-8h1.59L17 9.41V6h-1zM2 12l9.5-9.5L15 6V5h3v4l3 3h-3v8h-5v-6h-3v6H5v-8z"
@@ -178,6 +228,11 @@ export function HomeIcon2({
   );
 }
 
+/* 
+------------------
+Update Icon
+------------------
+*/
 export function UpdateIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -201,6 +256,11 @@ export function UpdateIcon({
   );
 }
 
+/* 
+------------------
+Dictionary Icon
+------------------
+*/
 export function DictionaryIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -220,6 +280,11 @@ export function DictionaryIcon({
   );
 }
 
+/* 
+------------------
+About Icon
+------------------
+*/
 export function AboutIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -239,6 +304,11 @@ export function AboutIcon({
   );
 }
 
+/*
+------------------
+Web Icon
+------------------
+*/
 export function WebIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -273,6 +343,11 @@ export function WebIcon({
   );
 }
 
+/*
+------------------
+Code Icon
+------------------
+*/
 export function CodeIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -292,6 +367,11 @@ export function CodeIcon({
   );
 }
 
+/*
+------------------
+Database Icon
+------------------
+*/
 export function DatabaseIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -313,6 +393,11 @@ export function DatabaseIcon({
   );
 }
 
+/*
+------------------
+Git Icon
+------------------
+*/
 export function GitIcon({
   dimension = defaultProps.dimension,
   color = "#f34f29",
@@ -332,7 +417,11 @@ export function GitIcon({
   );
 }
 
-// Operating System Icon
+/*
+  ------------------
+  Operating System Icon
+  ------------------
+*/
 export function OSIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -352,6 +441,11 @@ export function OSIcon({
   );
 }
 
+/*
+  ------------------
+  Developer Tools Icon
+  ------------------
+*/
 export function DevToolsIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -371,6 +465,11 @@ export function DevToolsIcon({
   );
 }
 
+/*
+  ------------------
+  Sheet Icon
+  ------------------
+*/
 export function SheetIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -390,6 +489,11 @@ export function SheetIcon({
   );
 }
 
+/* 
+  ------------------
+  Discord Icon
+  ------------------
+*/
 export function DiscordIcon({
   dimension = defaultProps.dimension,
   color = "#fff",
@@ -419,6 +523,11 @@ export function DiscordIcon({
   );
 }
 
+/* 
+  ------------------
+  JavaScript Icon
+  ------------------
+*/
 export function JsIcon({ dimension = 32 }) {
   return (
     <svg
@@ -436,6 +545,11 @@ export function JsIcon({ dimension = 32 }) {
   );
 }
 
+/*
+  ------------------
+  Date Icon Component
+  ------------------
+*/
 export function DateIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -459,6 +573,11 @@ export function DateIcon({
   );
 }
 
+/*
+  ------------------
+  File Code Icon Component
+  ------------------
+*/
 export function FileCodeIcon({ dimension = 32, color = "#6364f1" }) {
   return (
     <svg
@@ -475,6 +594,11 @@ export function FileCodeIcon({ dimension = 32, color = "#6364f1" }) {
   );
 }
 
+/*
+  ------------------
+  Menu Icon Component
+  ------------------
+*/
 export function MenuIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -494,6 +618,11 @@ export function MenuIcon({
   );
 }
 
+/*
+------------------
+Docs Icon Component
+------------------
+*/
 export function DocsIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -513,6 +642,11 @@ export function DocsIcon({
   );
 }
 
+/*
+------------------
+Status Icon Component
+------------------
+*/
 export function StatusIcon({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -534,6 +668,11 @@ export function StatusIcon({
   );
 }
 
+/*
+------------------
+Right Arrow Icon Component
+------------------
+*/
 export function RightArrow({
   dimension = defaultProps.dimension,
   color = defaultProps.color,
@@ -552,6 +691,167 @@ export function RightArrow({
         strokeLinejoin="round"
         d="m10 17l5-5l-5-5"
         strokeWidth={1}
+      ></path>
+    </svg>
+  );
+}
+
+/* 
+------------------
+Copy Icon Component
+------------------
+*/
+export function CopyIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 24 24"
+    >
+      <g fill="none">
+        <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"></path>
+        <path
+          fill={color}
+          d="M19 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V4a2 2 0 0 1 2-2zm-9 13H8a1 1 0 0 0-.117 1.993L8 17h2a1 1 0 0 0 .117-1.993zm9-11H9v2h6a2 2 0 0 1 2 2v8h2zm-7 7H8a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2"
+        ></path>
+      </g>
+    </svg>
+  );
+}
+
+/* 
+------------------
+Tick Icon Component
+------------------
+*/
+export function TickIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 16 16"
+    >
+      <g
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+      >
+        <path d="M14.25 8.75c-.5 2.5-2.385 4.854-5.03 5.38A6.25 6.25 0 0 1 3.373 3.798C5.187 1.8 8.25 1.25 10.75 2.25"></path>
+        <path d="m5.75 7.75l2.5 2.5l6-6.5"></path>
+      </g>
+    </svg>
+  );
+}
+
+/* 
+------------------
+Alert Icon Component
+------------------
+*/
+export function AlertIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 22 22"
+      className="inline-block"
+    >
+      <path
+        fill={color}
+        d="M18 20H4v-1H3v-1H2V4h1V3h1V2h14v1h1v1h1v14h-1v1h-1Zm-6-8V6h-2v6Zm0 4v-2h-2v2Z"
+      ></path>
+    </svg>
+  );
+}
+
+/* 
+------------------
+Warning Icon Component
+------------------
+*/
+export function WarningIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 24 24"
+      className="inline"
+    >
+      <path
+        fill={color}
+        d="m12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0M11 16v2h2v-2zm0-7v5h2V9z"
+      ></path>
+    </svg>
+  );
+}
+
+/* 
+------------------
+Error Icon Component
+------------------
+*/
+export function ErrorIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 512 512"
+      className="inline-block"
+    >
+      <path
+        fill={color}
+        fillRule="evenodd"
+        d="M256 42.667c117.803 0 213.334 95.53 213.334 213.333S373.803 469.334 256 469.334S42.667 373.803 42.667 256S138.197 42.667 256 42.667m48.918 134.25L256 225.836l-48.917-48.917l-30.165 30.165L225.835 256l-48.917 48.918l30.165 30.165L256 286.166l48.918 48.917l30.165-30.165L286.166 256l48.917-48.917z"
+      ></path>
+    </svg>
+  );
+}
+
+/* 
+------------------
+Link Icon Component
+------------------
+*/
+export function LinkIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 48 48"
+    >
+      <path
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M24.707 9.565L9.858 24.415a9 9 0 0 0 0 12.727v0a9 9 0 0 0 12.728 0l17.678-17.677a6 6 0 0 0 0-8.486v0a6 6 0 0 0-8.486 0L14.101 28.657a3 3 0 0 0 0 4.243v0a3 3 0 0 0 4.242 0l14.85-14.85"
       ></path>
     </svg>
   );
