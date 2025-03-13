@@ -5,8 +5,18 @@ import Card from "./Card";
 export default function CheatSheet() {
   return (
     <div className="w-full flex flex-col pb-3">
+      {/* 
+        ------------------
+        Mapping through dataList to render each category
+        ------------------
+      */}
       {dataList.map(({ id, data, _name, icon, number_of_cheatsheets }) => (
         <div key={id} className="flex flex-col flex-wrap">
+          {/* 
+            ------------------
+            Category Header
+            ------------------
+          */}
           <div
             key={id}
             className="bg-[#ffeecc44] flex flex-col gap-3 shadow-md border-b-2 border-indigo-400 p-2 w-full"
@@ -29,6 +39,11 @@ export default function CheatSheet() {
                   : ""}
               </h1>
             </div>
+            {/* 
+              ------------------
+              Total Cheatsheets Info
+              ------------------
+            */}
             <span
               style={{ fontFamily: "Kalam" }}
               className="text-[1.2rem] flex gap-2"
@@ -39,18 +54,18 @@ export default function CheatSheet() {
               {number_of_cheatsheets}
             </span>
           </div>
+          {/* 
+            ------------------
+            Cheatsheets Cards Section
+            ------------------
+          */}
           <div
             id="section-bar"
             className="flex gap-5 py-3 flex-wrap items-center justify-center"
           >
-            {/* 
-                ------------------
-                All data about cheatsheets 
-                ------------------
-              */}
             {data
               ? data.map((cheatsheet: any, id: number) => (
-                  <Card cheatsheet={cheatsheet} key={id}/>
+                  <Card cheatsheet={cheatsheet} key={id} />
                 ))
               : null}
           </div>
