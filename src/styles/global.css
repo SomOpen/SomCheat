@@ -28,5 +28,8 @@ main {
 }
 
 .one-dark-pro {
-  background-color: #122 !important;
+  background-color: #182130 !important;
+}
+.astro-code{
+  padding: 10px;
 }
