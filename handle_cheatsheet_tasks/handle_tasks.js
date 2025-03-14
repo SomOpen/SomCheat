@@ -18,8 +18,13 @@ async function readFolder() {
  */
 const dir_data = await readFolder();
 
+// Helper function 
+function getFileName(index) {
+  return dir_data[index]?.slice(0, dir_data[index].lastIndexOf("."));
+}
+
 async function readContents() {
-  let contents = [];
+  let contents = [], contents_with_reference = {};
   try {
     for (let i = 0; i < dir_data.length; i++) {
       const fileContent = await fs.readFile(
@@ -27,9 +32,10 @@ async function readContents() {
         "utf8"
       );
       contents.push(fileContent);
+      contents_with_reference[getFileName(i)] = fileContent;
     }
     if (contents.length > 0) {
-      return contents;
+      return [contents, contents_with_reference];
     }
   } catch (error) {
     console.error(error);
@@ -40,16 +46,12 @@ let metadata = [],
   status = [];
 /*
   ----------------
-  readContents(): wuxu so celinaya array ka kooban strings.
-  Tusaale ahaan:  ["TASK: Variables & Data Types - [Done]"]
+  readContents(): wuxu so celinaya array ka kooban arrays-iyo, kuwaas oo kasi kooban strings.
+  Tusaale ahaan:contents wuxu so celinaya: ["TASK: Variables & Data Types - [Done]"]
   ----------------
  */
 
-// Helper function 
-function getFileName(index) {
-  return dir_data[index]?.slice(0, dir_data[index].lastIndexOf("."));
-}
-const data = await readContents();
+const [data, referenced_data] = await readContents();
 
 async function extractData() {
   const split_data = data.map((content) => content.split("\n"));
@@ -60,8 +62,8 @@ async function extractData() {
     ["TASK: Js - Variables & Data Types - [Done]"],
     ["TASK: Lua - Control Flow - [done]"]
   ]
-  ----------------
- */
+    ----------------
+    */
   for (let i = 0; i < split_data.length; i++) {
     // js.txt --> js
     const filename = getFileName(i);
@@ -193,7 +195,7 @@ async function evaluate() {
   ----------------
  */
 const _data = await evaluate();
-console.log(_data[1]);
+
 async function calculateTask() {
   const result = [];
   const calculateTaskProgress = (task, totalTasks) =>
@@ -219,6 +221,7 @@ async function calculateTask() {
         empty_len: unfinished_tasks,
         done_indices: _data[i][filename]?.done_indices,
         empty_indices: _data[i][filename]?.empty_indices,
+        tasks: referenced_data[filename].split("\n"),
       },
     });
     i++;
