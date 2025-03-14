@@ -10,6 +10,12 @@ async function readFolder() {
     console.error(error);
   }
 }
+/*
+  ----------------
+  readFolder(): wuxu so celinaya array ka kooban strings.
+  Tusaale ahaan:  [ 'js.txt', 'lua.txt' ]
+  ----------------
+ */
 const dir_data = await readFolder();
 
 async function readContents() {
@@ -30,88 +36,194 @@ async function readContents() {
   }
 }
 
-let metadata = [], status = [];
+let metadata = [],
+  status = [];
+/*
+  ----------------
+  readContents(): wuxu so celinaya array ka kooban strings.
+  Tusaale ahaan:  ["TASK: Variables & Data Types - [Done]"]
+  ----------------
+ */
 
+// Helper function 
+function getFileName(index) {
+  return dir_data[index]?.slice(0, dir_data[index].lastIndexOf("."));
+}
 const data = await readContents();
 
 async function extractData() {
-  const split_data = data.map(content => content.split("\n"));
-
-  for(let i = 0; i < split_data.length; i++) {
-    const filename = dir_data[i]?.slice(0, dir_data[i].lastIndexOf("."));
-    for(let j = 0; j < split_data[i].length; j++) {
-        status.push({[i]: split_data[i][j].slice(split_data[i][j].lastIndexOf("["))});
+  const split_data = data.map((content) => content.split("\n"));
+  /*
+  ----------------
+  split_data: wuxu so celinaya array ka kooban arrays-iyo kale.
+  Tusaale ahaan:  [
+    ["TASK: Js - Variables & Data Types - [Done]"],
+    ["TASK: Lua - Control Flow - [done]"]
+  ]
+  ----------------
+ */
+  for (let i = 0; i < split_data.length; i++) {
+    // js.txt --> js
+    const filename = getFileName(i);
+    for (let j = 0; j < split_data[i].length; j++) {
+      status.push({
+        [i]: split_data[i][j].slice(split_data[i][j].lastIndexOf("[")),
+      });
     }
     metadata.push({
-        [filename]: {
-            raw_status: status.filter(v => v[i])
-        }
-    })
+      [filename]: {
+        raw_status: status.filter((v) => v[i]),
+      },
+    });
   }
-//   console.log(metadata[0].js.raw_status[0]);
   return metadata;
 }
-
+/*
+  ----------------
+  extractData() wuxu so celinaya array ka kooban objects-iyo, kuwaas oo iyana ka kooban objects-iyo kale.
+  Tusaale ahaan: 
+  [ 
+    { js: {raw_status: [{ '0': '[Done]' },  {'0': '[Done]' }]}},
+    { lua: {raw_status: [{ '1': '[Done]' },  {'1': '[]' }]}}
+  ]
+  ----------------
+ */
 const tasks_data = await extractData();
 
 async function evaluate() {
-    const translated_status = [], evaluated_status   = [];
-    for(let i = 0; i < tasks_data.length; i++) {
-        const filename = dir_data[i]?.slice(0, dir_data[i].lastIndexOf("."));
-        for(let j = 0; j < tasks_data[i][filename]?.raw_status.length; j++) {
-            const status = await tasks_data[i][filename]?.raw_status[j];
-            const clean_value = status[i]?.split("").filter(char => char !== " ").join("");
-            if(clean_value === "[]") {
-                translated_status.push({[i]: "Unfinished"});
-            }
-            if(clean_value?.trim().toLowerCase().includes("[done]")) {
-                translated_status.push({[i]: "Finished"});
-                console.log(clean_value);
-            }
-        }
-        evaluated_status.push({
-            [filename]: {
-            total_len: translated_status.filter(v => v[i]).length,
-            empty_len: translated_status.filter(v => v[i] === "Unfinished").length,
-            done_len: translated_status.filter(v => v[i] === "Finished").length,
-            empty_indices: translated_status.reduce((acc, curr, idx) => {
-                if (curr[i] === "Unfinished") acc.push(idx);
-                return acc;
-            }, []),
-            done_indices: translated_status.reduce((acc, curr, idx) => {
-                if (curr[i] === "Finished") acc.push(idx);
-                return acc;
-            }, [])
-            }
-        })
+  let translated_status = [],
+        evaluated_status = [];
+  for (let i = 0; i < tasks_data.length; i++) {
+    // js.txt --> js
+    const filename = getFileName(i);
+    for (let j = 0; j < tasks_data[i][filename]?.raw_status.length; j++) {
+      const status = await tasks_data[i][filename]?.raw_status[j];
+      const clean_value = status[i]
+        ?.split("")
+        .filter((char) => char !== " ")
+        .join("");
+      if (clean_value === "[]") {
+        translated_status.push({ [i]: "Unfinished" });
+      }
+      if (clean_value?.trim().toLowerCase().includes("[done]")) {
+        translated_status.push({ [i]: "Finished" });
+      }
     }
-    return evaluated_status;
+  }
+
+  let indices = [], dynamicObj = {};
+  const tempObj = {};
+  
+  for(const obj of translated_status) {
+    const index = parseInt(Object.keys(obj).toString());
+    if(!Object.hasOwn(tempObj, index)) {
+      tempObj[index] = index;
+      indices.push(tempObj[index]);
+    }
+  }
+
+  function handleDynamicArray(key, value) {
+    if (!dynamicObj[key]) {
+      dynamicObj[key] = [];
+    }
+    dynamicObj[key].push(value);
+  }
+
+  for(const obj of translated_status) {
+    let [[k, v]] = Object.entries(obj);
+    
+    k = parseInt(k);
+    if(indices.includes(k)) {
+      const filename = getFileName(k);
+      handleDynamicArray(filename, v)
+    }
+  }
+  for(let i = 0; i < indices.length; i++) {
+    const filename = getFileName(i);
+    evaluated_status.push({
+      [filename]: {
+        total_len: translated_status.filter((v) => v[i]).length,
+        empty_len: translated_status.filter((v) => v[i] === "Unfinished")
+          .length,
+        done_len: translated_status.filter((v) => v[i] === "Finished").length,
+        empty_indices: dynamicObj[filename].map((value, index) => {
+          if(value === "Unfinished") {
+            return index;
+          }
+        }).filter(value => value !== undefined),
+        done_indices: dynamicObj[filename].map((value, index) => {
+          if(value === "Finished") {
+            return index;
+          }
+        }).filter(value => value !== undefined),
+      },
+    });
+  }
+  
+  return evaluated_status;
 }
-
-const _data = await evaluate();
-
-async function calculateTask() {
-    const result = [];
-    const calculateTaskProgress = (task, totalTasks) => ((task / totalTasks) * 100).toFixed(0);
-    let i = 0;
-    while(i < _data.length) {
-        const filename = dir_data[i]?.slice(0, dir_data[i].lastIndexOf("."));
-        const finished_tasks = _data[i][filename]?.done_len;
-        const unfinished_tasks = _data[i][filename]?.empty_len;
-        const total_tasks = _data[i][filename]?.total_len;
-        result.push({
-            [filename]: {
-                finished_tasks_progress: calculateTaskProgress(finished_tasks, total_tasks),
-                unfinished_tasks_progress: calculateTaskProgress(unfinished_tasks, total_tasks),
-                done_len: finished_tasks,
-                empty_len: unfinished_tasks,
-                done_indices: _data[i][filename]?.done_indices,
-                empty_indices: _data[i][filename]?.empty_indices
-            }
-        })
-        i++;
+/*
+  ----------------
+  evaluate() wuxu so celinaya object ka kooban objects-iyo kale.
+  Tusaale ahaan:  
+  {
+    js: {
+      total_len: 15,
+      empty_len: 11,
+      done_len: 4,
+      empty_indices: [
+        4,  5,  6,  7,  8,
+        9, 10, 11, 12, 13,
+        14
+      ],
+      done_indices: [ 0, 1, 2, 3 ]
+  },
+      lua: {
+        total_len: 15,
+        empty_len: 13,
+        done_len: 2,
+        empty_indices: [
+          1, 2, 3,  4,  5,  6,
+          7, 8, 9, 10, 11, 12,
+          14
+        ],
+        done_indices: [ 0, 13 ]
     }
-    return result;
+  }
+  ----------------
+ */
+const _data = await evaluate();
+console.log(_data[1]);
+async function calculateTask() {
+  const result = [];
+  const calculateTaskProgress = (task, totalTasks) =>
+    ((task / totalTasks) * 100).toFixed(0);
+  let i = 0;
+  while (i < _data.length) {
+    // js.txt --> js
+    const filename = dir_data[i]?.slice(0, dir_data[i].lastIndexOf("."));
+    const finished_tasks = _data[i][filename]?.done_len;
+    const unfinished_tasks = _data[i][filename]?.empty_len;
+    const total_tasks = _data[i][filename]?.total_len;
+    result.push({
+      [filename]: {
+        finished_tasks_progress: calculateTaskProgress(
+          finished_tasks,
+          total_tasks
+        ),
+        unfinished_tasks_progress: calculateTaskProgress(
+          unfinished_tasks,
+          total_tasks
+        ),
+        done_len: finished_tasks,
+        empty_len: unfinished_tasks,
+        done_indices: _data[i][filename]?.done_indices,
+        empty_indices: _data[i][filename]?.empty_indices,
+      },
+    });
+    i++;
+  }
+  return result;
 }
 
 /*
@@ -137,22 +249,17 @@ async function calculateTask() {
  */
 
 const output = await calculateTask();
-console.log(data);
 
 async function createJsonFile() {
-try {
+  try {
     const fileData = JSON.stringify(output, null, 2);
-    await fs.writeFile(
-        "tasks/tasks.json",
-        fileData,
-        (err) => {
-        if (err) {
-          console.error("Error writing file:", err);
-          return;
-        }
-        console.log("File written successfully");
+    await fs.writeFile("tasks/tasks.json", fileData, (err) => {
+      if (err) {
+        console.error("Error writing file:", err);
+        return;
       }
-    );
+      console.log("File written successfully");
+    });
   } catch (error) {
     console.error(error);
   }
