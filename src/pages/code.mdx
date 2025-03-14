@@ -7,66 +7,54 @@ import {
   Section,
   MessageBox,
   Link,
+  Intro
 } from "../ReactComponent/components/Layout";
 import Code from "../Components/Code.astro";
 
+<Intro title="Javascript">
+This code only works on javascript environment. This code only works on javascript environment.
+</Intro>
+
 <Layout>
 <Section>
-# Example
-1. `This code only works on javascript environment.`
-  2. This code only works on javascript environment.
-  3. This code only works on javascript environment.
-<MessageBox type="error">
+# This is header one
+## This is header two
   `This code only works on javascript environment.`
-
-  ```js
-    console.log("Hello Adam");
-  ```
-  1. This code only works on javascript environment.
-  2. This code only works on javascript environment.
-  3. This code only works on javascript environment.
-
-</MessageBox>
 <Code>
   ```js
     console.log("Hello Adam");
   ```
 </Code>
-`aDAM`
-<MessageBox type="alert">
-  `This code only works on javascript environment.`
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  `console.log("Adam Elmi")`
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-</MessageBox>
-<MessageBox type="error">
-  `This code only works on javascript environment.`
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  `console.log("Adam Elmi")`
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-</MessageBox>
 <MessageBox type="warning">
-  `This code only works on javascript environment.`
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  `console.log("Adam Elmi")`
-  This code only works on javascript environment.
-  This code only works on javascript environment.
-  This code only works on javascript environment.
   This code only works on javascript environment.
 </MessageBox>
 <Link 
-        title="React Documentation"
-        url="https://react.dev/"
-        description="Official documentation for React.js."
-      />
+  title="React Documentation"
+  url="https://react.dev/"
+  description="Official documentation for React.js."
+/>
+</Section>
+  <Section>
+  `This is a highlighted text`
+  <Code>
+    ```lua
+      print("Hello Adam");
+    ```
+  </Code>
+  <MessageBox type="alert">
+    This is an alert message
+  </MessageBox>
+  <MessageBox type="error">
+    This is an error message
+  </MessageBox>
+  <MessageBox type="warning">
+    This is a warning message
+  </MessageBox>
+    This a markdown text
+    1. Markdown list
+    2. Another markdown list
+    *Italic text*
+    **Bold text**
+    `Code Highlighted`
 </Section>
 </Layout>
