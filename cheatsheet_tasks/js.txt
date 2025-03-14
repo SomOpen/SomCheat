@@ -1,7 +1,7 @@
 TASK: Variables & Data Types - [Done]  
 TASK: Control Flow - [done] 
 TASK: Loops & Iteration - [ done ]
-TASK: Functions & Methods - []  
+TASK: Functions & Methods - [Done]  
 TASK: Error Handling - []
 TASK: Data Structures - []
 TASK: Object-Oriented Basics - [] 
