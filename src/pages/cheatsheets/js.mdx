@@ -1,12 +1,16 @@
 ---
-layout: "../../Layouts/BasicLayout.astro"
-number: 404
+layout: "../../Layouts/SecondLayout.astro"
 ---
-import TopLayer from "../../Components/TopLayer.astro"
-import Welcome from "../../ReactComponent/components/Welcome.tsx";
+import Code from "../../Components/Code.astro";
+import {
+  Layout,
+  Section,
+  MessageBox,
+  Link,
+} from "../../ReactComponent/components/Layout";
 
-<TopLayer/>
-<pre class="p-2">
+<Section>
+<Code>
 ```js
     // @ts-check
 import { defineConfig } from 'astro/config';
@@ -33,6 +37,5 @@ export default defineConfig({
   integrations: [react(), mdx()]
 });
 ```
-</pre>
-<h2  class="text-slate-500">Hello, Venus!</h2>
-<h2>{new Date().getFullYear()}</h2>
+</Code>
+</Section>
