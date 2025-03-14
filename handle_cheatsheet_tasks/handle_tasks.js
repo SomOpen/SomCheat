@@ -137,6 +137,7 @@ async function calculateTask() {
  */
 
 const output = await calculateTask();
+console.log(data);
 
 async function createJsonFile() {
 try {
