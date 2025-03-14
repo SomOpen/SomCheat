@@ -1,0 +1,23 @@
+---
+import { RightArrow, HomeIcon2 } from "../ReactComponent/icons/Icon";
+---
+  {/* 
+  ------------------ 
+  Nav bar
+  ------------------ 
+  */}
+  <nav
+  class="w-full min-h-[50px] border-b-2 border-indigo-400 flex items-center px-4 bg-amber-50"
+>
+  <div class="flex items-center gap-3">
+    <a href="/" class="cursor-pointer" title="Home">
+      <HomeIcon2 dimension={30} color="#62748e" />
+    </a>
+    <RightArrow dimension={30} color="oklch(0.585 0.233 277.117)" />
+    <a
+      href="/cheatsheets"
+      class="no-underline italic hover:text-indigo-500 text-slate-500"
+      title="Cheatsheets">Cheatsheets</a
+    >
+  </div>
+</nav>
