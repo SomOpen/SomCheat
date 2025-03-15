@@ -221,8 +221,10 @@ async function calculateTask() {
         empty_len: unfinished_tasks,
         done_indices: _data[i][filename]?.done_indices,
         empty_indices: _data[i][filename]?.empty_indices,
-        tasks: referenced_data[filename].split("\n"),
+        tasks: referenced_data[filename].split("\n").map(_task => _task.slice(0, _task.lastIndexOf("-"))),
       },
+      id: dir_data.findIndex(value => value === filename + ".txt"),
+      folder: dir_data[i]
     });
     i++;
   }
