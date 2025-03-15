@@ -1,5 +1,6 @@
 ---
 import { RightArrow, HomeIcon2 } from "../ReactComponent/icons/Icon";
+const {path = "/"} = Astro.props;
 ---
   {/* 
   ------------------ 
@@ -15,9 +16,9 @@ import { RightArrow, HomeIcon2 } from "../ReactComponent/icons/Icon";
     </a>
     <RightArrow dimension={30} color="oklch(0.585 0.233 277.117)" />
     <a
-      href="/cheatsheets"
+      href={path}
       class="no-underline italic hover:text-indigo-500 text-slate-500"
-      title="Cheatsheets">Cheatsheets</a
+      title={path[0].replace("/", "") + path.slice(1)}>{path[0].replace("/", "") + path.slice(1)}</a
     >
   </div>
 </nav>
