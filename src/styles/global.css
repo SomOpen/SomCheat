@@ -33,3 +33,21 @@ main {
 .astro-code{
   padding: 10px;
 }
+/* All tasks */
+.show-all-tasks {
+  max-height: 4000px;
+}
+
+/* Finished tasks */
+.show-finished-tasks {
+  max-height: 4000px;
+}
+
+/* Unfinished tasks */
+.show-unfinished-tasks {
+  max-height: 4000px;
+}
+
+.add-gap {
+  gap: 12px;
+}
