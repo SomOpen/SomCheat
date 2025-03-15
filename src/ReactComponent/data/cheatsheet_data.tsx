@@ -2,6 +2,11 @@ import { JsIcon } from "../icons/Icon";
 import dynamicPath from "../../utils/dynamic_path";
 import { getData, getIndex } from "../../utils/handle_data";
 import getProgress from "../../utils/progress";
+import { filterTasks } from "../../utils/filter_tasks";
+
+console.log(filterTasks());
+
+
 
 // Programming Languages
 export const languagesData = [
