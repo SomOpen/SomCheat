@@ -74,8 +74,6 @@ export default function Nav() {
     setIsVisible(prev => !prev);
   }
 
-  console.log(isVisible);
-
   return (
     <nav className="w-full border-b-[1.5px] border-slate-200 min-h-[50px] flex flex-col bg-amber-50">
       {/*
