@@ -4,7 +4,7 @@ import Card from "./Card";
 
 export default function CheatSheet() {
   return (
-    <div className="w-full flex flex-col pb-3">
+    <div className="w-full flex flex-col pb-3 pt-5">
       {/* 
         ------------------
         Mapping through dataList to render each category
