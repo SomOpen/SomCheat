@@ -1,21 +1,10 @@
 ---
 import BasicLayout from "../Layouts/BasicLayout.astro";
+import AboutUs from "../ReactComponent/components/About";
+import Nav from "../Components/Nav.astro";
 ---
 
 <BasicLayout title="SomCheat-About">
-	<p class="about">About Page</p>
-	<main></main>
-	<script is:inline>
-		let counter = 0;
-		const element = document.querySelector(".about");
-		if (element) {
-			element.textContent += ` ${counter}`;
-		}
-		setInterval(() => {
-			counter++;
-			if (element) {
-				element.textContent = `About Page ${counter}`;
-			}
-		}, 2000);
-	</script>
+	<Nav path={"/about"}/>
+	<AboutUs/>
 </BasicLayout>
