@@ -31,8 +31,8 @@ const navData: Array<Props> = [
     icon: <HomeIcon dimension={21} color="#6364f1" />,
   },
   {
-    sectionName: "Dictionary",
-    path: "/dictionary",
+    sectionName: "Glossary",
+    path: "/glossary",
     icon: <DictionaryIcon dimension={25} color="#fba8a8" />,
   },
   {
