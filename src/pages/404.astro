@@ -4,15 +4,39 @@ import { HomeIcon2 } from "../ReactComponent/icons/Icon";
 ---
 
 <BasicLayout>
-    <main class="w-full flex justify-center items-center flex-col gap-5">
-      <div class="flex justify-center items-center flex-col">
-        <h1>404</h1>
-        <h2 class="italic text-[1.2rem] font-medium text-pink-400">Page Not Found.</h2>
-      </div>
-      <p class="italic text-slate-500">Sorry, we can't find the page you are looking for.</p>
-      <a class="py-2 px-4 bg-indigo-500 border-2  border-slate-300 rounded-full text-slate-100 flex gap-2 justify-center items-center" href="/"><HomeIcon2/> Back to home</a>
-    </main>
+  <main class="w-full flex justify-center items-center flex-col gap-5">
+    <div class="flex justify-center items-center flex-col">
+      <h1>404</h1>
+      <h2 class="italic text-[1.2rem] font-medium text-pink-400">
+        Page Not Found.
+      </h2>
+    </div>
+    <p class="italic text-slate-500">
+      Sorry, we can't find the page you are looking for.
+    </p>
+    <a
+      class="py-2 px-4 bg-indigo-500 border-2 border-slate-300 rounded-full text-slate-100 flex gap-2 justify-center items-center"
+      href="/"><HomeIcon2 /> Back to home</a
+    >
+    <div id="cheatsheet-message" class="mt-4"></div>
+  </main>
 </BasicLayout>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const messageContainer = document.getElementById("cheatsheet-message");
+    const pathname = window.location.pathname;
+
+    if (messageContainer && pathname.includes("/cheatsheets/")) {
+      const cheatName = decodeURIComponent(pathname.split("/").pop() || "");
+      messageContainer.innerHTML = `
+  <p>Cheatsheet "<strong>${cheatName}</strong>" not found.  
+  <a href="https://github.com/Adam-Elmi/SomCheat" target="_blank" class="text-blue-500 underline">Contribute</a> or  
+  <a href="https://github.com/Adam-Elmi/SomCheat/issues" target="_blank" class="text-blue-500 underline">Request</a>.</p>
+`;
+    }
+  });
+</script>
 
 <style>
   main {
@@ -24,6 +48,41 @@ import { HomeIcon2 } from "../ReactComponent/icons/Icon";
     font-size: 6rem;
     color: #aaa;
   }
+  #cheatsheet-message {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: 500px;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease-in-out;
+  }
 
+  #cheatsheet-message a {
+    color: #4f46e5;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
 
+  #cheatsheet-message a:hover {
+    color: #3730a3;
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
