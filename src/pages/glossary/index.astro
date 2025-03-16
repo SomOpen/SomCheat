@@ -1,0 +1,10 @@
+---
+import BasicLayout from "../../Layouts/BasicLayout.astro";
+import Glossary from "../../ReactComponent/components/Glossary";
+import Nav from "../../Components/Nav.astro";
+---
+
+<BasicLayout>
+  <Nav path={"/glossary"}/>
+  <Glossary client:load/>
+</BasicLayout>
