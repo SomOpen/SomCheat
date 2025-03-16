@@ -27,10 +27,10 @@ h1 {
   color: #1f2937;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Space between icon and text */
+  gap: 0.5rem; 
   padding-bottom: 0.5rem;
   margin: 1rem 0;
-  border-bottom: 3px solid #3b82f6; /* Blue underline */
+  border-bottom: 3px solid #3b82f6; 
   letter-spacing: -0.02em;
   line-height: 1.2;
   transition: border-color 0.2s ease;
@@ -38,9 +38,9 @@ h1 {
 
 /* Icon */
 h1::before {
-  content: "\2756"; /* Change to any emoji or icon */
+  content: "\2756";
   font-size: 2.5rem;
-  color: #3b82f6; /* Blue icon color */
+  color: #3b82f6;
 }
 
 /* Hover Effect */
@@ -54,10 +54,10 @@ h2 {
   color: #6191f0;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Space between icon and text */
+  gap: 0.5rem;
   padding-bottom: 0.5rem;
   margin: 1rem 0;
-  border-bottom: 3px solid #eee; /* Blue underline */
+  border-bottom: 3px solid #eee;
   letter-spacing: -0.02em;
   line-height: 1.2;
   transition: border-color 0.2s ease;
@@ -65,17 +65,17 @@ h2 {
 
 /* Icon */
 h2::before {
-  content: "\27BE"; /* Change to any emoji or icon */
-  font-size: 2.5rem;
-  color: #3b82f6; /* Blue icon color */
+  content: "\2756";
+  font-size: 2.2rem;
+  color: #3b82f6;
 }
 
   /* Base styles */
 .astro-code {
-  white-space: pre-wrap; /* Wrap long lines */
-  word-break: break-word; /* Break long words */
-  overflow-x: auto; /* Horizontal scroll if needed */
-  max-width: 100%; /* Prevent overflow */
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  max-width: 100%;
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -111,7 +111,7 @@ code:not(.astro-code > code) {
 }
 /* Default styles */
 ol, ol > li {
-  font-size: 1rem; /* Default font size (16px) */
+  font-size: 1rem;
   line-height: 2;
   word-break: normal;
   list-style: decimal;
@@ -119,29 +119,23 @@ ol, ol > li {
   padding-top: 8px;
 }
 
-/* Responsive adjustments for small screens */
 @media (max-width: 640px) {
   ol, ol > li {
-    font-size: 0.875rem; /* Adjust the font size for small screens (14px) */
+    font-size: 0.875rem;
     line-height: 1.5;
     word-break: break-word;
   }
-}
-
-/* Responsive adjustments for small screens */
-@media (max-width: 640px) {
   p {
-    font-size: 0.875rem; /* Adjust the font size for small screens (14px) */
+    font-size: 0.875rem;
     line-height: 1.5;
     word-break: break-word;
   }
 }
 
-/* Media query for smaller screens */
 @media (max-width: 640px) {
   .astro-code {
-    font-size: 0.75rem; /* Smaller font size */
-    padding: 0.5rem; /* Reduce padding */
+    font-size: 0.75rem;
+    padding: 0.5rem; 
   }
 
   .code-container {
