@@ -4,7 +4,13 @@
   ------------------
 */
 import { useState, useEffect, useRef } from "react";
-import { FileCodeIcon, CopyIcon, TickIcon, AlertIcon, WarningIcon, ErrorIcon, LinkIcon } from "../icons/Icon";
+import {
+  CopyIcon,
+  TickIcon,
+  LinkIcon,
+} from "../icons/Other_Icons";
+import { AlertIcon, WarningIcon, ErrorIcon } from "../icons/Indicator_Icons";
+import { FileCodeIcon } from "../icons/File_Icons";
 
 /*
   ------------------
@@ -12,8 +18,8 @@ import { FileCodeIcon, CopyIcon, TickIcon, AlertIcon, WarningIcon, ErrorIcon, Li
   ------------------
 */
 interface Props {
-    children?: any;
-    fileName?: string;
+  children?: any;
+  fileName?: string;
 }
 
 /*
@@ -21,12 +27,12 @@ interface Props {
   Layout Component
   ------------------
 */
-export function Layout({children} : Props) {
-    return (
-        <div className="p-4 flex gap-8 flex-wrap justify-center items-center">
-            {children}
-        </div>
-    )
+export function Layout({ children }: Props) {
+  return (
+    <div className="p-4 flex gap-8 flex-wrap justify-center items-center">
+      {children}
+    </div>
+  );
 }
 
 /*
@@ -34,12 +40,12 @@ export function Layout({children} : Props) {
   Section Component
   ------------------
 */
-export function Section({children} : Props) {
-    return (
-        <div className="p-4 flex gap-4 border-2 border-slate-200 rounded-md w-[700px] max-w-full flex-col">
-            {children}
-        </div>
-    )
+export function Section({ children }: Props) {
+  return (
+    <div className="p-4 flex gap-4 border-2 border-slate-200 rounded-md w-[700px] max-w-full flex-col">
+      {children}
+    </div>
+  );
 }
 
 /*
@@ -47,33 +53,35 @@ export function Section({children} : Props) {
   CodeBlock Component
   ------------------
 */
-export function CodeBlock({ children, fileName = '' }: Props) {
+export function CodeBlock({ children, fileName = "" }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [codeText, setCodeText] = useState<string>('');
+  const [codeText, setCodeText] = useState<string>("");
 
   useEffect(() => {
     if (containerRef.current) {
-      const preElement = containerRef.current.querySelector('pre');
+      const preElement = containerRef.current.querySelector("pre");
       if (preElement) {
-        setCodeText(preElement.textContent || '');
+        setCodeText(preElement.textContent || "");
       }
     }
   }, [children]);
-{/*
+  {
+    /*
   ------------------
   Fallback if navigator.clipboard is not supported
   ------------------
-*/}
+*/
+  }
   const fallbackCopyText = (text: string) => {
-    const textArea = document.createElement('textarea');
+    const textArea = document.createElement("textarea");
     textArea.value = text;
     document.body.appendChild(textArea);
     textArea.select();
     try {
-      document.execCommand('copy');
-      alert('Code copied (fallback)!');
+      document.execCommand("copy");
+      alert("Code copied (fallback)!");
     } catch (err) {
-      console.error('Fallback copy failed:', err);
+      console.error("Fallback copy failed:", err);
     } finally {
       document.body.removeChild(textArea);
     }
@@ -81,19 +89,22 @@ export function CodeBlock({ children, fileName = '' }: Props) {
 
   const handleCopy = () => {
     if (!codeText) {
-      console.warn('No code block found.');
+      console.warn("No code block found.");
       return;
     }
-{/*
+    {
+      /*
   ------------------
   navigator.clipboard
   ------------------
-*/}
+*/
+    }
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(codeText)
-        .then(() => alert('Code copied!'))
+      navigator.clipboard
+        .writeText(codeText)
+        .then(() => alert("Code copied!"))
         .catch((err) => {
-          console.error('Clipboard API failed, using fallback:', err);
+          console.error("Clipboard API failed, using fallback:", err);
           fallbackCopyText(codeText);
         });
     } else {
@@ -102,7 +113,10 @@ export function CodeBlock({ children, fileName = '' }: Props) {
   };
 
   return (
-    <div ref={containerRef} className="w-full max-w-full border-2 border-slate-700 shadow-md">
+    <div
+      ref={containerRef}
+      className="w-full max-w-full border-2 border-slate-700 shadow-md"
+    >
       {/* Header */}
       <div className="w-full h-[50px] bg-gray-900 border-b border-gray-700 flex items-center p-2">
         <span className="flex items-center italic text-slate-300 gap-2 flex-1">
@@ -124,7 +138,13 @@ export function CodeBlock({ children, fileName = '' }: Props) {
   MessageBox Component
   ------------------
 */
-export const MessageBox = ({ type, children }: { type: "alert" | "warning" | "error"; children: React.ReactNode }) => {
+export const MessageBox = ({
+  type,
+  children,
+}: {
+  type: "alert" | "warning" | "error";
+  children: React.ReactNode;
+}) => {
   /*
     ------------------
     MessageBox Styles
@@ -175,7 +195,7 @@ export const Link: React.FC<LinkProps> = ({ title, url, description }) => {
     >
       {/* Top Bar with Icon and Reference Label */}
       <div className="flex justify-between items-center mb-3">
-        <span className="text-xs text-white bg-blue-500 px-2 py-1 rounded">
+        <span className="text-[0.9rem] text-white bg-blue-500 px-2 py-1 rounded">
           Reference
         </span>
         <div className="text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
@@ -214,7 +234,9 @@ export const Intro: React.FC<IntroProps> = ({ title, children }) => {
       </div>
 
       {/* Title */}
-      <h3 className="text-2xl font-bold text-slate-700 border-b-2 border-dashed w-fit mb-2 py-2">{title}</h3>
+      <h3 className="text-2xl font-bold text-slate-700 border-b-2 border-dashed w-fit mb-2 py-2">
+        {title}
+      </h3>
 
       {/* Description */}
       <p className="mt-2 text-sm text-gray-600 leading-relaxed">{children}</p>
