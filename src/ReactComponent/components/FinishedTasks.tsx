@@ -1,4 +1,5 @@
-import { TaskCheckedIcon, CheckedIcon } from "../icons/Icon";
+import { TaskCheckedIcon } from "../icons/Task_Icons";
+import { CheckedIcon } from "../icons/Status_Icons";
 
 export default function FinishedTasks({
   tasks,
@@ -35,7 +36,7 @@ export default function FinishedTasks({
         className="max-h-0 flex flex-col gap-2 overflow-hidden transition-all duration-300 linear"
       >
         {tasks?.finished_t.map((_t: any, index: number) => (
-          <div className="flex gap-2">
+          <div key={"Finished-Tasks" + _t} className="flex gap-2">
             <CheckedIcon dimension={28} color="oklch(0.696 0.17 162.48)" />
             <p className="font-medium text-slate-600">
               {_t.slice(_t.indexOf(":") + 1)}
