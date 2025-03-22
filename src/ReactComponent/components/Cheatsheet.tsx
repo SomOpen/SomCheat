@@ -1,10 +1,11 @@
-import dataList from "../data/datalist";
-import { SheetIcon, StatusIcon, FileCodeIcon, DateIcon } from "../icons/Icon";
+import dataList from "../helpers/datalist";
+import { SheetIcon, DateIcon } from "../icons/Other_Icons";
+import { StatusIcon } from "../icons/Status_Icons";
 import Card from "./Card";
 
 export default function CheatSheet() {
   return (
-    <div className="w-full flex flex-col pb-3 pt-5">
+    <div className="w-full flex flex-col pb-3">
       {/* 
         ------------------
         Mapping through dataList to render each category
