@@ -1,4 +1,4 @@
-import { TaskStarIcon, TaskIcon } from "../icons/Icon";
+import { TaskStarIcon, TaskIcon } from "../icons/Task_Icons";
 export default function AllTasks({
   tasks,
   icon,
@@ -34,7 +34,7 @@ export default function AllTasks({
                     "
       >
         {tasks?.tasks.map((_t: any, index: number) => (
-          <div className="flex gap-2">
+          <div key={"All-tasks" + _t} className="flex gap-2">
             <TaskIcon dimension={28} color="oklch(0.623 0.214 259.815)" />
             <p className="font-medium text-slate-600">
               {_t.slice(_t.indexOf(":") + 1)}
