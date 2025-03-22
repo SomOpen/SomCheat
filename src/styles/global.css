@@ -2,7 +2,7 @@
 
 
 body {
-  background-color: #fff;
+  background-color: #fafafc;
   font-family: "roboto", Arial, sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -50,4 +50,7 @@ main {
 
 .add-gap {
   gap: 12px;
+}
+.dark {
+  background-color: red;
 }
