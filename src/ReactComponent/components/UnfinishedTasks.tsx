@@ -1,4 +1,5 @@
-import { TaskErrorIcon, UncheckIcon } from "../icons/Icon";
+import { TaskErrorIcon } from "../icons/Task_Icons";
+import { UncheckIcon } from "../icons/Status_Icons";
 
 export default function UnfinishedTasks({
   tasks,
@@ -35,7 +36,7 @@ export default function UnfinishedTasks({
                     "
       >
         {tasks?.unfinished_t.map((_t: any, index: number) => (
-          <div className="flex gap-2">
+          <div key={"Unfinished-tasks" + _t} className="flex gap-2">
             <UncheckIcon dimension={28} color="oklch(0.592 0.249 0.584)" />
             <p className="font-medium text-slate-600">
               {_t.slice(_t.indexOf(":") + 1)}
