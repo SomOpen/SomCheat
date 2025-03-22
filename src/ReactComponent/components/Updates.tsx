@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
 import { extractFolders, filterTasks } from "../../utils/filter_tasks";
+import replacer from "../../utils/replacer";
 import AllTasks from "./AllTasks";
 import FinishedTasks from "./FinishedTasks";
 import UnfinishedTasks from "./UnfinishedTasks";
 
-import {
-  FileCodeIcon,
-  JsIcon,
-  StatusIcon,
-  DateIcon,
-  DownArrow,
-  RightArrow,
-} from "../icons/Icon";
+import { StatusIcon } from "../icons/Status_Icons";
+import { DateIcon } from "../icons/Other_Icons";
+import { RightArrow, DownArrow } from "../icons/Arrow_Icons";
+import { FileCodeIcon, JsIcon } from "../icons/File_Icons";
 
 export default function Updates() {
   const dir = extractFolders();
@@ -85,12 +82,15 @@ export default function Updates() {
     <div className="w-full flex justify-around gap-3 flex-wrap">
       {tasks
         ? tasks.map((task: any, i: number) => (
-            <div className="w-[600px] bg-white h-fit rounded-lg border-2 border-slate-200 shadow-md p-5 flex flex-col gap-3">
+            <div
+              key={i}
+              className="w-[600px] bg-white h-fit rounded-lg border-2 border-slate-200 shadow-md p-5 flex flex-col gap-3"
+            >
               {/* Title and Icon */}
               <div className="flex gap-3 items-center">
                 <JsIcon />
                 <h1 className="text-[1.2rem] font-semibold text-slate-500 italic">
-                  {dir[i]}
+                  {replacer(dir[i])}
                 </h1>
               </div>
               {/* Download bar */}
