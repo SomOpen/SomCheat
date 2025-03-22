@@ -1,6 +1,6 @@
 ---
 import BasicLayout from "../Layouts/BasicLayout.astro";
-import { HomeIcon2 } from "../ReactComponent/icons/Icon";
+import { HomeIcon2 } from "../ReactComponent/icons/Section_Icons";
 ---
 
 <BasicLayout>
@@ -34,6 +34,8 @@ import { HomeIcon2 } from "../ReactComponent/icons/Icon";
   <a href="https://github.com/Adam-Elmi/SomCheat" target="_blank" class="text-blue-500 underline">Contribute</a> or  
   <a href="https://github.com/Adam-Elmi/SomCheat/issues" target="_blank" class="text-blue-500 underline">Request</a>.</p>
 `;
+    } else {
+      messageContainer.style.display = "none";
     }
   });
 </script>
