@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { MenuIcon } from "../icons/Other_Icons";
+
 import {
   HomeIcon,
   UpdateIcon,
   DictionaryIcon,
   CliIcon,
   AboutIcon,
-  MenuIcon,
-} from "../icons/Icon";
+} from "../icons/Section_Icons";
 
 /*
   ------------------
@@ -71,7 +72,7 @@ export default function Nav() {
     ------------------
   */
   function changeState() {
-    setIsVisible(prev => !prev);
+    setIsVisible((prev) => !prev);
   }
 
   return (
@@ -81,7 +82,10 @@ export default function Nav() {
         Mobile Menu Button (Visible only on small screens)
         ------------------
       */}
-      <button onClick={changeState} className="min-h-[50px] hidden max-sm:flex cursor-pointer w-full border-b-2 border-slate-100 p-2">
+      <button
+        onClick={changeState}
+        className="min-h-[50px] hidden max-sm:flex cursor-pointer w-full border-b-2 border-slate-100 p-2"
+      >
         <MenuIcon dimension={35} />
       </button>
 
@@ -92,11 +96,16 @@ export default function Nav() {
       */}
       <ul
         id="lists"
-        className={`flex ${isVisible ? "" : "max-sm:hidden"} max-sm:flex-col max-sm:items-start max-sm:gap-8 max-sm:p-l[1.4rem] gap-12 w-full justify-center items-center h-full flex-wrap p-2`}
+        className={`flex ${
+          isVisible ? "" : "max-sm:hidden"
+        } max-sm:flex-col max-sm:items-start max-sm:gap-8 max-sm:p-l[1.4rem] gap-12 w-full justify-center items-center h-full flex-wrap p-2`}
       >
         {navData &&
           navData.map((section, id) => (
-            <li key={id} className="active-section flex gap-2 justify-center items-center h-full">
+            <li
+              key={id}
+              className="active-section flex gap-2 justify-center items-center h-full"
+            >
               {section.icon}
               <a
                 href={section.path}
