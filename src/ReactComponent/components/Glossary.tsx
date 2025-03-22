@@ -1,6 +1,6 @@
 import { useState } from "react";
 import glossary from "../../../data/glossary.json";
-import { BookIcon, SearchIcon } from "../icons/Icon";
+import { BookIcon, SearchIcon } from "../icons/Other_Icons";
 
 const Glossary = () => {
   const [searchTerm, setSearchTerm] = useState("");
