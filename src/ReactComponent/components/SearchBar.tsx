@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { SearchIcon, SheetIcon } from "../icons/Icon";
+import { SearchIcon, SheetIcon } from "../icons/Other_Icons";
 import pathData from "../../../data/path.json";
 
 type PathData = {
@@ -62,21 +62,25 @@ export default function SearchBar() {
           Search
         </button>
       </div>
-      <div className="px-2 mt-1 absolute top-full">
-      {filteredResults.length > 0 && (
-        <div className=" bg-white border border-slate-300 shadow-lg rounded-lg w-[700px] max-w-full z-20">
-          <ul className="max-h-60 overflow-y-auto">
-            {filteredResults.map((item, index) => (
-              <a key={index} href={item.path} className="text-indigo-500">
-              <li className="p-2 border-b border-slate-200 hover:bg-indigo-100 flex gap-2">
-                <SheetIcon color="oklch(0.585 0.233 277.117)"/>
-                  {item.name}
-              </li>
-              </a>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className="px-2 mt-1 absolute w-full top-full flex justify-center items-center">
+        {filteredResults.length > 0 && (
+          <div className=" bg-white border border-slate-300 shadow-lg rounded-lg w-full max-w-[700px] z-20">
+            <ul className="max-h-60 overflow-y-auto">
+              {filteredResults.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.path}
+                  className="text-slate-400 italic"
+                >
+                  <li className="p-2 border-b border-slate-200 hover:bg-indigo-100 flex gap-2">
+                    <SheetIcon color="oklch(0.828 0.111 230.318)" />
+                    {item.name}
+                  </li>
+                </a>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
