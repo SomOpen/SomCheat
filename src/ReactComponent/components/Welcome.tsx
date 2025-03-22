@@ -1,29 +1,27 @@
 import { useState, useEffect } from "react";
-import '../../styles/global.css';
-import {
-  SmileIcon,
-  SmileBeamIcon,
-  WinkFaceIcon,
-  GithubIcon,
-  DocsIcon,
-} from "../icons/Icon";
-
+import "../../styles/global.css";
+import { DocsIcon } from "../icons/Other_Icons";
+import { SmileIcon, SmileBeamIcon, WinkFaceIcon } from "../icons/Welcome_Icons";
+import { GithubIcon } from "../icons/Social_Icons";
 /* ------------------
     Welcome Messages
 ------------------ */
 const welcome_messages: Array<object> = [
   {
     icon: <SmileIcon color="#6364f1" />,
-    message: 
-    <>
-      Ku soo dhowow  <span className="text-indigo-400">SomCheat</span>! Xasuusin degdeg ah oo koodhkaaga fududeynaya. 🚀
-    </>,
+    message: (
+      <>
+        Ku soo dhowow <span className="text-indigo-400">SomCheat</span>!
+        Xasuusin degdeg ah oo koodhkaaga fududeynaya. 🚀
+      </>
+    ),
   },
   {
     icon: <SmileBeamIcon color="#6364f1" />,
     message: (
       <>
-        Ma u baahan tahay xasuusin degdeg ah? <span className="text-indigo-400">SomCheat</span> waa diyaar! 💡
+        Ma u baahan tahay xasuusin degdeg ah?{" "}
+        <span className="text-indigo-400">SomCheat</span> waa diyaar! 💡
       </>
     ),
   },
@@ -63,9 +61,7 @@ export default function Welcome() {
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{icon}</span>
-          <p
-            className="roboto italic font-bold text-center text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]"
-          >
+          <p className="roboto italic font-bold text-center text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]">
             {message}
           </p>
         </div>
@@ -78,15 +74,19 @@ export default function Welcome() {
            Contribute Button
         ------------------ */}
         <button className="cursor-pointer flex gap-2 items-center border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
-          <span className="font-semibold text-slate-200 hover:text-blue-300">Contribute</span>
-          <GithubIcon color="#e2e8f0"/>
+          <span className="font-semibold text-slate-200 hover:text-blue-300">
+            Contribute
+          </span>
+          <GithubIcon color="#e2e8f0" />
         </button>
         {/* ------------------
            Read Docs Button
         ------------------ */}
         <button className="flex gap-2 items-center cursor-pointer border-2 border-slate-300 p-2 rounded-md bg-slate-100">
-          <span className="font-semibold text-indigo-400 hover:text-blue-300">Read Docs</span>
-          <DocsIcon color="oklch(0.673 0.182 276.935)"/>
+          <span className="font-semibold text-indigo-400 hover:text-blue-300">
+            Read Docs
+          </span>
+          <DocsIcon color="oklch(0.673 0.182 276.935)" />
         </button>
       </div>
     </div>
