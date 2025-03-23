@@ -1,11 +1,11 @@
-import { WelcomeIcon } from "../icons/Welcome_Icons";
+import { FireIcon } from "../icons/Other_Icons";
 const About = () => {
   return (
     <main className="hero flex flex-col items-center justify-center p-8 bg-gray-50">
       <div className="relative w-[900px] pt-16 max-w-full bg-white border-2 border-slate-200 min-h-[300px] shadow-md p-4 rounded-lg">
         {/* Icon */}
         <span className="absolute top-2 left-[50%] border-b-2 pb-2 border-slate-200">
-          {<WelcomeIcon dimension={34} color="#62748e" />}
+          {<FireIcon dimension={34} color="oklch(0.585 0.233 277.117)" />}
         </span>
         {/* Header */}
         <h1 className="text-2xl sm:text-4xl font-bold text-slate-600 mb-6 text-center">
