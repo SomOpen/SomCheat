@@ -7,35 +7,54 @@ import {
   Section,
   MessageBox,
   Link,
+  Intro
 } from "../../ReactComponent/components/Layout";
 
+<Intro title="Javascript">
+This code only works on javascript environment. This code only works on javascript environment.
+</Intro>
+
+<Layout>
 <Section>
+# This is header one
+## This is header two
+  `This code only works on javascript environment.`
 <Code>
-```js
-    // @ts-check
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-
-import tailwindcss from '@tailwindcss/vite';
-
-import mdx from '@astrojs/mdx';
-
-// https://astro.build/config
-export default defineConfig({
-  markdown: {
-    shikiConfig: {
-      theme: 'solarized-light',
-    }},
-  devToolbar: {
-    enabled: false
-  },
-
-  vite: {
-    plugins: [tailwindcss()]
-  },
-
-  integrations: [react(), mdx()]
-});
-```
+  ```js
+    console.log("Hello Adam");
+  ```
 </Code>
+<MessageBox type="warning">
+  This code only works on javascript `environment`.
+</MessageBox>
+<Link 
+  title="React Documentation"
+  url="https://react.dev/"
+  description="Official documentation for React.js."
+/>
 </Section>
+  <Section>
+  `This is a highlighted text`
+  <Code>
+    ```lua
+      print("Hello Adam");
+    ```
+  </Code>
+  <MessageBox type="alert">
+    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </MessageBox>
+  <MessageBox type="error">
+   In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </MessageBox>
+  <MessageBox type="warning">
+    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </MessageBox>
+    This a markdown text
+    [text](hellow)
+    1. Markdown list
+    2. Another markdown list
+    *Italic text*
+    **Bold text**
+    `Code Highlighted`
+</Section>
+</Layout>
