@@ -8,7 +8,7 @@ import UnfinishedTasks from "./UnfinishedTasks";
 import { StatusIcon } from "../icons/Status_Icons";
 import { DateIcon } from "../icons/Other_Icons";
 import { RightArrow, DownArrow } from "../icons/Arrow_Icons";
-import { FileCodeIcon, JsIcon } from "../icons/File_Icons";
+import icon_detector from "../helpers/icon_detector";
 
 export default function Updates() {
   const dir = extractFolders();
@@ -88,7 +88,9 @@ export default function Updates() {
             >
               {/* Title and Icon */}
               <div className="flex gap-3 items-center">
-                <JsIcon />
+                {
+                  icon_detector(dir[i])
+                }
                 <h1 className="text-[1.2rem] font-semibold text-slate-500 italic">
                   {replacer(dir[i])}
                 </h1>
