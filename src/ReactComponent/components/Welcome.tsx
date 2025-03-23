@@ -73,21 +73,25 @@ export default function Welcome() {
         {/* ------------------
            Contribute Button
         ------------------ */}
-        <button className="cursor-pointer flex gap-2 items-center border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
-          <span className="font-semibold text-slate-200 hover:text-blue-300">
-            Contribute
-          </span>
-          <GithubIcon color="#e2e8f0" />
-        </button>
+        <a href="https://github.com/Adam-Elmi/SomCheat" title="Contribute to this project">
+          <button className="cursor-pointer flex gap-2 items-center border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
+            <span className="font-semibold text-slate-200 hover:text-blue-300">
+              Contribute
+            </span>
+            <GithubIcon color="#e2e8f0" />
+          </button>
+        </a>
         {/* ------------------
            Read Docs Button
         ------------------ */}
-        <button className="flex gap-2 items-center cursor-pointer border-2 border-slate-300 p-2 rounded-md bg-slate-100">
-          <span className="font-semibold text-indigo-400 hover:text-blue-300">
-            Read Docs
-          </span>
-          <DocsIcon color="oklch(0.673 0.182 276.935)" />
-        </button>
+        <a href="/" title="Read documentation">
+          <button className="flex gap-2 items-center cursor-pointer border-2 border-slate-300 p-2 rounded-md bg-slate-100">
+            <span className="font-semibold text-indigo-400 hover:text-blue-300">
+              Read Docs
+            </span>
+            <DocsIcon color="oklch(0.673 0.182 276.935)" />
+          </button>
+        </a>
       </div>
     </div>
   );
