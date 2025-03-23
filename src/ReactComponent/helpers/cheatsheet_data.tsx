@@ -3,10 +3,7 @@ import dynamicPath from "../../utils/dynamic_path";
 import { getData, getIndex } from "../../utils/handle_data";
 import getProgress from "../../utils/progress";
 import { filterTasks } from "../../utils/filter_tasks";
-
-console.log(filterTasks());
-
-
+import icon_detector from "./icon_detector";
 
 // Programming Languages
 export const languagesData = [
@@ -16,7 +13,9 @@ export const languagesData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: <JsIcon />,
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -28,7 +27,9 @@ export const languagesData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -40,7 +41,9 @@ export const languagesData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -52,7 +55,9 @@ export const languagesData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -64,7 +69,9 @@ export const languagesData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -80,7 +87,9 @@ export const databasesData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -96,7 +105,9 @@ export const webDevelopmentData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -112,7 +123,9 @@ export const operatingSystemData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -128,7 +141,9 @@ export const versionControlData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
@@ -144,7 +159,9 @@ export const devToolsData = [
     get path() {
       return dynamicPath(this.id);
     },
-    icon: "",
+    get icon() {
+      return icon_detector(this.id);
+    },
     lastUpdate: "Feb 27, 2025",
     get progress() {
       return getProgress(getIndex, getData, this);
