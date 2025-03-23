@@ -1,6 +1,7 @@
 ---
 import { RightArrow } from "../ReactComponent/icons/Arrow_Icons";
 import { HomeIcon2 } from "../ReactComponent/icons/Section_Icons";
+import PathComponent from "../ReactComponent/helpers/PathComponent";
 const { path = "/" } = Astro.props;
 ---
 
@@ -19,11 +20,8 @@ class="w-full min-h-[50px] border-b-2 border-indigo-400 flex items-center px-4 b
       <HomeIcon2 dimension={30} color="#62748e" />
     </a>
     <RightArrow dimension={30} color="oklch(0.585 0.233 277.117)" />
-    <a
-      href={path}
-      class="no-underline italic hover:text-indigo-500 text-slate-500"
-      title={path[0].replace("/", "") + path.slice(1)}
-      >{path[0].replace("/", "") + path.slice(1)}</a
-    >
+    {
+      <PathComponent path={path} client:load/>
+    }
   </div> 
 </nav>
