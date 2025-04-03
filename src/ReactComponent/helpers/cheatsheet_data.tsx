@@ -4,11 +4,10 @@ import { getData, getIndex } from "../../utils/handle_data";
 import getProgress from "../../utils/progress";
 import { filterTasks } from "../../utils/filter_tasks";
 import icon_detector from "./icon_detector";
-
 /* 
-  ------------------
-  Programming languages
-  ------------------
+------------------
+Programming languages
+------------------
 */
 export const languagesData = [
   {
