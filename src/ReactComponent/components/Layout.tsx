@@ -10,7 +10,7 @@ import {
   LinkIcon,
 } from "../icons/Other_Icons";
 import { AlertIcon, WarningIcon, ErrorIcon } from "../icons/Indicator_Icons";
-import { FileCodeIcon } from "../icons/File_Icons";
+import { FileCodeIcon } from "../icons/lang_icons";
 
 /*
   ------------------
@@ -65,13 +65,11 @@ export function CodeBlock({ children, fileName = "" }: Props) {
       }
     }
   }, [children]);
-  {
-    /*
+/*
   ------------------
   Fallback if navigator.clipboard is not supported
   ------------------
 */
-  }
   const fallbackCopyText = (text: string) => {
     const textArea = document.createElement("textarea");
     textArea.value = text;
@@ -92,13 +90,12 @@ export function CodeBlock({ children, fileName = "" }: Props) {
       console.warn("No code block found.");
       return;
     }
-    {
-      /*
+
+/*
   ------------------
   navigator.clipboard
   ------------------
 */
-    }
     if (navigator.clipboard) {
       navigator.clipboard
         .writeText(codeText)
