@@ -1,0 +1,76 @@
+---
+import { filterTasks, extractFolders } from "../utils/filter_tasks";
+import { ListIcon } from "../ReactComponent/icons/Other_Icons";
+import { ContentsIcon } from "../ReactComponent/icons/Other_Icons";
+const path = Astro.originPathname;
+const target_path = path.slice(path.lastIndexOf("/") + 1);
+const target_file = extractFolders().findIndex((filename: any )=> filename === target_path);
+---
+
+<div class="w-full bg-slate-50">
+  <div
+    class="relative w-full bg-amber-50 border-b-2 border-slate-200 border-dashed p-2"
+    id="section-bar"
+  >
+    <button id="display-btn" class="absolute top-2 right-4 cursor-pointer">
+      <span
+        class="flex gap-2 p-2 border-2 border-slate-300 text-slate-500 font-semibold bg-slate-100 rounded-md"
+      >
+        <ListIcon color="#62748e" />
+        <span id="state" class="transition-all duration-300 ease-in-out">Hide</span>
+      </span>
+    </button>
+    <div class="flex gap-2 items-center overflow-hidden">
+      <div
+        class="pb-1 border-b-2 border-dashed flex gap-2 justify-center items-center border-slate-200"
+      >
+        <ContentsIcon dimension={35} />
+        <span class="text-[1.5rem] font-bold text-slate-400"> Contents </span>
+      </div>
+    </div>
+    <div
+      id="contents"
+      class="w-full overflow-hidden transition-all duration-300 ease-in-out"
+    >
+      <div class="w-full flex items-center gap-5 flex-wrap h-fit p-2">
+        {
+          filterTasks &&
+            filterTasks()[target_file][target_path].finished_t.map((task: string) => (
+              <div class="p-2 rounded-sm flex items-center gap-2 bg-white border-2 border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200 ease-in-out">
+                <span
+                  class="px-3 py-1 border-[1.5px] border-slate-200 text-[1.3rem] text-slate-500"
+                  style="font-family: Grand Hotel;"
+                >
+                  #
+                </span>
+                <p class="font-medium text-blue-500">
+                  {task && task.slice(task.indexOf(":") + 1)}
+                </p>
+              </div>
+            ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="p-4 flex gap-8 flex-wrap bg-slate-50">
+    <slot />
+  </div>
+</div>
+
+<script>
+  const display_btn = document.getElementById("display-btn");
+  const contents_container = document.getElementById("contents");
+  const state = document.getElementById("state");
+  let isVisible = true;
+
+  if (display_btn && contents_container) {
+    display_btn.addEventListener("click", () => {
+      isVisible = !isVisible;
+      console.log(isVisible);
+      contents_container.style.maxHeight = isVisible ? "100%" : "0";
+      if (state) {
+        state.innerHTML = isVisible ? "Hide" : "Show";
+      }
+    });
+  }
+</script>
