@@ -1,59 +1,250 @@
 {
-    "js": {"name": "JavaScript", "path": "/cheatsheets/js"},
-    "ts": {"name": "TypeScript", "path": "/cheatsheets/ts"},
-    "py": {"name": "Python", "path": "/cheatsheets/py"},
-    "java": {"name": "Java", "path": "/cheatsheets/java"},
-    "c": {"name": "C", "path": "/cheatsheets/c"},
-    "cpp": {"name": "C++", "path": "/cheatsheets/cpp"},
-    "cs": {"name": "C#", "path": "/cheatsheets/cs"},
-    "go": {"name": "Go", "path": "/cheatsheets/go"},
-    "rb": {"name": "Ruby", "path": "/cheatsheets/rb"},
-    "php": {"name": "PHP", "path": "/cheatsheets/php"},
-    "swift": {"name": "Swift", "path": "/cheatsheets/swift"},
-    "kotlin": {"name": "Kotlin", "path": "/cheatsheets/kotlin"},
-    "dart": {"name": "Dart", "path": "/cheatsheets/dart"},
-    "r": {"name": "R", "path": "/cheatsheets/r"},
-    "rust": {"name": "Rust", "path": "/cheatsheets/rust"},
-    "bash": {"name": "Bash", "path": "/cheatsheets/bash"},
-    "powershell": {"name": "PowerShell", "path": "/cheatsheets/powershell"},
-    "html": {"name": "HTML", "path": "/cheatsheets/html"},
-    "css": {"name": "CSS", "path": "/cheatsheets/css"},
-    "sql": {"name": "SQL", "path": "/cheatsheets/sql"},
-    "vscode": {"name": "VS Code", "path": "/cheatsheets/vscode"},
-    "os": {"name": "Operating Systems", "path": "/cheatsheets/os"},
-    "git": {"name": "Git", "path": "/cheatsheets/git"},
-    "github": {"name": "GitHub", "path": "/cheatsheets/github"},
-    "docker": {"name": "Docker", "path": "/cheatsheets/docker"},
-    "kubernetes": {"name": "Kubernetes", "path": "/cheatsheets/kubernetes"},
-    "ci_cd": {"name": "CI/CD", "path": "/cheatsheets/ci_cd"},
-    "testing": {"name": "Testing", "path": "/cheatsheets/testing"},
-    "designpatterns": {"name": "Design Patterns", "path": "/cheatsheets/designpatterns"},
-    "algorithms": {"name": "Algorithms", "path": "/cheatsheets/algorithms"},
-    "datastructures": {"name": "Data Structures", "path": "/cheatsheets/datastructures"},
-    "networking": {"name": "Networking", "path": "/cheatsheets/networking"},
-    "security": {"name": "Security", "path": "/cheatsheets/security"},
-    "cloud": {"name": "Cloud Computing", "path": "/cheatsheets/cloud"},
-    "api": {"name": "APIs", "path": "/cheatsheets/api"},
-    "graphql": {"name": "GraphQL", "path": "/cheatsheets/graphql"},
-    "rest": {"name": "REST APIs", "path": "/cheatsheets/rest"},
-    "linux": {"name": "Linux", "path": "/cheatsheets/linux"},
-    "windows": {"name": "Windows", "path": "/cheatsheets/windows"},
-    "macos": {"name": "macOS", "path": "/cheatsheets/macos"},
-    "react": {"name": "React", "path": "/cheatsheets/react"},
-    "vue": {"name": "Vue", "path": "/cheatsheets/vue"},
-    "angular": {"name": "Angular", "path": "/cheatsheets/angular"},
-    "svelte": {"name": "Svelte", "path": "/cheatsheets/svelte"},
-    "nextjs": {"name": "Next.js", "path": "/cheatsheets/nextjs"},
-    "nuxtjs": {"name": "Nuxt.js", "path": "/cheatsheets/nuxtjs"},
-    "express": {"name": "Express", "path": "/cheatsheets/express"},
-    "nestjs": {"name": "NestJS", "path": "/cheatsheets/nestjs"},
-    "flask": {"name": "Flask", "path": "/cheatsheets/flask"},
-    "django": {"name": "Django", "path": "/cheatsheets/django"},
-    "spring": {"name": "Spring", "path": "/cheatsheets/spring"},
-    "laravel": {"name": "Laravel", "path": "/cheatsheets/laravel"},
-    "bootstrap": {"name": "Bootstrap", "path": "/cheatsheets/bootstrap"},
-    "tailwind": {"name": "Tailwind CSS", "path": "/cheatsheets/tailwind"},
-    "jquery": {"name": "jQuery", "path": "/cheatsheets/jquery"},
-    "astro": {"name": "Astro", "path": "/cheatsheets/astro"}
+  "js": {
+    "name": "JavaScript",
+    "path": "/cheatsheets/js"
+  },
+  "ts": {
+    "name": "TypeScript",
+    "path": "/cheatsheets/ts"
+  },
+  "py": {
+    "name": "Python",
+    "path": "/cheatsheets/py"
+  },
+  "lua": {
+    "name": "Lua",
+    "path": "/cheatsheets/lua"
+  },
+  "java": {
+    "name": "Java",
+    "path": "/cheatsheets/java"
+  },
+  "c": {
+    "name": "C",
+    "path": "/cheatsheets/c"
+  },
+  "cpp": {
+    "name": "C++",
+    "path": "/cheatsheets/cpp"
+  },
+  "cs": {
+    "name": "C#",
+    "path": "/cheatsheets/cs"
+  },
+  "go": {
+    "name": "Go",
+    "path": "/cheatsheets/go"
+  },
+  "rb": {
+    "name": "Ruby",
+    "path": "/cheatsheets/rb"
+  },
+  "php": {
+    "name": "PHP",
+    "path": "/cheatsheets/php"
+  },
+  "swift": {
+    "name": "Swift",
+    "path": "/cheatsheets/swift"
+  },
+  "kotlin": {
+    "name": "Kotlin",
+    "path": "/cheatsheets/kotlin"
+  },
+  "dart": {
+    "name": "Dart",
+    "path": "/cheatsheets/dart"
+  },
+  "r": {
+    "name": "R",
+    "path": "/cheatsheets/r"
+  },
+  "rust": {
+    "name": "Rust",
+    "path": "/cheatsheets/rust"
+  },
+  "bash": {
+    "name": "Bash",
+    "path": "/cheatsheets/bash"
+  },
+  "powershell": {
+    "name": "PowerShell",
+    "path": "/cheatsheets/powershell"
+  },
+  "html": {
+    "name": "HTML",
+    "path": "/cheatsheets/html"
+  },
+  "css": {
+    "name": "CSS",
+    "path": "/cheatsheets/css"
+  },
+  "firestore": {
+    "name": "Firestore",
+    "path": "/cheatsheets/firestore"
+  },
+  "redis": {
+    "name": "Redis",
+    "path": "/cheatsheets/redis"
+  },
+  "mysql": {
+    "name": "MySQL",
+    "path": "/cheatsheets/mysql"
+  },
+  "postgresql": {
+    "name": "PostgreSQL",
+    "path": "/cheatsheets/postgresql"
+  },
+  "mongodb": {
+    "name": "MongoDB",
+    "path": "/cheatsheets/mongodb"
+  },
+  "sqlite": {
+    "name": "SQLite",
+    "path": "/cheatsheets/sqlite"
+  },
+  "vscode": {
+    "name": "VS Code",
+    "path": "/cheatsheets/vscode"
+  },
+  "os": {
+    "name": "Operating Systems",
+    "path": "/cheatsheets/os"
+  },
+  "git": {
+    "name": "Git",
+    "path": "/cheatsheets/git"
+  },
+  "github": {
+    "name": "GitHub",
+    "path": "/cheatsheets/github"
+  },
+  "docker": {
+    "name": "Docker",
+    "path": "/cheatsheets/docker"
+  },
+  "kubernetes": {
+    "name": "Kubernetes",
+    "path": "/cheatsheets/kubernetes"
+  },
+  "ci_cd": {
+    "name": "CI/CD",
+    "path": "/cheatsheets/ci_cd"
+  },
+  "testing": {
+    "name": "Testing",
+    "path": "/cheatsheets/testing"
+  },
+  "designpatterns": {
+    "name": "Design Patterns",
+    "path": "/cheatsheets/designpatterns"
+  },
+  "algorithms": {
+    "name": "Algorithms",
+    "path": "/cheatsheets/algorithms"
+  },
+  "datastructures": {
+    "name": "Data Structures",
+    "path": "/cheatsheets/datastructures"
+  },
+  "networking": {
+    "name": "Networking",
+    "path": "/cheatsheets/networking"
+  },
+  "security": {
+    "name": "Security",
+    "path": "/cheatsheets/security"
+  },
+  "cloud": {
+    "name": "Cloud Computing",
+    "path": "/cheatsheets/cloud"
+  },
+  "api": {
+    "name": "APIs",
+    "path": "/cheatsheets/api"
+  },
+  "graphql": {
+    "name": "GraphQL",
+    "path": "/cheatsheets/graphql"
+  },
+  "rest": {
+    "name": "REST APIs",
+    "path": "/cheatsheets/rest"
+  },
+  "linux": {
+    "name": "Linux",
+    "path": "/cheatsheets/linux"
+  },
+  "windows": {
+    "name": "Windows",
+    "path": "/cheatsheets/windows"
+  },
+  "macos": {
+    "name": "macOS",
+    "path": "/cheatsheets/macos"
+  },
+  "react": {
+    "name": "React",
+    "path": "/cheatsheets/react"
+  },
+  "vue": {
+    "name": "Vue",
+    "path": "/cheatsheets/vue"
+  },
+  "angular": {
+    "name": "Angular",
+    "path": "/cheatsheets/angular"
+  },
+  "svelte": {
+    "name": "Svelte",
+    "path": "/cheatsheets/svelte"
+  },
+  "nextjs": {
+    "name": "Next.js",
+    "path": "/cheatsheets/nextjs"
+  },
+  "nuxtjs": {
+    "name": "Nuxt.js",
+    "path": "/cheatsheets/nuxtjs"
+  },
+  "express": {
+    "name": "Express",
+    "path": "/cheatsheets/express"
+  },
+  "nestjs": {
+    "name": "NestJS",
+    "path": "/cheatsheets/nestjs"
+  },
+  "flask": {
+    "name": "Flask",
+    "path": "/cheatsheets/flask"
+  },
+  "django": {
+    "name": "Django",
+    "path": "/cheatsheets/django"
+  },
+  "spring": {
+    "name": "Spring",
+    "path": "/cheatsheets/spring"
+  },
+  "laravel": {
+    "name": "Laravel",
+    "path": "/cheatsheets/laravel"
+  },
+  "bootstrap": {
+    "name": "Bootstrap",
+    "path": "/cheatsheets/bootstrap"
+  },
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "path": "/cheatsheets/tailwind"
+  },
+  "jquery": {
+    "name": "jQuery",
+    "path": "/cheatsheets/jquery"
+  },
+  "astro": {
+    "name": "Astro",
+    "path": "/cheatsheets/astro"
   }
-  
+}
