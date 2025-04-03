@@ -1,6 +1,6 @@
 import { DateIcon } from "../icons/Other_Icons";
 import { StatusIcon } from "../icons/Status_Icons";
-import { FileCodeIcon } from "../icons/File_Icons";
+import { FileCodeIcon } from "../icons/lang_icons";
 import { CompletedIcon, InProgressIcon, InCompleteIcon } from "../icons/Status_Icons";
 
 export default function Card({ cheatsheet }: { cheatsheet: any;}) {
@@ -84,7 +84,7 @@ function Label({progress}:{progress: number}) {
       return statusIcon(<InProgressIcon color="oklch(0.707 0.165 254.624)"/>, "In Progress");
     }
     else {
-      return statusIcon(<InCompleteIcon dimension={25} color="#fb64b6"/>, "Incomplete");
+      return statusIcon(<InCompleteIcon dimension={25} color="#fb64b6"/>, "Empty");
     }
   }
   return status();
