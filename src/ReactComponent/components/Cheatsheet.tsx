@@ -1,6 +1,5 @@
 import dataList from "../helpers/datalist";
-import { SheetIcon, DateIcon } from "../icons/Other_Icons";
-import { StatusIcon } from "../icons/Status_Icons";
+import { SheetIcon } from "../icons/Other_Icons";
 import Card from "./Card";
 
 export default function CheatSheet() {
