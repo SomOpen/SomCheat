@@ -1,8 +1,6 @@
 import pathJson from "../../data/path.json";
 import { extractFolders } from "./filter_tasks";
 
-
-
 export default function replacer(name_to_compare: string) {
     let list_of_names: string[] = extractFolders();
     list_of_names = list_of_names.map(_name => _name.toLowerCase());
