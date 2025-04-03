@@ -2,13 +2,11 @@
 layout: "../../Layouts/SecondLayout.astro"
 ---
 import Code from "../../Components/Code.astro";
-
-
-import Layout from "../../ReactComponent/content_components/Layout";
-import Section from "../../ReactComponent/content_components/Section";
-import MessageBox from "../../ReactComponent/content_components/MessageBox";
-import Link from "../../ReactComponent/content_components/Link";
-import Intro from "../../ReactComponent/content_components/Intro";
+import Structure from "../../Components/Structure.astro";
+import Section from "../../Components/Section.astro";
+import Message from "../../Components/Message.astro";
+import Link from "../../Components/Link.astro";
+import Intro from "../../Components/Intro.astro";
 
 <Intro title="Javascript">
 This code only works on javascript environment. 
@@ -17,9 +15,12 @@ This code only works on javascript environment.
 This code only works on javascript environment.
 This code only works on javascript environment. 
 This code only works on javascript environment.
+<Message type="warning">
+  First you should learn  `express.js or any backend`.
+</Message>
 </Intro>
 
-<Layout>
+<Structure>
 <Section>
 # This is header one
 ## This is header two
@@ -29,9 +30,9 @@ This code only works on javascript environment.
     console.log("Hello Adam");
   ```
 </Code>
-<MessageBox type="warning">
+<Message type="warning">
   This code only works on javascript `environment`.
-</MessageBox>
+</Message>
 <Link 
   title="React Documentation"
   url="https://react.dev/"
@@ -39,21 +40,20 @@ This code only works on javascript environment.
 />
 </Section>
   <Section>
-  `This is a highlighted text`
   <Code>
     ```lua
       print("Hello Adam");
     ```
   </Code>
-  <MessageBox type="alert">
+  <Message type="alert">
     In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
-  </MessageBox>
-  <MessageBox type="error">
+  </Message>
+  <Message type="error">
    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
-  </MessageBox>
-  <MessageBox type="warning">
+  </Message>
+  <Message type="warning">
     In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
-  </MessageBox>
+  </Message>
     This a markdown text
     [text](hellow)
     1. Markdown list
@@ -62,4 +62,52 @@ This code only works on javascript environment.
     **Bold text**
     `Code Highlighted`
 </Section>
-</Layout>
+<Section>
+  #  Functions & Methods 
+  <Code>
+    ```lua
+      print("Hello Adam");
+    ```
+  </Code>
+  <Message type="alert">
+    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </Message>
+  <Message type="error">
+   In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </Message>
+  <Message type="warning">
+    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </Message>
+    This a markdown text
+    [text](hellow)
+    1. Markdown list
+    2. Another markdown list
+    *Italic text*
+    **Bold text**
+    `Code Highlighted`
+</Section>
+<Section>
+  #  Functions & Methods 
+  <Code>
+    ```lua
+      print("Hello Adam");
+    ```
+  </Code>
+  <Message type="alert">
+    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </Message>
+  <Message type="error">
+   In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </Message>
+  <Message type="warning">
+    In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
+  </Message>
+    This a markdown text
+    [text](hellow)
+    1. Markdown list
+    2. Another markdown list
+    *Italic text*
+    **Bold text**
+    `Code Highlighted`
+</Section>
+</Structure>
