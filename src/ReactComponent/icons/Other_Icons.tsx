@@ -8,7 +8,6 @@ const defaultProps = {
   color: "currentColor",
 };
 
-
 /*
   ------------------
   Fire Icon Component
@@ -32,8 +31,6 @@ export function FireIcon({
     </svg>
   );
 }
-
-
 
 /* 
 ------------------
@@ -62,7 +59,6 @@ export function SearchIcon({
     </svg>
   );
 }
-
 
 /*
   ------------------
@@ -260,6 +256,72 @@ export function BookIcon({
       <path
         fill={color}
         d="M4 3h2v18H4zm14 0H7v18h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-2 6h-6V8h6zm0-2h-6V6h6z"
+      ></path>
+    </svg>
+  );
+}
+export function ContentsIcon({ dimension = defaultProps.dimension }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 16 16"
+    >
+      <g fill="none">
+        <path
+          fill="url(#fluentColorContentView160)"
+          d="M2 4.5A2.5 2.5 0 0 1 4.5 2h7A2.5 2.5 0 0 1 14 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5z"
+        ></path>
+        <path
+          fill="url(#fluentColorContentView161)"
+          d="M4 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M4.5 9a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM4 5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zm6 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
+        ></path>
+        <defs>
+          <linearGradient
+            id="fluentColorContentView160"
+            x1={6.286}
+            x2={10.883}
+            y1={2}
+            y2={13.353}
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#b3e0ff"></stop>
+            <stop offset={1} stopColor="#8cd0ff"></stop>
+          </linearGradient>
+          <linearGradient
+            id="fluentColorContentView161"
+            x1={4}
+            x2={13.609}
+            y1={4}
+            y2={7.266}
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#0094f0"></stop>
+            <stop offset={1} stopColor="#2764e7"></stop>
+          </linearGradient>
+        </defs>
+      </g>
+    </svg>
+  );
+}
+export function ListIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeWidth={2}
+        d="M12 8h15m-15 8h9m-9 8h15M7 24a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm0-8a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm0-8a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z"
       ></path>
     </svg>
   );
