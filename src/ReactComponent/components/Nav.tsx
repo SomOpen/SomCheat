@@ -5,7 +5,6 @@ import {
   HomeIcon,
   UpdateIcon,
   DictionaryIcon,
-  CliIcon,
   AboutIcon,
 } from "../icons/Section_Icons";
 
@@ -30,16 +29,6 @@ const navData: Array<Props> = [
     sectionName: "Home",
     path: "/",
     icon: <HomeIcon dimension={21} color="#6364f1" />,
-  },
-  {
-    sectionName: "Glossary",
-    path: "/glossary",
-    icon: <DictionaryIcon dimension={25} color="#fba8a8" />,
-  },
-  {
-    sectionName: "CLI",
-    path: "/cli",
-    icon: <CliIcon dimension={20} color="#afe262" />,
   },
   {
     sectionName: "Updates",
