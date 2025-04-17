@@ -8,7 +8,7 @@ const { title, url, description } = Astro.props;
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="block cursor-pointer group p-5 rounded-lg border border-gray-200 shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
+  class="block cursor-pointer group my-3 p-5 rounded-lg border border-gray-200 shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
 >
   <!-- Top Bar with Icon and Reference Label -->
   <div class="flex justify-between items-center mb-3">
@@ -21,9 +21,9 @@ const { title, url, description } = Astro.props;
   </div>
 
   <!-- Title -->
-  <h3 class="text-lg font-semibold text-slate-500 group-hover:text-blue-600 transition-colors duration-300">
+  <span class="block text-lg font-semibold text-slate-500 group-hover:text-blue-600 transition-colors duration-300">
     {title}
-  </h3>
+  </span>
 
   <!-- Description -->
   {description && (
