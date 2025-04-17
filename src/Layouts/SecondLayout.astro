@@ -20,38 +20,9 @@ const { title, frontmatter } = Astro.props;
 
 
 <style is:inline>
-/* Modern H1 with Icon */
-h1 {
-  font-size: 2.5rem;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #1f2937;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; 
-  padding-bottom: 0.5rem;
-  margin: 1rem 0;
-  border-bottom: 3px solid #3b82f6; 
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  transition: border-color 0.2s ease;
-}
-
-/* Icon */
-h1::before {
-  content: "#";
-  font-size: 2.5rem;
-  color: #3b82f6;
-}
-
-/* Hover Effect */
-h1:hover {
-  border-bottom-color: #1d4ed8;
-}
-/* Modern H1 with Icon */
-h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #6191f0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -63,89 +34,149 @@ h2 {
   transition: border-color 0.2s ease;
 }
 
-/* Icon */
+h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  border-bottom-color: #3b82f6;
+}
+h1::before {
+  content: "#";
+  font-size: 2.5rem;
+  color: #3b82f6;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: #111;
+  border-bottom-color: #4ed87e;
+}
 h2::before {
+  content: "#";
+  font-size: 2.2rem;
+  color: #4ed87e;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #222;
+  border-bottom-color: #d8c64e;
+}
+h3::before {
+  content: "#";
+  font-size: 2.2rem;
+  color: #d8c64e;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: #333;
+}
+h4::before {
   content: "#";
   font-size: 2.2rem;
   color: #ccc;
 }
 
-  /* Base styles */
-.astro-code {
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow-x: auto;
-  max-width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
+h5 {
+  font-size: 1rem;
+  color: #444;
+}
+h5::before {
+  content: "#";
+  font-size: 2.2rem;
+  color: #ccc;
 }
 
-/* Container styles */
-.code-container {
-  width: 100%;
-  max-width: 600px;
-  border: 2px solid #334155;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+h6 {
+  font-size: 0.875rem;
+  color: #555;
+}
+h6::before {
+  content: "#";
+  font-size: 2.2rem;
+  color: #ccc;
 }
 
-/* Header styles */
-.code-header {
-  background: #1e293b;
-  border-bottom: 1px solid #334155;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  justify-content: space-between;
-  color: #e2e8f0;
-  font-style: italic;
-}
-
+/* Paragraphs */
 p {
-  line-height: 2;
+  line-height: 1.8;
   display: inline;
+  font-size: 1rem;
 }
+
+/* Code blocks */
 code:not(.astro-code > code) {
   background-color: #e3f8d0;
   padding: 0 2px;
-}
-/* Default styles */
-ol, ol > li {
-  font-size: 1rem;
-  line-height: 2;
-  word-break: normal;
-  list-style: decimal;
-  padding-left: 8px;
-  padding-top: 8px;
+  font-family: monospace;
 }
 
+/* Ordered lists */
+ol, ol > li {
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style: decimal;
+}
+ol {
+  padding-left: 1.5rem;
+}
+
+ol > li {
+  color: #073ac7;
+}
+
+/* Responsive styles */
 @media (max-width: 640px) {
-  ol, ol > li {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    word-break: break-word;
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
   }
   p {
     font-size: 0.875rem;
     line-height: 1.5;
-    word-break: break-word;
   }
-}
-
-@media (max-width: 640px) {
+  ol, ol > li {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
   .astro-code {
     font-size: 0.75rem;
-    padding: 0.5rem; 
+    padding: 0.5rem;
   }
-
   .code-container {
     border-width: 1px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
-
   .code-header {
     padding: 0.25rem;
   }
 }
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  h5 {
+    font-size: 0.75rem;
+  }
+  h6 {
+    font-size: 0.625rem;
+  }
+}
+</style>
 
 </style>
