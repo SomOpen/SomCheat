@@ -9,7 +9,7 @@ const target_file = extractFolders().findIndex((filename: any )=> filename === t
 
 <div class="w-full bg-slate-50">
   <div
-    class="relative w-full bg-amber-50 border-b-2 border-slate-200 border-dashed p-2"
+    class="relative w-full bg-blue-50 border-b-2 border-slate-200 border-dashed p-2"
     id="section-bar"
   >
     <button id="display-btn" class="absolute top-2 right-4 cursor-pointer">
@@ -17,7 +17,7 @@ const target_file = extractFolders().findIndex((filename: any )=> filename === t
         class="flex gap-2 p-2 border-2 border-slate-300 text-slate-500 font-semibold bg-slate-100 rounded-md"
       >
         <ListIcon color="#62748e" />
-        <span id="state" class="transition-all duration-300 ease-in-out">Hide</span>
+        <span id="state" class="transition-all duration-300 ease-in-out">Show</span>
       </span>
     </button>
     <div class="flex gap-2 items-center overflow-hidden">
@@ -30,7 +30,7 @@ const target_file = extractFolders().findIndex((filename: any )=> filename === t
     </div>
     <div
       id="contents"
-      class="w-full overflow-hidden transition-all duration-300 ease-in-out"
+      class="w-full overflow-hidden transition-all duration-300 ease-in-out max-h-0"
     >
       <div class="w-full flex items-center gap-5 flex-wrap h-fit p-2">
         {
@@ -61,7 +61,7 @@ const target_file = extractFolders().findIndex((filename: any )=> filename === t
   const display_btn = document.getElementById("display-btn");
   const contents_container = document.getElementById("contents");
   const state = document.getElementById("state");
-  let isVisible = true;
+  let isVisible = false;
 
   if (display_btn && contents_container) {
     display_btn.addEventListener("click", () => {
