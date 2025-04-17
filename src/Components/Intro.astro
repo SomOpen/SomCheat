@@ -1,8 +1,9 @@
 ---
+import { DateIcon } from "../ReactComponent/icons/Other_Icons";
 const { title, children } = Astro.props;
 ---
 
-<div class="w-full p-5 border-2 bg-gray-800">
+<div class="w-full p-5 border-2 bg-gray-800 relative">
   <!-- Top Bar with Label -->
   <div class="flex justify-between items-center mb-3">
     <span class="text-md text-white bg-blue-500 px-2 py-1 rounded">
@@ -11,9 +12,14 @@ const { title, children } = Astro.props;
   </div>
 
   <!-- Title -->
-  <h3 class="text-2xl font-bold text-yellow-100 border-b-2 border-dashed w-fit mb-2 py-2">
+  <span class="block text-2xl font-bold text-yellow-100 border-b-2 border-dashed w-fit mb-2 py-2">
     {title}
-  </h3>
+  </span>
+  
+  <div class="flex gap-2 text-white absolute top-2 right-2">
+      <DateIcon dimension={20}/>
+      <span class="italic">1/2/2025</span>
+  </div>
 
   <!-- Description -->
   <span class="text-slate-200 mt-2 text-md leading-relaxed">
