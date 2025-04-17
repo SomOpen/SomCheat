@@ -81,7 +81,7 @@ export default function CodeBlock({ children, fileName = "" }: Props) {
   return (
     <div
       ref={containerRef}
-      className="w-full max-w-full border-2 border-slate-700 shadow-md"
+      className="w-full max-w-full border-2 border-slate-700 shadow-md my-3"
     >
       {/* Header */}
       <div className="w-full h-[50px] bg-gray-900 border-b border-gray-700 flex items-center p-2">
