@@ -7,7 +7,6 @@ const defaultProps = {
     dimension: 24,
     color: "currentColor",
   };
-
 /*
   ------------------
   Github Icon Component
