@@ -1,24 +1,25 @@
+import languagesData from "./languageData";
+import databasesData from "./databaseData";
+import frameworkData from "./frameworkData";
+import librariesData from "./librariesData";
+import platformsData from "./platformsData";
+import runtimeData from "./runtimeData";
+import devToolsData from "./devToolsData";
+
 import {
-  languagesData,
-  databasesData,
-  webDevelopmentData,
-  operatingSystemData,
-  versionControlData,
-  devToolsData,
-} from "./cheatsheet_data";
-import {
-  WebIcon,
+  CubesIcon,
   DatabaseIcon,
-  GitIcon,
+  LibraryIcon,
   OSIcon,
   DevToolsIcon,
-  CodeIcon
+  CodeIcon,
+  RuntimeIcon
 } from "../icons/Categories_Icons";
 
 const dataList = [
   {
     id: "langs",
-    _name: "Programming Languages",
+    _name: "Languages",
     data: languagesData,
     icon: <CodeIcon dimension={40} color="#6364f1" />,
     number_of_cheatsheets: languagesData.length,
@@ -31,25 +32,32 @@ const dataList = [
     number_of_cheatsheets: databasesData.length,
   },
   {
-    id: "web",
-    _name: "Web Development",
-    data: webDevelopmentData,
-    icon: <WebIcon dimension={40} color="#fecb66" />,
-    number_of_cheatsheets: webDevelopmentData.length,
+    id: "frame",
+    _name: "Frameworks",
+    data: frameworkData,
+    icon: <CubesIcon dimension={40} color="#fecb66" />,
+    number_of_cheatsheets: frameworkData.length,
   },
   {
     id: "os",
-    _name: "Operating System",
-    data: operatingSystemData,
+    _name: "Platforms",
+    data: platformsData,
     icon: <OSIcon dimension={45} color="#1aa5e7" />,
-    number_of_cheatsheets: operatingSystemData.length,
+    number_of_cheatsheets: platformsData.length,
   },
   {
-    id: "vc",
-    _name: "Version Control",
-    data: versionControlData,
-    icon: <GitIcon dimension={40} />,
-    number_of_cheatsheets: versionControlData.length,
+    id: "lib",
+    _name: "Libraries",
+    data: librariesData,
+    icon: <LibraryIcon dimension={35} color="#caf"/>,
+    number_of_cheatsheets: librariesData.length,
+  },
+  {
+    id: "run",
+    _name: "Runtime",
+    data: runtimeData,
+    icon: <RuntimeIcon dimension={40} color="#acd"/>,
+    number_of_cheatsheets: runtimeData.length,
   },
   {
     id: "dev",
