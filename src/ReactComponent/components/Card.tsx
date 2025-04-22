@@ -1,21 +1,45 @@
-import { DateIcon } from "../icons/Other_Icons";
+import {
+  DateIcon,
+  DesktopIcon,
+  MobileIcon,
+  WebIcon,
+} from "../icons/Other_Icons";
 import { StatusIcon } from "../icons/Status_Icons";
 import { FileCodeIcon } from "../icons/lang_icons";
-import { CompletedIcon, InProgressIcon, InCompleteIcon } from "../icons/Status_Icons";
+import {
+  CompletedIcon,
+  InProgressIcon,
+  InCompleteIcon,
+} from "../icons/Status_Icons";
 
-export default function Card({ cheatsheet }: { cheatsheet: any;}) {
+export default function Card({ cheatsheet }: { cheatsheet: any }) {
   return (
     <a href={cheatsheet.path}>
-      <div
-        className="relative bg-white border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full"
-      >
-        {/* 
+      <div className="relative bg-white border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
+        {/*
           ------------------
           Label
           ------------------
         */}
-          <Label progress={cheatsheet.progress}/>
-          {/* 
+        <div className="absolute top-2 right-10">
+          {cheatsheet.targets ? (
+            cheatsheet.targets === "mobile" ? (
+              <span className="text-orange-500">
+                <MobileIcon />
+              </span>
+            ) : cheatsheet.targets === "desktop" ? (
+              <span className="text-indigo-400">
+                <DesktopIcon />
+              </span>
+            ) : cheatsheet.targets === "web" ? (
+              <span className="text-sky-400">
+                <WebIcon />
+              </span>
+            ) : null
+          ) : null}
+        </div>
+          <Label progress={cheatsheet.progress} />
+        {/*
           ------------------
           Metadata of the cheatsheet such as cheatsheet name, icon and date
           ------------------
@@ -37,15 +61,15 @@ export default function Card({ cheatsheet }: { cheatsheet: any;}) {
             </span>
           </span>
         </div>
-          {/* 
+        {/*
           ------------------
-          Separator line 
+          Separator line
           ------------------
           */}
         <hr className="border-b border-slate-100 my-1" />
-          {/* 
+        {/*
           ------------------
-          Download bar 
+          Progress bar
           ------------------
           */}
         <div
@@ -72,20 +96,31 @@ export default function Card({ cheatsheet }: { cheatsheet: any;}) {
   );
 }
 
-function Label({progress}:{progress: number}) {
+function Label({ progress }: { progress: number }) {
   const statusIcon = (icon: React.ReactElement, title: string) => {
-    return <span title={title} className="absolute top-2 right-2">{icon}</span>
-  }
+    return (
+      <span title={title} className="absolute top-2 right-2">
+        {icon}
+      </span>
+    );
+  };
   const status = () => {
-    if(progress && progress === 100) {
-      return statusIcon(<CompletedIcon dimension={22} color="oklch(0.765 0.177 163.223)"/>, "Completed");
+    if (progress && progress === 100) {
+      return statusIcon(
+        <CompletedIcon dimension={22} color="oklch(0.765 0.177 163.223)" />,
+        "Completed",
+      );
+    } else if (progress > 0 && progress < 100) {
+      return statusIcon(
+        <InProgressIcon color="oklch(0.707 0.165 254.624)" />,
+        "In Progress",
+      );
+    } else {
+      return statusIcon(
+        <InCompleteIcon dimension={25} color="#fb64b6" />,
+        "Empty",
+      );
     }
-    else if(progress > 0 && progress < 100) {
-      return statusIcon(<InProgressIcon color="oklch(0.707 0.165 254.624)"/>, "In Progress");
-    }
-    else {
-      return statusIcon(<InCompleteIcon dimension={25} color="#fb64b6"/>, "Empty");
-    }
-  }
+  };
   return status();
 }
