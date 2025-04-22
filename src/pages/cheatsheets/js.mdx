@@ -31,8 +31,11 @@ This code only works on javascript environment.
     <Section>
       #  Functions & Methods 
       <Code>
-        ```lua
-          print("Hello Adam");
+        ```js
+        export default function dynamicPath(path: string) {
+            if(!path) throw new Error("Please provide a path!");
+            return `cheatsheets/${path.split(" ")[0].toLowerCase()}`;
+        }
         ```
       </Code>
       <Message type="alert">
