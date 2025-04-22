@@ -28,11 +28,13 @@ export default function CheatSheet() {
                   ? _name
                   : id === "dbs"
                   ? _name
-                  : id === "web"
+                  : id === "frame"
                   ? _name
                   : id === "os"
                   ? _name
-                  : id === "vc"
+                  : id === "lib"
+                  ? _name
+                  : id === "run"
                   ? _name
                   : id === "dev"
                   ? _name
