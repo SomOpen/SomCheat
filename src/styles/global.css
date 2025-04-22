@@ -31,6 +31,7 @@ main {
 }
 .astro-code{
   padding: 10px;
+  line-height: 1.8;
 }
 /* All tasks */
 .show-all-tasks {
