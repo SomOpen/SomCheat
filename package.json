@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "handle": "node handle_cheatsheet_tasks/handle_tasks.js"
+    "create": "node create_cheatsheet_tasks/create_tasks.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.1.0",
