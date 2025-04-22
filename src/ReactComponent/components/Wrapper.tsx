@@ -1,9 +1,14 @@
-import { CompletedIcon, InProgressIcon, InCompleteIcon } from "../icons/Status_Icons";
+import {
+  CompletedIcon,
+  InProgressIcon,
+  InCompleteIcon,
+} from "../icons/Status_Icons";
 import { ArrowRightLongIcon } from "../icons/Arrow_Icons";
 import SearchBar from "./SearchBar";
 import Welcome from "./Welcome";
+import { MobileIcon, DesktopIcon, WebIcon } from "../icons/Other_Icons";
 
-const statusIcons = [
+const indicators = [
   {
     icon: <CompletedIcon dimension={22} color="oklch(0.765 0.177 163.223)" />,
     indicator: "Complete Cheatsheets",
@@ -16,6 +21,18 @@ const statusIcons = [
     icon: <InCompleteIcon color="#fb64b6" />,
     indicator: "Empty Cheatsheets",
   },
+  {
+    icon: <MobileIcon color="oklch(0.705 0.213 47.604)" />,
+    indicator: "For Mobile",
+  },
+  {
+    icon: <DesktopIcon color="oklch(0.673 0.182 276.935)" />,
+    indicator: "For desktop",
+  },
+  {
+    icon: <WebIcon color="oklch(0.746 0.16 232.661)" />,
+    indicator: "For Web",
+  },
 ];
 
 export default function Wrapper() {
@@ -27,8 +44,8 @@ export default function Wrapper() {
       <SearchBar />
       <div className="w-full flex justify-center items-center">
         <div className="min-w-[200px] flex flex-col gap-2 bg-white min-h-[100px] shadow-md p-2 rounded border-2 border-slate-100 mt-5">
-          {statusIcons &&
-            statusIcons.map((status, id) => (
+          {indicators &&
+            indicators.map((status, id) => (
               <div key={id} className="flex gap-2">
                 {status.icon} <ArrowRightLongIcon color="#ddd" />
                 <span className="text-blue-400 italic">{status.indicator}</span>
