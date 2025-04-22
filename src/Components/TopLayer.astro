@@ -1,31 +1,33 @@
 ---
-import { FireIcon } from "../ReactComponent/icons/Other_Icons";
+import logo from "../../public/som.svg";
 import { GithubIcon, DiscordIcon } from "../ReactComponent/icons/Social_Icons";
 import { CliIcon } from "../ReactComponent/icons/Section_Icons";
 ---
 
 <div
-  class="w-full bg-[#112] p-[4px_10px] min-h-[30px] border-b-4 border-indigo-400 text-white flex items-center justify-between flex-wrap gap-[10px]"
+    class="w-full bg-[#112] p-[4px_10px] min-h-[30px] border-b-4 border-indigo-400 text-white flex items-center justify-between flex-wrap gap-[10px]"
 >
-  <div
-    style={{ fontFamily: "Grand Hotel" }}
-    class="text-[1.5rem] text-indigo-400 font-medium flex justify-center items-center gap-[5px]"
-  >
-    <FireIcon />
-    <a href="/">SomCheat</a>
-  </div>
-  <div class="flex justify-center items-center gap-[10px]">
-    <a href="https://discord.com/users/adamcade">
-      <DiscordIcon />
-    </a>
-    <a href="https://github.com/Adam-Elmi">
-      <GithubIcon dimension={26} />
-    </a>
-    <button
-      class="p-[4px_8px] bg-[#ffcb66] rounded-[10px] flex justify-center items-center gap-[10px] cursor-pointer"
+    <div
+        style={{ fontFamily: "Grand Hotel" }}
+        class="text-[1.5rem] text-indigo-400 font-medium flex justify-center items-center gap-2"
     >
-      <CliIcon dimension={20} color="#333" />
-      <span class="text-[#333] italic font-medium text-[1rem]"> v1.1.5 </span>
-    </button>
-  </div>
+        <img src={logo.src} alt="logo" width={14} height={14}>
+        <a href="/">SomCheat</a>
+    </div>
+    <div class="flex justify-center items-center gap-[10px]">
+        <a href="https://discord.com/users/adamcade">
+            <DiscordIcon />
+        </a>
+        <a href="https://github.com/Adam-Elmi">
+            <GithubIcon dimension={26} />
+        </a>
+        <button
+            class="p-[4px_8px] bg-[#ffcb66] rounded-[10px] flex justify-center items-center gap-[10px] cursor-pointer"
+        >
+            <CliIcon dimension={20} color="#333" />
+            <span class="text-[#333] italic font-medium text-[1rem]">
+                v1.1.5
+            </span>
+        </button>
+    </div>
 </div>
