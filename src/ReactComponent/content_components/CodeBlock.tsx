@@ -81,10 +81,10 @@ export default function CodeBlock({ children, fileName = "" }: Props) {
   return (
     <div
       ref={containerRef}
-      className="w-full max-w-full border-2 border-slate-700 shadow-md my-3"
+      className="w-full max-w-full border-2 border-slate-700 shadow-md my-3 dark:border-slate-400/10"
     >
       {/* Header */}
-      <div className="w-full h-[50px] bg-gray-900 border-b border-gray-700 flex items-center p-2">
+      <div className="w-full h-[50px] dark:bg-[#0C0C0C] bg-gray-900 border-b border-gray-700 flex items-center p-2">
         <span className="flex items-center italic text-slate-300 gap-2 flex-1">
           <FileCodeIcon color="#62748e" dimension={20} /> {fileName}
         </span>
