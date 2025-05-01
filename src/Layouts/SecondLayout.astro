@@ -7,7 +7,7 @@ const { title, frontmatter } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <BasicHead  title={ title }/>
 	<body>
     <Nav path={frontmatter.url}/>
@@ -109,7 +109,28 @@ code:not(.astro-code > code) {
   background-color: #e3f8d0;
   padding: 0 2px;
   font-family: monospace;
+  border-radius: 2px;
 }
+
+[data-theme="dark"] code:not(.astro-code > code) {
+  color: #1f2937;
+  background-color: #f8f8d0d4;
+}
+
+[data-theme="dark"] h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+[data-theme="dark"] ol > li {
+  color: #cdf;
+}
+[data-theme="dark"] #layout-container {
+  background-color: #101012;
+}
+[data-theme="dark"] #block-section {
+  border: 1.5px solid #aaaaaa2d;
+}
+
 
 /* Ordered lists */
 ol, ol > li {
@@ -178,5 +199,4 @@ ol > li {
   }
 }
 </style>
-
-</style>
+<script src="../utils/applyTheme.ts"></script>
