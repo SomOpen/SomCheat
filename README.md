@@ -1,4 +1,7 @@
-## SomCheat
+<p align="left">
+  <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/som.svg" alt="SomCheat Logo" width="40" style="vertical-align: middle;"/>
+  <span style="font-size: 1.8em; font-weight: bold; vertical-align: middle;">SomCheat</span>
+</p>
 
 **SomCheat** waa il muhiim ah oo aad ka heli karto cheatsheets (xasuusiyayaal) ku qoran **af Soomaali**, si sahlanna kuu xasuusisa macluumaad hore aad taqaanay.
 
