@@ -219,7 +219,7 @@ import Link from "../../Components/Link.astro";
 
 ```mdx
 <Structure>
-  <!-- Qaybaha Section-ka halkan geli -->
+  Qaybaha Section-ka halkan geli
 </Structure>
 ```
 
@@ -266,7 +266,7 @@ import Link from "../../Components/Link.astro";
 
 ```mdx
 <Section>
-  <!-- Qoraal, code, fariimo, iyo links halkan geli -->
+  Qoraal, code, fariimo, iyo links halkan geli
 </Section>
 ```
 
@@ -345,16 +345,16 @@ import Link from "../../Components/Link.astro";
 ---
 
 ### Tusaale:
-
-    <Code>
+```
+<Code>
 ```js
-      const greet = (name) => {
-        console.log("Hello " + name);
-      };
-      greet("Adam");
+    const greet = (name) => {
+    console.log("Hello " + name);
+    };
+    greet("Adam");
   ```
-
-    </Code>
+</Code>
+```
 
 ---
 
