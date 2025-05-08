@@ -469,6 +469,13 @@ import Link from "../../Components/Link.astro";
 
 ```mdx
 
+import Intro from "../../Components/Intro.astro";
+import Structure from "../../Components/Structure.astro";
+import Section from "../../Components/Section.astro";
+import Code from "../../Components/Code.astro";
+import Message from "../../Components/Message.astro";
+import Link from "../../Components/Link.astro";
+
 <Intro title="JavaScript">
   JavaScript waa luuqad barnaamij oo loogu talagalay in lagu daro shaqooyin firfircoon oo bogagga webka ah. Waa luuqad dhinaca browser-ka ah oo aad muhiim ugu ah horumarka webka casriga ah.
   <Message type="warning">
