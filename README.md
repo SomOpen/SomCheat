@@ -467,6 +467,8 @@ import Link from "../../Components/Link.astro";
 
 ## Tusaale Dhamaystiran oo Isticmaalka Dhammaan Components
 
+#### `js.mdx`
+
 ```mdx
 
 import Intro from "../../Components/Intro.astro";
