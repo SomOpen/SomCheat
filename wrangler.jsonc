@@ -1,0 +1,7 @@
+{
+  "name": "somcheat",
+  "compatibility_date": "2025-05-08",
+  "assets": {
+    "directory": "./dist"
+  }
+}
