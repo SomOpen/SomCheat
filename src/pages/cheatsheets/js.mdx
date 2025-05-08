@@ -1,45 +1,121 @@
 ---
 layout: "../../Layouts/SecondLayout.astro"
 ---
-import Code from "../../Components/Code.astro";
+
+import Intro from "../../Components/Intro.astro";
 import Structure from "../../Components/Structure.astro";
 import Section from "../../Components/Section.astro";
+import Code from "../../Components/Code.astro";
 import Message from "../../Components/Message.astro";
 import Link from "../../Components/Link.astro";
-import Intro from "../../Components/Intro.astro";
 
-<Intro title="Javascript">
-This code only works on javascript environment. 
-This code only works on javascript environment.
-This code only works on javascript environment. 
-This code only works on javascript environment.
-This code only works on javascript environment. 
-This code only works on javascript environment.
+<Intro title="JavaScript">
+  JavaScript waa luuqad barnaamij oo loogu talagalay in lagu daro shaqooyin firfircoon oo bogagga webka ah. Waa luuqad dhinaca browser-ka ah oo aad muhiim ugu ah horumarka webka casriga ah.
+  <Message type="warning">
+    Kahor intaadan bilaabin, waxaa muhiim ah inaad faham guud ka haysato JavaScript.
+  </Message>
 </Intro>
 
 <Structure>
-    <Section>
-      #  Functions & Methods 
-      In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. `"Even if you walk on the edge of a sword, it's your path to carve."` Keep the vision clear, and don’t let obstacles block your way.
-      <Code>
-        ```lua
-          print("Hello Adam");
-        ```
-      </Code>
-      In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
-    </Section>
-    <Section>
-      #  Functions & Methods 
-      <Code>
-        ```js
-        export default function dynamicPath(path: string) {
-            if(!path) throw new Error("Please provide a path!");
-            return `cheatsheets/${path.split(" ")[0].toLowerCase()}`;
-        }
-        ```
-      </Code>
-      <Message type="alert">
-        In the end, if you can stay disciplined, manage your time well, and lean into the community when needed, it's possible. "Even if you walk on the edge of a sword, it's your path to carve." Keep the vision clear, and don’t let obstacles block your way.
-      </Message>
-    </Section>
+  <Section>
+    # Variables in JavaScript
+    ## Deklarashanka Xogta
+    `let`, `const`, iyo `var` waxaa loo isticmaalaa in lagu qeexo variables.
+    
+    <Code>
+      ```js
+      let name = "Adam";
+      const age = 25;
+      var city = "Hargeisa";
+      console.log(name, age, city);
+      ```
+    </Code>
+    
+    <Message type="alert">
+      Markaad isticmaaleyso `let` iyo `const`, waa muhiim inaad fahamto farqiga u dhexeeya labada. `const` waxaa loo isticmaalaa si loo xakameeyo qiimaha aan la bedeli karin.
+    </Message>
+    <Link 
+      title="JavaScript MDN Docs"
+      url="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      description="Halkan waxaad ka helaysaa dokumentiyada rasmiga ah ee JavaScript."
+    />
+  </Section>
+
+  <Section>
+    ## Functions in JavaScript
+    Function-ku waa habka loo abaabulo code-ka iyo in la sameeyo hawlo gaar ah.
+    <Code>
+      ```js
+      function greet(name) {
+        return `Hello, ${name}!`;
+      }
+      console.log(greet("Adam"));
+      ```
+    </Code>
+  
+    <Message type="warning">
+      Waa muhiim inaad si fiican u fahamto sida loo sameeyo functions si loo fududeeyo maamulka code-kaaga.
+    </Message>
+    
+  </Section>
+
+  <Section>
+    # Arrays in JavaScript
+    ## Loo yaqaan Liiska Xogta
+    Arrays waxaa loo isticmaalaa in lagu keydiyo xog badan oo la xiriirta.
+    <Code>
+      ```js
+      let fruits = ["apple", "banana", "orange"];
+      fruits.push("grape");
+      console.log(fruits);
+      ```
+    </Code>
+    <Message type="error">
+      Waa in aad ka digtoonaato in aad isticmaasho array-ka si aan habboonayn, gaar ahaan haddii ay tahay array waaweyn oo leh xog badan.
+    </Message>
+  </Section>
+
+  <Section>
+    # Functions and Methods in Arrays
+    ## Methods-ka Array-ka
+    Arrays waxay leeyihiin habab kala duwan sida `map()`, `filter()`, iyo `reduce()`.
+    <Code>
+      ```js
+      let numbers = [1, 2, 3, 4, 5];
+      let doubled = numbers.map(num => num * 2);
+      console.log(doubled);
+      ```
+    </Code>
+    <Message type="alert">
+      Isticmaalka `map()` wuxuu ku siinayaa array cusub iyadoo la adeegsanayo hawl gaar ah oo ku saabsan xogta array-ga.
+    </Message>
+  </Section>
 </Structure>
+
+<Intro title="React">
+  React waa maktabad JavaScript oo loo isticmaalo in lagu dhiso interfaces-ka isticmaalaha ee webka. Waxay awood siisaa in la abuuro components reusable ah iyo maamulka xaaladda (state).
+  <Message type="warning">
+    Kahor intaadan bilaabin React, waa muhiim inaad fahamto sida JavaScript u shaqeyso, gaar ahaan mawduucyada sida functions iyo arrays.
+  </Message>
+</Intro>
+
+<Structure>
+  <Section>
+    ## React Components
+    React waxa uu isticmaalaa "components" si uu u dhiso UI. Components-ka waa qaybaha dhismaha webka oo loo isticmaali karo marar badan.
+    <Code>
+      ```js
+      function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+      }
+
+      const element = <Welcome name="Adam" />;
+      ReactDOM.render(element, document.getElementById('root'));
+      ```
+    </Code>
+    <Message type="alert">
+      React components waa la qaadi karaa oo dib loo isticmaali karaa, taas oo ka dhigaysa horumarinta UI mid aad u habboon.
+    </Message>
+  </Section>
+</Structure>
+
