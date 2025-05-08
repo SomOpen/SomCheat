@@ -14,45 +14,46 @@ Tusaale ahaan, waxaa laga yaabaa inaad bil ka hor baratey luuqad cusub, aadna wa
 ---
 
 ### Folder Structure
-
+```
 SomCheat
 │
-├── .astro                       # Config file for Astro.
-├── .vscode                      # Vs code settings
+├── .astro/                      # Config file for Astro.
+├── .vscode/                     # VS Code settings.
 │
-├── cheatsheet_tasks             # Folder to store tasks.
+├── cheatsheet_tasks/            # Folder to store tasks.
 │   ├── js.txt                   # JS-related tasks.
 │   └── lua.txt                  # Lua-related tasks.
 │
-├── create_cheatsheet_tasks      # Create tasks folder.
+├── create_cheatsheet_tasks/     # Folder for task creation scripts.
 │   └── create_tasks.js          # Handles the creation of tasks.
 │
-├── data                          # Json data.
+├── data/                        # JSON data.
 │
-├── node_modules                 # NPM dependencies.
+├── node_modules/                # NPM dependencies.
 │
-├── public                        # Public files.
+├── public/                      # Public files.
 │
-├── src                           # Src
-│   ├── Components                # Astro components.
-│   ├── Layouts                   # Layout templates.
-│   ├── pages                     # Pages.
-│   ├── ReactComponent            # React components.
-│   ├── styles                    # Stylesheets (CSS).
-│   └── utils                     # Utility functions.
+├── src/                         # Source files.
+│   ├── Components/              # Astro components.
+│   ├── Layouts/                 # Layout templates.
+│   ├── pages/                   # Pages.
+│   ├── ReactComponent/          # React components.
+│   ├── styles/                  # Stylesheets (CSS).
+│   └── utils/                   # Utility functions.
 │
-├── tasks                         # Json tasks.
+├── tasks/                       # JSON tasks.
 │
-├── .gitignore                    # Git ignore.
-├── astro.config.mjs              # Astro config file.
-├── package.json                  # NPM package file.
-├── package-lock.json             # NPM lock file.
-├── README.md                     # README.
-└── tsconfig.json                 # TypeScript config.
+├── .gitignore                   # Git ignore file.
+├── astro.config.mjs             # Astro config file.
+├── package.json                 # NPM package file.
+├── package-lock.json            # NPM lock file.
+├── README.md                    # README file.
+└── tsconfig.json                # TypeScript config file.
+```
 
 ---
 
-## 📋 Cheatsheet Tasks
+## Cheatsheet Tasks
 
 Si aan u ogaano halka ay marayaan cheatsheet-yada, waxaan isticmaalnaa *cheatsheet tasks*. Tani waxay naga caawinaysaa inaan kala saarno:
 
@@ -94,14 +95,14 @@ SomCheat wuxuu isticmaalaa **MDX (Markdown + JSX)** si loogu sameeyo cheatsheets
 
 ### Folder Structure - Cheatsheets Folder
 
+```
 src/
-└── pages/
-    └── cheatsheets/
-        ├── index.astro
-        ├── js.mdx
-        └── lua.mdx
-
-
+├── pages/
+│   └── cheatsheets/
+│       ├── index.astro
+│       ├── js.mdx
+│       └── lua.mdx
+```
 
 ### Components la Heli Karo:
 
@@ -286,7 +287,7 @@ import Link from "../../Components/Link.astro";
 
 ### Tusaale:
 
-````mdx
+```mdx
 <Section>
   ## Loops (Wareegyo)
 
@@ -322,12 +323,9 @@ import Link from "../../Components/Link.astro";
 
 ### Qaabka Isticmaalka (`Syntax`):
 
-````mdx
+```mdx
 <Code>
-  ```language
-  // Your code here
-````
-
+  Halkan gali code-ka
 </Code>
 ```
 
@@ -348,17 +346,15 @@ import Link from "../../Components/Link.astro";
 
 ### Tusaale:
 
-````mdx
-<Code>
-  ```js
-  const greet = (name) => {
-    console.log("Hello " + name);
-  };
-  greet("Adam");
-````
+    <Code>
+```js
+      const greet = (name) => {
+        console.log("Hello " + name);
+      };
+      greet("Adam");
+  ```
 
-</Code>
-```
+    </Code>
 
 ---
 
@@ -485,6 +481,7 @@ import Link from "../../Components/Link.astro";
     # Variables in JavaScript
     ## Deklarashanka Xogta
     `let`, `const`, iyo `var` waxaa loo isticmaalaa in lagu qeexo variables.
+    
     <Code>
       ```js
       let name = "Adam";
@@ -493,6 +490,7 @@ import Link from "../../Components/Link.astro";
       console.log(name, age, city);
       ```
     </Code>
+    
     <Message type="alert">
       Markaad isticmaaleyso `let` iyo `const`, waa muhiim inaad fahamto farqiga u dhexeeya labada. `const` waxaa loo isticmaalaa si loo xakameeyo qiimaha aan la bedeli karin.
     </Message>
@@ -514,9 +512,11 @@ import Link from "../../Components/Link.astro";
       console.log(greet("Adam"));
       ```
     </Code>
+  
     <Message type="warning">
       Waa muhiim inaad si fiican u fahamto sida loo sameeyo functions si loo fududeeyo maamulka code-kaaga.
     </Message>
+    
   </Section>
 
   <Section>
