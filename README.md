@@ -159,7 +159,7 @@ import Link from "../../Components/Link.astro";
 
 ---
 
-## Qaybta 1aad: `Intro`
+## Component-ka 1aad: `Intro`
 
 `Intro` waxaa loo isticmaalaa in lagu bixiyo **hordhac** ama **sharraxaad kooban** ee ku saabsan cheatsheet-ka. Waxaa lagu dhigayaa bilowga file-ka/faylka si qofka akhrisanaya uu fahmo waxa mawduucaasi ku saabsan yahay.
 
@@ -209,7 +209,7 @@ import Link from "../../Components/Link.astro";
 
 ---
 
-## Qaybta 2aad: `Structure`
+## Component-ka 2aad: `Structure`
 
 `Structure` waxaa loo isticmaalaa in lagu habeeyo qaybaha kala duwan ee cheatsheet-ka. Waa sida **isku xidhaha guud** ee ku haya dhammaan **qaybaha hoose** sida `Section`, `Code`, `Message`, iyo kuwo kale.
 
@@ -256,7 +256,7 @@ import Link from "../../Components/Link.astro";
 
 ---
 
-## Qaybta 3aad: `Section`
+## Component-ka 3aad: `Section`
 
 `Section` waxaa loo isticmaalaa in lagu kala saaro ama lagu **qeexo qayb kasta oo mawduuc gaar ah** ah sida *variables*, *loops*, *functions*, iwm. Waxa uu ka shaqaynayaa gudaha `Structure`.
 
@@ -315,7 +315,7 @@ import Link from "../../Components/Link.astro";
 
 ---
 
-## Qaybta 4aad: `Code`
+## Component-ka 4aad: `Code`
 
 `Code` waxaa loo isticmaalaa in lagu muujiyo tusaalooyin **code** ah gudaha cheatsheet-ka. Waxa uu taageeraa **syntax highlighting** oo kuu ogolaanaysa inaad ku muujiso code si haboon.
 
@@ -359,7 +359,7 @@ import Link from "../../Components/Link.astro";
 ---
 
 
-## Qaybta 5aad: `Message`
+## Component-ka 5aad: `Message`
 
 `Message` waxaa loo isticmaalaa in lagu bixiyo **fariimo** gaar ah sida **digniin**, **talobixin**, ama **error**. Waxaa si gaar ah loogu isticmaalaa in lagu muujiyo fariimo muhiim ah ama digniin ku saabsan isticmaalka code-ka ama hawsha la qabanayo.
 
@@ -411,7 +411,7 @@ import Link from "../../Components/Link.astro";
 ---
 
 
-## Qaybta 6aad: `Link`
+## Component-ka 6aad: `Link`
 
 `Link` waxaa loo isticmaalaa in lagu bixiyo **link** muhiim ah oo tilmaamaya meelaha kale sida **documentation**, **website**, ama **resources**. Waxa uu u ogolaanayaa isticmaalaha inuu u guuro boggaga kale ee internetka.
 
