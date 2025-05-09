@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host",
-    "build": "astro build && cp dist/404/index.html dist/404.html",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "create": "node create_cheatsheet_tasks/create_tasks.js"
