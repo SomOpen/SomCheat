@@ -4,3 +4,6 @@ compatibility_date = "2025-05-08"
 [pages]
 project = "somcheat"
 build = { upload_format = "directory", directory = "./dist" }
+
+[assets]
+directory = "./dist"
