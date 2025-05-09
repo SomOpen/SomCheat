@@ -84,7 +84,7 @@ export default function Welcome() {
         {/* ------------------
            Read Docs Button
         ------------------ */}
-        <a href="/" title="Read documentation">
+        <a href="https://github.com/Adam-Elmi/SomCheat/blob/master/README.md" title="Read documentation">
           <button className="flex gap-2 items-center cursor-pointer border-2 border-slate-300 p-2 rounded-md bg-slate-100">
             <span className="font-semibold text-indigo-400 hover:text-blue-300">
               Read Docs
