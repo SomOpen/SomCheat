@@ -1,7 +1,6 @@
-<h1 align="left">
-  <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/som.svg" alt="SomCheat Logo" width="40" style="vertical-align: middle;"/>
-  SomCheat
-</h1>
+
+  <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/somcheat_logo.svg" alt="SomCheat Logo" width="40" style="vertical-align: middle;"/>
+
 
 
 
