@@ -1,5 +1,5 @@
 
-  <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/somcheat_logo.svg" alt="SomCheat Logo" width="40" style="vertical-align: middle;"/>
+  <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/somcheat_logo.svg" alt="SomCheat Logo" width="200" style="vertical-align: middle;"/>
 
 
 
