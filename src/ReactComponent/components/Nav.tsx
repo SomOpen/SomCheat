@@ -4,7 +4,6 @@ import { MenuIcon } from "../icons/Other_Icons";
 import {
   HomeIcon,
   UpdateIcon,
-  DictionaryIcon,
   AboutIcon,
 } from "../icons/Section_Icons";
 
@@ -65,7 +64,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="w-full border-b-[1.5px] border-slate-200 min-h-[50px] flex flex-col bg-amber-50">
+    <nav className="w-full border-b-[1.5px] dark:bg-[#111122] dark:border-b-1 dark:border-indigo-500 border-slate-200 min-h-[50px] flex flex-col bg-amber-50">
       {/*
         ------------------
         Mobile Menu Button (Visible only on small screens)
@@ -73,7 +72,7 @@ export default function Nav() {
       */}
       <button
         onClick={changeState}
-        className="min-h-[50px] hidden max-sm:flex cursor-pointer w-full border-b-2 border-slate-100 p-2"
+        className="min-h-[50px] hidden max-sm:flex text-slate-900 dark:text-slate-300 cursor-pointer w-full dark:border-indigo-500 border-b-2 border-slate-100 p-2"
       >
         <MenuIcon dimension={35} />
       </button>
@@ -98,7 +97,7 @@ export default function Nav() {
               {section.icon}
               <a
                 href={section.path}
-                className="font-medium text-slate-600 hover:text-blue-400 italic w-fit"
+                className="font-medium dark:text-slate-300 text-slate-600 hover:text-blue-400 italic w-fit"
               >
                 {section.sectionName}
               </a>
