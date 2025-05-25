@@ -61,7 +61,7 @@ export default function Welcome() {
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{icon}</span>
-          <p className="roboto italic font-bold text-center text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]">
+          <p className="roboto italic font-bold text-center dark:text-slate-300  text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]">
             {message}
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function Welcome() {
            Contribute Button
         ------------------ */}
         <a href="https://github.com/Adam-Elmi/SomCheat" title="Contribute to this project">
-          <button className="cursor-pointer flex gap-2 items-center border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
+          <button className="cursor-pointer flex gap-2 items-center dark:border-slate-700 border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
             <span className="font-semibold text-slate-200 hover:text-blue-300">
               Contribute
             </span>
@@ -85,11 +85,11 @@ export default function Welcome() {
            Read Docs Button
         ------------------ */}
         <a href="https://github.com/Adam-Elmi/SomCheat/blob/master/README.md" title="Read documentation">
-          <button className="flex gap-2 items-center cursor-pointer border-2 border-slate-300 p-2 rounded-md bg-slate-100">
-            <span className="font-semibold text-indigo-400 hover:text-blue-300">
+          <button className="flex gap-2 items-center cursor-pointer dark:border-slate-700 border-2 border-slate-300 p-2 rounded-md bg-slate-100 dark:bg-indigo-500">
+            <span className="flex-1 flex justify-between items-center gap-2 font-semibold text-indigo-400 dark:text-slate-200 hover:text-slate-800">
               Read Docs
+            <DocsIcon/>
             </span>
-            <DocsIcon color="oklch(0.673 0.182 276.935)" />
           </button>
         </a>
       </div>
