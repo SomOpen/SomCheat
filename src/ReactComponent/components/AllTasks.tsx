@@ -33,7 +33,7 @@ export default function AllTasks({
         className="max-h-0 flex flex-col gap-2 overflow-hidden transition-all duration-300 linear ${
                     "
       >
-        {tasks?.tasks.map((_t: any, index: number) => (
+        {tasks?.tasks.map((_t: any) => (
           <div key={"All-tasks" + _t} className="flex gap-2">
             <TaskIcon dimension={28} color="oklch(0.623 0.214 259.815)" />
             <p className="font-medium text-slate-600">
