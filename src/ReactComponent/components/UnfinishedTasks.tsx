@@ -11,7 +11,7 @@ export default function UnfinishedTasks({
   return (
     <div
       id="unfinished-tasks-main"
-      className="flex transition-all duration-300 linear flex-col border border-slate-300 rounded-md p-2"
+      className="flex transition-all duration-300 linear flex-col border border-slate-300 rounded-md p-2 dark:border-slate-800"
     >
       <button
         id="unfinished-tasks-btn"
