@@ -1,23 +1,27 @@
 (() => {
-  const light_btn = document.getElementById("light-btn");
-  const dark_btn = document.getElementById("dark-btn");
-  const html = document.querySelector("html");
-  const get_theme_value = localStorage.getItem("theme-value");
-  if (light_btn && dark_btn) {
-      
-      light_btn.addEventListener("click", () => {
-        (html as HTMLHtmlElement).dataset.theme = "light"
-        localStorage.setItem("theme-value", `${(html as HTMLHtmlElement).dataset.theme}`);
-    });
-    dark_btn.addEventListener("click", () => {
-        (html as HTMLHtmlElement).dataset.theme = "dark";
-        localStorage.setItem("theme-value", `${(html as HTMLHtmlElement).dataset.theme}`);
-    });
-    
+  const light_btn = document.getElementById("light-btn") as HTMLButtonElement | null;
+  const dark_btn = document.getElementById("dark-btn") as HTMLButtonElement | null;
+  const html = document.documentElement as HTMLElement & { dataset: { theme: string } };
 
-    document.addEventListener("DOMContentLoaded", () => {
-      if (get_theme_value) {
-        (html as HTMLHtmlElement).dataset.theme = get_theme_value;
+  const saved_theme: string | null = localStorage.getItem("theme-value");
+  if (saved_theme) {
+    html.dataset.theme = saved_theme;
+  }
+
+  if (light_btn && dark_btn) {
+    light_btn.addEventListener("click", (): void => {
+      html.dataset.theme = "light";
+      localStorage.setItem("theme-value", "light");
+    });
+
+    dark_btn.addEventListener("click", (): void => {
+      html.dataset.theme = "dark";
+      localStorage.setItem("theme-value", "dark");
+    });
+
+    document.addEventListener("DOMContentLoaded", (): void => {
+      if (!saved_theme) {
+        localStorage.setItem("theme-value", html.dataset.theme);
       }
     });
   }
