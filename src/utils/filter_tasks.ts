@@ -6,7 +6,7 @@ export function extractFolders() {
   try {
     if (jsonData) {
       for (const props of jsonData) {
-        folders.push(props.folder.slice(0, props.folder.lastIndexOf(".")));
+        folders.push(props.file.slice(0, props.file.lastIndexOf(".")));
       }
       return folders;
     }
