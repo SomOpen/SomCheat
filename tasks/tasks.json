@@ -43,52 +43,6 @@
       ]
     },
     "id": 0,
-    "folder": "js.txt"
-  },
-  {
-    "lua": {
-      "finished_tasks_progress": "7",
-      "unfinished_tasks_progress": "93",
-      "done_len": 1,
-      "empty_len": 14,
-      "done_indices": [
-        0
-      ],
-      "empty_indices": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "tasks": [
-        "TASK: Variables & Data Types ",
-        "TASK: Control Flow ",
-        "TASK: Loops & Iteration ",
-        "TASK: Functions & Methods ",
-        "TASK: Error Handling ",
-        "TASK: Data Structures ",
-        "TASK: Object-Oriented Basics ",
-        "TASK: Modules & Imports ",
-        "TASK: Asynchronous Programming ",
-        "TASK: Memory Management ",
-        "TASK: File Handling ",
-        "TASK: Networking & APIs ",
-        "TASK: Version Control ",
-        "TASK: Security Basics ",
-        "TASK: Performance Optimization "
-      ]
-    },
-    "id": 1,
-    "folder": "lua.txt"
+    "file": "js.txt"
   }
 ]
