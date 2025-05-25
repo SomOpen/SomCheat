@@ -246,5 +246,17 @@
   "astro": {
     "name": "Astro",
     "path": "/cheatsheets/astro"
+  },
+  "nodejs": {
+    "name": "Nodejs",
+    "path": "/cheatsheets/nodejs"
+  },
+  "deno": {
+    "name": "Deno",
+    "path": "/cheatsheets/deno"
+  },
+  "bun": {
+    "name": "Bun",
+    "path": "/cheatsheets/bun"
   }
 }
