@@ -18,6 +18,8 @@ import {
     SwiftIcon,
     RIcon
   } from "../icons/lang_icons";
+  import { BunIcon, DenoIcon, NodejsIcon } from "../icons/Runtime_icons";
+  import { GitIcon } from "../icons/DevTools_Icons";
   
   const all_cheat_icons = {
     default: <FileCodeIcon />,
@@ -42,7 +44,11 @@ import {
     mongodb: <MongoDBIcon/>,
     redis: <RedisIcon/>,
     firestore: <FirestoreIcon/>,
-    sqlite: <SQLLiteIcon/>
+    sqlite: <SQLLiteIcon/>,
+    nodejs: <NodejsIcon/>,
+    deno: <DenoIcon/>,
+    bun: <BunIcon/>,
+    git: <GitIcon/>,
   };
 
   export default all_cheat_icons;
