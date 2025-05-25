@@ -4,7 +4,7 @@ import Card from "./Card";
 
 export default function CheatSheet() {
   return (
-    <div className="w-full flex flex-col pb-3">
+    <div className="w-full flex flex-col">
       {/* 
         ------------------
         Mapping through dataList to render each category
@@ -19,7 +19,7 @@ export default function CheatSheet() {
           */}
           <div
             key={id}
-            className="bg-[#ffeecc44] flex flex-col gap-3 shadow-md border-b-2 border-indigo-400 p-2 w-full"
+            className="bg-[#ffeecc44] dark:bg-slate-900/95 flex flex-col gap-3 shadow-md border-b-2 border-indigo-400 p-2 w-full"
           >
             <div className="flex gap-3 items-center">
               {icon}
@@ -48,7 +48,7 @@ export default function CheatSheet() {
             */}
             <span
               style={{ fontFamily: "Kalam" }}
-              className="text-[1.2rem] flex gap-2"
+              className="text-[1.2rem] flex gap-2 dark:text-indigo-400"
             >
               <span className="text-slate-400 flex gap-2">
                 <SheetIcon dimension={20} /> Total Cheatsheets:
@@ -63,7 +63,7 @@ export default function CheatSheet() {
           */}
           <div
             id="section-bar"
-            className="flex gap-5 py-3 flex-wrap items-center justify-center"
+            className="flex dark:bg-[#0f0f0f] gap-5 py-3 flex-wrap items-center justify-center"
           >
             {data
               ? data.map((cheatsheet: any, id: number) => (
