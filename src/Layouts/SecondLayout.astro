@@ -3,16 +3,18 @@ import "../styles/global.css";
 import BasicHead from "./BasicHead.astro";
 import Footer from "./Footer.astro";
 import Nav from "../Components/Nav.astro";
-const { title, frontmatter } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" data-theme="light">
-    <BasicHead title={title} />
+    <BasicHead title={frontmatter.title} />
     <body>
         <script is:inline>
-            const theme = localStorage.getItem("theme-value") || "light";
-            document.documentElement.dataset.theme = theme;
+            (() => {
+              const theme = localStorage.getItem("theme-value") || "light";
+              document.documentElement.dataset.theme = theme;
+            })();
         </script>
         <Nav path={frontmatter.url} />
         <main>
