@@ -8,213 +8,225 @@ const { title, frontmatter } = Astro.props;
 
 <!doctype html>
 <html lang="en" data-theme="light">
-    <BasicHead  title={ title }/>
-	<body>
-    <Nav path={frontmatter.url}/>
-		<main>
-      <slot/>
-    </main>
-	</body>
-  <Footer/>
+    <BasicHead title={title} />
+    <body>
+        <script is:inline>
+            const theme = localStorage.getItem("theme-value") || "light";
+            document.documentElement.dataset.theme = theme;
+        </script>
+        <Nav path={frontmatter.url} />
+        <main>
+            <slot />
+        </main>
+    </body><Footer />
 </html>
 
-
 <style is:inline>
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin: 1rem 0;
-  border-bottom: 3px solid #eee;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  transition: border-color 0.2s ease;
-}
+    /* Headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin: 1rem 0;
+        border-bottom: 3px solid #eee;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        transition: border-color 0.2s ease;
+    }
 
-h1 {
-  font-size: 2rem;
-  color: #1f2937;
-  border-bottom-color: #3b82f6;
-}
-[data-theme="light"] h1 {
-    color: #1f2937;
-}
-h1::before {
-  content: "#";
-  font-size: 2.5rem;
-  color: #3b82f6;
-}
+    h1 {
+        font-size: 2rem;
+        color: #1f2937;
+        border-bottom-color: #3b82f6;
+    }
+    [data-theme="light"] h1 {
+        color: #1f2937;
+    }
+    h1::before {
+        content: "#";
+        font-size: 2.5rem;
+        color: #3b82f6;
+    }
 
-h2 {
-  font-size: 1.75rem;
-  color: #111;
-  border-bottom-color: #4ed87e;
-}
-[data-theme="light"] h2 {
-    color: #111;
-}
-h2::before {
-  content: "#";
-  font-size: 2.2rem;
-  color: #4ed87e;
-}
+    h2 {
+        font-size: 1.75rem;
+        color: #111;
+        border-bottom-color: #4ed87e;
+    }
+    [data-theme="light"] h2 {
+        color: #111;
+    }
+    h2::before {
+        content: "#";
+        font-size: 2.2rem;
+        color: #4ed87e;
+    }
 
-h3 {
-  font-size: 1.5rem;
-  color: #222;
-  border-bottom-color: #d8c64e;
-}
-[data-theme="light"] h3 {
-    color: #222;
-}
-h3::before {
-  content: "#";
-  font-size: 2.2rem;
-  color: #d8c64e;
-}
+    h3 {
+        font-size: 1.5rem;
+        color: #222;
+        border-bottom-color: #d8c64e;
+    }
+    [data-theme="light"] h3 {
+        color: #222;
+    }
+    h3::before {
+        content: "#";
+        font-size: 2.2rem;
+        color: #d8c64e;
+    }
 
-h4 {
-  font-size: 1.25rem;
-  color: #333;
-}
-[data-theme="light"] h4 {
-    color: #333;
-}
-h4::before {
-  content: "#";
-  font-size: 2.2rem;
-  color: #ccc;
-}
+    h4 {
+        font-size: 1.25rem;
+        color: #333;
+    }
+    [data-theme="light"] h4 {
+        color: #333;
+    }
+    h4::before {
+        content: "#";
+        font-size: 2.2rem;
+        color: #ccc;
+    }
 
-h5 {
-  font-size: 1rem;
-  color: #444;
-}
-[data-theme="light"] h5 {
-    color: #444;
-}
-h5::before {
-  content: "#";
-  font-size: 2.2rem;
-  color: #ccc;
-}
+    h5 {
+        font-size: 1rem;
+        color: #444;
+    }
+    [data-theme="light"] h5 {
+        color: #444;
+    }
+    h5::before {
+        content: "#";
+        font-size: 2.2rem;
+        color: #ccc;
+    }
 
-h6 {
-  font-size: 0.875rem;
-  color: #555;
-}
-[data-theme="light"] h6 {
-    color: #555;
-}
-h6::before {
-  content: "#";
-  font-size: 2.2rem;
-  color: #ccc;
-}
+    h6 {
+        font-size: 0.875rem;
+        color: #555;
+    }
+    [data-theme="light"] h6 {
+        color: #555;
+    }
+    h6::before {
+        content: "#";
+        font-size: 2.2rem;
+        color: #ccc;
+    }
 
-/* Paragraphs */
-p {
-  line-height: 1.8;
-  display: inline;
-  font-size: 1rem;
-}
+    /* Paragraphs */
+    p {
+        line-height: 1.8;
+        display: inline;
+        font-size: 1rem;
+    }
 
-/* Code blocks */
-code:not(.astro-code > code) {
-  background-color: #e3f8d0;
-  padding: 0 2px;
-  font-family: monospace;
-  border-radius: 2px;
-}
+    /* Code blocks */
+    code:not(.astro-code > code) {
+        background-color: #e3f8d0;
+        padding: 0 2px;
+        font-family: monospace;
+        border-radius: 2px;
+    }
 
-[data-theme="dark"] code:not(.astro-code > code) {
-  color: #1f2937;
-  background-color: #f8f8d0d4;
-}
+    [data-theme="dark"] code:not(.astro-code > code) {
+        color: #1f2937;
+        background-color: #f8f8d0d4;
+    }
 
-[data-theme="dark"] h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-}
+    [data-theme="dark"] h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
 
-[data-theme="dark"] ol > li {
-  color: #cdf;
-}
-[data-theme="dark"] #layout-container {
-  background-color: #101012;
-}
-[data-theme="dark"] #block-section {
-  border: 1.5px solid #aaaaaa2d;
-}
+    [data-theme="dark"] ol > li {
+        color: #cdf;
+    }
+    [data-theme="dark"] #layout-container {
+        background-color: #101012;
+    }
+    [data-theme="dark"] #block-section {
+        border: 1.5px solid #aaaaaa2d;
+    }
 
+    /* Ordered lists */
+    ol,
+    ol > li {
+        font-size: 1rem;
+        line-height: 1.5;
+        list-style: decimal;
+    }
+    ol {
+        padding-left: 1.5rem;
+    }
 
-/* Ordered lists */
-ol, ol > li {
-  font-size: 1rem;
-  line-height: 1.5;
-  list-style: decimal;
-}
-ol {
-  padding-left: 1.5rem;
-}
+    ol > li {
+        color: #073ac7;
+    }
 
-ol > li {
-  color: #073ac7;
-}
+    /* Responsive styles */
+    @media (max-width: 640px) {
+        h1 {
+            font-size: 1.75rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        ol,
+        ol > li {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        .astro-code {
+            font-size: 0.75rem;
+            padding: 0.5rem;
+        }
+        .code-container {
+            border-width: 1px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .code-header {
+            padding: 0.25rem;
+        }
+    }
 
-/* Responsive styles */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  p {
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-  ol, ol > li {
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-  .astro-code {
-    font-size: 0.75rem;
-    padding: 0.5rem;
-  }
-  .code-container {
-    border-width: 1px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  .code-header {
-    padding: 0.25rem;
-  }
-}
-
-@media (max-width: 460px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  h4 {
-    font-size: 0.875rem;
-  }
-  h5 {
-    font-size: 0.75rem;
-  }
-  h6 {
-    font-size: 0.625rem;
-  }
-}
+    @media (max-width: 460px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        h4 {
+            font-size: 0.875rem;
+        }
+        h5 {
+            font-size: 0.75rem;
+        }
+        h6 {
+            font-size: 0.625rem;
+        }
+    }
 </style>
-<script src="../utils/applyTheme.ts"></script>
