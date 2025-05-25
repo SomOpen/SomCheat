@@ -84,7 +84,7 @@ export default function Updates() {
         ? tasks.map((task: any, i: number) => (
             <div
               key={i}
-              className="w-[600px] bg-white h-fit rounded-lg border-2 border-slate-200 shadow-md p-5 flex flex-col gap-3"
+              className="w-[600px] dark:border-slate-800 dark:bg-slate-900/95 bg-white h-fit rounded-lg border-2 border-slate-200 shadow-md p-5 flex flex-col gap-3"
             >
               {/* Title and Icon */}
               <div className="flex gap-3 items-center">
