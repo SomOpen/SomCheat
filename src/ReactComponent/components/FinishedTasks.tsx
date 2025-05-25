@@ -12,7 +12,7 @@ export default function FinishedTasks({
     <div
       id="finished-tasks-main"
       className="flex transition-all duration-300 linear
-                } flex-col border border-slate-300 rounded-md p-2"
+                } flex-col border border-slate-300 rounded-md p-2 dark:border-slate-800"
     >
       <button
         id="finished-tasks-btn"
