@@ -15,7 +15,7 @@ import {
 export default function Card({ cheatsheet }: { cheatsheet: any }) {
   return (
     <a href={cheatsheet.path}>
-      <div className="relative bg-white border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
+      <div className="relative dark:bg-[#111122] bg-white dark:border-slate-800 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
         {/*
           ------------------
           Label
@@ -47,7 +47,7 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
         <div className="flex gap-2 flex-col">
           <div className="flex gap-2 items-center">
             {cheatsheet.icon ? cheatsheet.icon : <FileCodeIcon />}
-            <h1 className="italic text-[1rem] font-bold text-slate-700">
+            <h1 className="italic text-[1rem] font-bold dark:text-slate-200 text-slate-700">
               {cheatsheet.name}
             </h1>
           </div>
@@ -66,7 +66,7 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
           Separator line
           ------------------
           */}
-        <hr className="border-b border-slate-100 my-1" />
+        <hr className="dark:border-slate-800 border-b border-slate-100 my-1" />
         {/*
           ------------------
           Progress bar
@@ -76,8 +76,10 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
           className="w-full flex gap-2 items-center"
           title={"Progress: " + String(cheatsheet.progress) + "%"}
         >
-          <StatusIcon color="#cdf" />
-          <div className="flex-1 bg-slate-100 rounded-sm">
+          <span className="text-[#cdf] dark:text-slate-700">
+            <StatusIcon/>
+          </span>
+          <div className="flex-1 dark:bg-slate-700 bg-slate-100 rounded-sm">
             <div
               style={{
                 width: `${
