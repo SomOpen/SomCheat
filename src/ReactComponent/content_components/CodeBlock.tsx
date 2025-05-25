@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { CopyIcon, LinkIcon, TickIcon } from "../icons/Other_Icons";
-import { FileCodeIcon } from "../icons/lang_icons";
+import { CopyIcon, TickIcon } from "../icons/Other_Icons";
 
 interface Props {
   children?: any;
@@ -10,7 +9,9 @@ interface Props {
 export default function CodeBlock({ children, fileName = "" }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [codeText, setCodeText] = useState<string>("");
-  const [icon, setIcon] = useState<React.ReactElement>(<CopyIcon color="#cad5e2" />);
+  const [icon, setIcon] = useState<React.ReactElement>(
+    <CopyIcon color="#cad5e2" />,
+  );
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   useEffect(() => {
@@ -84,9 +85,9 @@ export default function CodeBlock({ children, fileName = "" }: Props) {
       className="w-full max-w-full border-2 border-slate-700 shadow-md my-3 dark:border-slate-400/10"
     >
       {/* Header */}
-      <div className="w-full h-[50px] dark:bg-[#0C0C0C] bg-gray-900 border-b border-gray-700 flex items-center p-2">
+      <div className="w-full h-[50px] dark:bg-[#0C0C0C] dark:border-gray-700/40 bg-gray-900 border-b border-gray-700/60 flex items-center p-2">
         <span className="flex items-center italic text-slate-300 gap-2 flex-1">
-          <FileCodeIcon color="#62748e" dimension={20} /> {fileName}
+          {fileName}
         </span>
         <button onClick={handleCopy} className="cursor-pointer">
           {icon}
