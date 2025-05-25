@@ -224,7 +224,7 @@ async function calculateTask() {
         tasks: referenced_data[filename].split("\n").map(_task => _task.slice(0, _task.lastIndexOf("-"))),
       },
       id: dir_data.findIndex(value => value === filename + ".txt"),
-      folder: dir_data[i]
+      file: dir_data[i]
     });
     i++;
   }
@@ -263,8 +263,8 @@ async function createJsonFile() {
         console.error("Error writing file:", err);
         return;
       }
-      console.log("File written successfully");
     });
+    console.log("File written successfully!");
   } catch (error) {
     console.error(error);
   }
