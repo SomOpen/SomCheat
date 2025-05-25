@@ -54,7 +54,7 @@ const dataList = [
   },
   {
     id: "run",
-    _name: "Runtime",
+    _name: "Runtimes",
     data: runtimeData,
     icon: <RuntimeIcon dimension={40} color="#acd"/>,
     number_of_cheatsheets: runtimeData.length,
