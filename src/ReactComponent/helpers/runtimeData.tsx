@@ -23,6 +23,34 @@ const runtimeData = [
       return getProgress(getIndex, getData, this);
     },
   },
+  {
+    id: "deno",
+    name: "Deno",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "bun",
+    name: "Bun",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
 ];
 
 export default runtimeData;
