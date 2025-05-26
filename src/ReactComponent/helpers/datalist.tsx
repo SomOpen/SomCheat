@@ -39,18 +39,18 @@ const dataList = [
     number_of_cheatsheets: frameworkData.length,
   },
   {
-    id: "os",
-    _name: "Platforms",
-    data: platformsData,
-    icon: <OSIcon dimension={45} color="#1aa5e7" />,
-    number_of_cheatsheets: platformsData.length,
-  },
-  {
     id: "lib",
     _name: "Libraries",
     data: librariesData,
     icon: <LibraryIcon dimension={35} color="#caf"/>,
     number_of_cheatsheets: librariesData.length,
+  },
+  {
+    id: "os",
+    _name: "Platforms",
+    data: platformsData,
+    icon: <OSIcon dimension={45} color="#1aa5e7" />,
+    number_of_cheatsheets: platformsData.length,
   },
   {
     id: "run",
