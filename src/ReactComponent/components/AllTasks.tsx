@@ -36,7 +36,7 @@ export default function AllTasks({
         {tasks?.tasks.map((_t: any) => (
           <div key={"All-tasks" + _t} className="flex gap-2">
             <TaskIcon dimension={28} color="oklch(0.623 0.214 259.815)" />
-            <p className="font-medium text-slate-600">
+            <p className="font-medium dark:text-slate-300 text-slate-600">
               {_t.slice(_t.indexOf(":") + 1)}
             </p>
           </div>
