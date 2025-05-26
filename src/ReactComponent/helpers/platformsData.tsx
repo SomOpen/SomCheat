@@ -12,7 +12,20 @@ const platformsData = [
   {
     id: "linux",
     name: "Linux",
-    targets: "desktop",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "ubuntu",
+    name: "Ubuntu",
     get path() {
       return dynamicPath(this.id);
     },
