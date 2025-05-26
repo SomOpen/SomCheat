@@ -35,10 +35,10 @@ export default function FinishedTasks({
         id="finished-tasks"
         className="max-h-0 flex flex-col gap-2 overflow-hidden transition-all duration-300 linear"
       >
-        {tasks?.finished_t.map((_t: any, index: number) => (
+        {tasks?.finished_t.map((_t: any) => (
           <div key={"Finished-Tasks" + _t} className="flex gap-2">
             <CheckedIcon dimension={28} color="oklch(0.696 0.17 162.48)" />
-            <p className="font-medium text-slate-600">
+            <p className="font-medium dark:text-slate-300 text-slate-600">
               {_t.slice(_t.indexOf(":") + 1)}
             </p>
           </div>
