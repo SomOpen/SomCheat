@@ -102,8 +102,10 @@ export default function Updates() {
                   "Progress: " + task[dir[i]]?.finished_tasks_progress + "%"
                 }
               >
-                <StatusIcon color="#cdf" />
-                <div className="flex-1 bg-slate-100 rounded-sm">
+                <span className="text-[#cdf] dark:text-slate-700">
+                  <StatusIcon/>
+                </span>
+                <div className="flex-1 dark:bg-slate-700 bg-slate-100 rounded-sm">
                   <div
                     style={{
                       width: `${
