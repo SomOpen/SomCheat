@@ -234,6 +234,160 @@ const languagesData = [
       return getProgress(getIndex, getData, this);
     },
   },
+  {
+    id: "bash",
+    name: "Bash",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "powershell",
+    name: "Powershell",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "zsh",
+    name: "Zsh",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "fish",
+    name: "Fish Shell",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "html",
+    name: "Html",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "xml",
+    name: "Xml",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "yaml",
+    name: "Yaml",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "json",
+    name: "Json",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "markdown",
+    name: "Markdown",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "css",
+    name: "Css",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
+  {
+    id: "sass",
+    name: "Sass",
+    get path() {
+      return dynamicPath(this.id);
+    },
+    get icon() {
+      return icon_detector(this.id);
+    },
+    lastUpdate: "Feb 27, 2025",
+    get progress() {
+      return getProgress(getIndex, getData, this);
+    },
+  },
 ];
 
 export default languagesData;
