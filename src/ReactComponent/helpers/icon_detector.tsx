@@ -4,7 +4,7 @@ import all_cheat_icons from "./list_icons";
 export default function icon_detector(cheatname: string) {
   try {
     if (pathJson && all_cheat_icons) {
-      for (const [key, value] of Object.entries(pathJson)) {
+      for (const [key, _] of Object.entries(pathJson)) {
         if (cheatname === key && all_cheat_icons.hasOwnProperty(key)) {
           return all_cheat_icons[key as keyof typeof all_cheat_icons];
         }
