@@ -75,9 +75,37 @@
     "name": "HTML",
     "path": "/cheatsheets/html"
   },
+  "xml": {
+    "name": "Xml",
+    "path": "/cheatsheets/xml"
+  },
   "css": {
     "name": "CSS",
     "path": "/cheatsheets/css"
+  },
+  "sass": {
+    "name": "Sass",
+    "path": "/cheatsheets/sass"
+  },
+  "yaml": {
+    "name": "Yaml",
+    "path": "/cheatsheets/yaml"
+  },
+  "json": {
+    "name": "Json",
+    "path": "/cheatsheets/json"
+  },
+  "markdown": {
+    "name": "Markdown",
+    "path": "/cheatsheets/markdown"
+  },
+  "fish": {
+    "name": "Fish Shell",
+    "path": "/cheatsheets/fish"
+  },
+  "zsh": {
+    "name": "Zsh",
+    "path": "/cheatsheets/zsh"
   },
   "firestore": {
     "name": "Firestore",
@@ -103,89 +131,33 @@
     "name": "SQLite",
     "path": "/cheatsheets/sqlite"
   },
-  "vscode": {
-    "name": "VS Code",
-    "path": "/cheatsheets/vscode"
-  },
-  "os": {
-    "name": "Operating Systems",
-    "path": "/cheatsheets/os"
-  },
   "git": {
     "name": "Git",
     "path": "/cheatsheets/git"
   },
-  "github": {
-    "name": "GitHub",
-    "path": "/cheatsheets/github"
+  "nodejs": {
+    "name": "Nodejs",
+    "path": "/cheatsheets/nodejs"
   },
-  "docker": {
-    "name": "Docker",
-    "path": "/cheatsheets/docker"
+  "deno": {
+    "name": "Deno",
+    "path": "/cheatsheets/deno"
   },
-  "kubernetes": {
-    "name": "Kubernetes",
-    "path": "/cheatsheets/kubernetes"
+  "bun": {
+    "name": "Bun",
+    "path": "/cheatsheets/bun"
   },
-  "ci_cd": {
-    "name": "CI/CD",
-    "path": "/cheatsheets/ci_cd"
+  "electron": {
+    "name": "Electron",
+    "path": "/cheatsheets/electron"
   },
-  "testing": {
-    "name": "Testing",
-    "path": "/cheatsheets/testing"
+  "reactnative": {
+    "name": "React Native",
+    "path": "/cheatsheets/reactnative"
   },
-  "designpatterns": {
-    "name": "Design Patterns",
-    "path": "/cheatsheets/designpatterns"
-  },
-  "algorithms": {
-    "name": "Algorithms",
-    "path": "/cheatsheets/algorithms"
-  },
-  "datastructures": {
-    "name": "Data Structures",
-    "path": "/cheatsheets/datastructures"
-  },
-  "networking": {
-    "name": "Networking",
-    "path": "/cheatsheets/networking"
-  },
-  "security": {
-    "name": "Security",
-    "path": "/cheatsheets/security"
-  },
-  "cloud": {
-    "name": "Cloud Computing",
-    "path": "/cheatsheets/cloud"
-  },
-  "api": {
-    "name": "APIs",
-    "path": "/cheatsheets/api"
-  },
-  "graphql": {
-    "name": "GraphQL",
-    "path": "/cheatsheets/graphql"
-  },
-  "rest": {
-    "name": "REST APIs",
-    "path": "/cheatsheets/rest"
-  },
-  "linux": {
-    "name": "Linux",
-    "path": "/cheatsheets/linux"
-  },
-  "windows": {
-    "name": "Windows",
-    "path": "/cheatsheets/windows"
-  },
-  "macos": {
-    "name": "macOS",
-    "path": "/cheatsheets/macos"
-  },
-  "react": {
-    "name": "React",
-    "path": "/cheatsheets/react"
+  "flutter": {
+    "name": "Flutter",
+    "path": "/cheatsheets/flutter"
   },
   "vue": {
     "name": "Vue",
@@ -199,6 +171,10 @@
     "name": "Svelte",
     "path": "/cheatsheets/svelte"
   },
+  "ember": {
+    "name": "Ember",
+    "path": "/cheatsheets/ember"
+  },
   "nextjs": {
     "name": "Next.js",
     "path": "/cheatsheets/nextjs"
@@ -207,56 +183,196 @@
     "name": "Nuxt.js",
     "path": "/cheatsheets/nuxtjs"
   },
-  "express": {
-    "name": "Express",
-    "path": "/cheatsheets/express"
-  },
-  "nestjs": {
-    "name": "NestJS",
-    "path": "/cheatsheets/nestjs"
-  },
-  "flask": {
-    "name": "Flask",
-    "path": "/cheatsheets/flask"
-  },
-  "django": {
-    "name": "Django",
-    "path": "/cheatsheets/django"
+  "expressjs": {
+    "name": "Express.js",
+    "path": "/cheatsheets/expressjs"
   },
   "spring": {
     "name": "Spring",
     "path": "/cheatsheets/spring"
   },
+  "django": {
+    "name": "Django",
+    "path": "/cheatsheets/django"
+  },
   "laravel": {
     "name": "Laravel",
     "path": "/cheatsheets/laravel"
+  },
+  "rails": {
+    "name": "Rails",
+    "path": "/cheatsheets/rails"
+  },
+  "flask": {
+    "name": "Flask",
+    "path": "/cheatsheets/flask"
+  },
+  "gin": {
+    "name": "Gin",
+    "path": "/cheatsheets/gin"
+  },
+  "phoenix": {
+    "name": "Phoenix",
+    "path": "/cheatsheets/phoenix"
+  },
+  "dotnet": {
+    "name": ".NET",
+    "path": "/cheatsheets/dotnet"
+  },
+  "jest": {
+    "name": "Jest",
+    "path": "/cheatsheets/jest"
+  },
+  "mocha": {
+    "name": "Mocha",
+    "path": "/cheatsheets/mocha"
+  },
+  "pytest": {
+    "name": "PyTest",
+    "path": "/cheatsheets/pytest"
+  },
+  "pytorch": {
+    "name": "PyTorch",
+    "path": "/cheatsheets/pytorch"
+  },
+  "tailwind": {
+    "name": "Tailwind",
+    "path": "/cheatsheets/tailwind"
   },
   "bootstrap": {
     "name": "Bootstrap",
     "path": "/cheatsheets/bootstrap"
   },
-  "tailwind": {
-    "name": "Tailwind CSS",
-    "path": "/cheatsheets/tailwind"
+  "bulma": {
+    "name": "Bulma",
+    "path": "/cheatsheets/bulma"
+  },
+  "react": {
+    "name": "React",
+    "path": "/cheatsheets/react"
   },
   "jquery": {
     "name": "jQuery",
     "path": "/cheatsheets/jquery"
   },
-  "astro": {
-    "name": "Astro",
-    "path": "/cheatsheets/astro"
+  "mongoose": {
+    "name": "Mongoose",
+    "path": "/cheatsheets/mongoose"
   },
-  "nodejs": {
-    "name": "Nodejs",
-    "path": "/cheatsheets/nodejs"
+  "redux": {
+    "name": "Redux",
+    "path": "/cheatsheets/redux"
   },
-  "deno": {
-    "name": "Deno",
-    "path": "/cheatsheets/deno"
+  "axios": {
+    "name": "Axios",
+    "path": "/cheatsheets/axios"
   },
-  "bun": {
-    "name": "Bun",
-    "path": "/cheatsheets/bun"
-  }
+  "prisma": {
+    "name": "Prisma",
+    "path": "/cheatsheets/prisma"
+  },
+  "pandas": {
+    "name": "Pandas",
+    "path": "/cheatsheets/pandas"
+  },
+  "chartjs": {
+    "name": "Chart.js",
+    "path": "/cheatsheets/chartjs"
+  },
+  "d3": {
+    "name": "D3.js",
+    "path": "/cheatsheets/d3"
+  },
+  "tensorflow": {
+    "name": "TensorFlow",
+    "path": "/cheatsheets/tensorflow"
+  },
+  "numpy": {
+    "name": "NumPy",
+    "path": "/cheatsheets/numpy"
+  },
+  "mdx": {
+    "name": "MDX",
+    "path": "/cheatsheets/mdx"
+  },
+  "linux": {
+    "name": "Linux",
+    "path": "/cheatsheets/linux"
+  },
+  "ubuntu": {
+    "name": "Ubuntu",
+    "path": "/cheatsheets/ubuntu"
+  },
+  "vscode": {
+    "name": "Vscode",
+    "path": "/cheatsheets/vscode"
+  },
+  "vim": {
+      "name": "Vim",
+      "path": "/cheatsheets/vim"
+    },
+    "neovim": {
+      "name": "Neovim",
+      "path": "/cheatsheets/neovim"
+    },
+    "tmux": {
+      "name": "Tmux",
+      "path": "/cheatsheets/tmux"
+    },
+    "curl": {
+      "name": "Curl",
+      "path": "/cheatsheets/curl"
+    },
+    "vite": {
+      "name": "Vite",
+      "path": "/cheatsheets/vite"
+    },
+    "webpack": {
+      "name": "Webpack",
+      "path": "/cheatsheets/webpack"
+    },
+    "parcel": {
+      "name": "Parcel",
+      "path": "/cheatsheets/parcel"
+    },
+    "rollup": {
+      "name": "Rollup",
+      "path": "/cheatsheets/rollup"
+    },
+    "rolldown": {
+      "name": "Rolldown",
+      "path": "/cheatsheets/rolldown"
+    },
+    "eslint": {
+      "name": "ESLint",
+      "path": "/cheatsheets/eslint"
+    },
+    "babel": {
+      "name": "Babel",
+      "path": "/cheatsheets/babel"
+    },
+    "prettier": {
+      "name": "Prettier",
+      "path": "/cheatsheets/prettier"
+    },
+    "docker": {
+      "name": "Docker",
+      "path": "/cheatsheets/docker"
+    },
+    "pip": {
+      "name": "Pip",
+      "path": "/cheatsheets/pip"
+    },
+    "npm": {
+      "name": "Npm",
+      "path": "/cheatsheets/npm"
+    },
+    "cargo": {
+      "name": "Cargo",
+      "path": "/cheatsheets/cargo"
+    },
+    "luarocks": {
+      "name": "LuaRocks",
+      "path": "/cheatsheets/luarocks"
+    }
 }
