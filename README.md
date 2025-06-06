@@ -1,9 +1,11 @@
+<img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/somcheat_logo.svg" alt="SomCheat Logo" width="200" style="vertical-align: middle;"/>
 
-  <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/somcheat_logo.svg" alt="SomCheat Logo" width="200" style="vertical-align: middle;"/>
+---
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Cheatsheets Available](https://img.shields.io/badge/Cheatsheets-1-blue.svg)
 
-
-
+---
 
 **SomCheat** waa il muhiim ah oo aad ka heli karto cheatsheets (xasuusiyayaal) ku qoran **af Soomaali**, si sahlanna kuu xasuusisa macluumaad hore aad taqaanay.
 
@@ -350,15 +352,15 @@ import Link from "../../Components/Link.astro";
 ---
 
 ### Tusaale:
-```
-<Code>
-```js
-    const greet = (name) => {
-    console.log("Hello " + name);
-    };
-    greet("Adam");
-  ```
-</Code>
+```mdx
+    <Code>
+        ```js
+            const greet = (name) => {
+            console.log("Hello " + name);
+            };
+            greet("Adam");
+        ```
+    </Code>
 ```
 
 ---
