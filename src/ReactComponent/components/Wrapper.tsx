@@ -37,7 +37,7 @@ const indicators = [
 
 export default function Wrapper() {
   return (
-    <div className="hero min-h-[100px] h-auto pb-10 dark:bg-[#111122]">
+    <div className="hero min-h-[100px] h-auto pb-10 dark:bg-[#0f0f0f]">
       <div className="flex gap-5 flex-wrap p-2 justify-center items-center">
         <Welcome />
       </div>
