@@ -28,11 +28,9 @@ main {
 }
 
 .one-dark-pro {
-  background-color: #182130 !important;
+  background-color: #161616 !important;
 }
-[data-theme="dark"] .one-dark-pro {
-  background-color: #0F0F0F !important;
-}
+
 .astro-code{
   padding: 10px;
   line-height: 1.8;
