@@ -1,45 +1,46 @@
 [
   {
     "js": {
-      "finished_tasks_progress": "27",
-      "unfinished_tasks_progress": "73",
-      "done_len": 4,
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
+      "done_len": 0,
       "empty_len": 11,
-      "done_indices": [
+      "done_indices": [],
+      "empty_indices": [
         0,
         1,
         2,
-        3
-      ],
-      "empty_indices": [
+        3,
         4,
         5,
         6,
         7,
         8,
         9,
-        10,
-        11,
-        12,
-        13,
-        14
+        10
       ],
       "tasks": [
-        "TASK: Variables & Data Types ",
+        "TASK: Basic Syntax & Structure ",
+        "",
+        "TASK: Data Types ",
+        "",
+        "TASK: Variables & Constants ",
+        "",
+        "TASK: Strings ",
+        "",
+        "TASK: Operators ",
+        "",
         "TASK: Control Flow ",
-        "TASK: Loops & Iteration ",
-        "TASK: Functions & Methods ",
-        "TASK: Error Handling ",
-        "TASK: Data Structures ",
-        "TASK: Object-Oriented Basics ",
-        "TASK: Modules & Imports ",
-        "TASK: Asynchronous Programming ",
-        "TASK: Memory Management ",
-        "TASK: File Handling ",
-        "TASK: Networking & APIs ",
-        "TASK: Version Control ",
-        "TASK: Security Basics ",
-        "TASK: Performance Optimization "
+        "",
+        "TASK: Functions / Methods ",
+        "",
+        "TASK: Custom Data Structures ",
+        "",
+        "TASK: Export & Imports ",
+        "",
+        "TASK: Truthy and Falsy Values ",
+        "",
+        "TASK: Error Handling "
       ]
     },
     "id": 0,
