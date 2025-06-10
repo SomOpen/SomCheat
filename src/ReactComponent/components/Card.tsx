@@ -114,7 +114,9 @@ function Label({ progress }: { progress: number }) {
       );
     } else if (progress > 0 && progress < 100) {
       return statusIcon(
-        <InProgressIcon color="oklch(0.707 0.165 254.624)" />,
+        <span className="dark:text-slate-700 text-slate-200">
+          <InProgressIcon progress_number={progress} color="oklch(0.707 0.165 254.624)" />
+        </span>,
         "In Progress",
       );
     } else {
