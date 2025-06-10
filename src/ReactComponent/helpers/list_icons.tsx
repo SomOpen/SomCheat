@@ -146,7 +146,7 @@ const all_cheat_icons = {
   tensorflow: <TensorFlowIcon />,
   numpy: <NumPyIcon />,
   mdx:<MdxIcon/>,
-  bash: <BashIcon/>,
+  bash: <span className="dark:text-white"><BashIcon/></span>,
   powershell: <PowershellIcon/>,
   zsh: <ZshIcon/>,
   fish: <FishIcon/>,
