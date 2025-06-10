@@ -35,7 +35,7 @@ export default function UnfinishedTasks({
         className="max-h-0 flex flex-col gap-2 overflow-hidden transition-all duration-300 linear ${
                     "
       >
-        {tasks?.unfinished_t.map((_t: any) => (
+        {tasks?.unfinished_t.filter((task: string | any) => task !== "").map((_t: any) => (
           <div key={"Unfinished-tasks" + _t} className="flex gap-2">
             <UncheckIcon dimension={28} color="oklch(0.592 0.249 0.584)" />
             <p className="font-medium dark:text-slate-300 text-slate-600">

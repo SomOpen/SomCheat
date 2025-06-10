@@ -23,7 +23,7 @@ export default function AllTasks({
             style={{ fontFamily: "Grand Hotel" }}
             className="text-slate-400 font-bold text-[1.1rem]"
           >
-            {tasks?.tasks.length} Tasks
+            {tasks?.tasks.filter((task: string | any) => task !== "").length} Tasks
           </span>
           {icon}
         </div>
@@ -33,7 +33,7 @@ export default function AllTasks({
         className="max-h-0 flex flex-col gap-2 overflow-hidden transition-all duration-300 linear ${
                     "
       >
-        {tasks?.tasks.map((_t: any) => (
+        {tasks?.tasks.filter((task: string | any) => task !== "").map((_t: any) => (
           <div key={"All-tasks" + _t} className="flex gap-2">
             <TaskIcon dimension={28} color="oklch(0.623 0.214 259.815)" />
             <p className="font-medium dark:text-slate-300 text-slate-600">

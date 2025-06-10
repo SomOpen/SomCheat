@@ -38,7 +38,7 @@ export function filterTasks() {
     for (let i = 0; i < tasks.length; i++) {
       const taskName = tasks[i][directories[i]];
       taskName.finished_t = taskName.tasks.filter(
-        (_: any, i: number) => taskName?.done_indices.includes(i)
+        (_: any, i: number) => taskName?.done_indices.includes(i) 
       );
       taskName.unfinished_t = taskName.tasks.filter(
         (_: any, i: number) => taskName?.empty_indices.includes(i)
