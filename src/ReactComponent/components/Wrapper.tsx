@@ -14,7 +14,11 @@ const indicators = [
     indicator: "Complete Cheatsheets",
   },
   {
-    icon: <InProgressIcon color="oklch(0.707 0.165 254.624)" />,
+    icon: (
+      <span className="dark:text-slate-700 text-slate-200">
+        <InProgressIcon color="oklch(0.707 0.165 254.624)" />
+      </span>
+    ),
     indicator: "In Progress Cheatsheets",
   },
   {
@@ -49,9 +53,11 @@ export default function Wrapper() {
               <div key={id} className="flex gap-2">
                 {status.icon}
                 <span className="text-[#ddd] dark:text-slate-600">
-                  <ArrowRightLongIcon/>
+                  <ArrowRightLongIcon />
                 </span>
-                <span className="text-blue-400 dark:text-indigo-400 italic">{status.indicator}</span>
+                <span className="text-blue-400 dark:text-indigo-400 italic">
+                  {status.indicator}
+                </span>
               </div>
             ))}
         </div>
