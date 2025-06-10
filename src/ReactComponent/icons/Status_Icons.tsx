@@ -37,23 +37,50 @@ export function CompletedIcon({
   ------------------
 */
 export function InProgressIcon({
-  dimension = defaultProps.dimension,
-  color = defaultProps.color,
+  dimension = 24,
+  color = "#4f46e5",
+  backgroundColor = "currentColor",
+  progress_number = 65,
 }) {
+  const strokeWidth = 3;
+  const radius = (dimension - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const progress = Math.min(Math.max(progress_number, 0), 100);
+  const offset = circumference - (progress / 100) * circumference;
+
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width={dimension}
       height={dimension}
-      viewBox="0 0 32 32"
+      viewBox={`0 0 ${dimension} ${dimension}`}
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        fill={color}
-        d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2m0 26a12 12 0 0 1 0-24v12l8.481 8.481A11.96 11.96 0 0 1 16 28"
-      ></path>
+      <circle
+        cx={dimension / 2}
+        cy={dimension / 2}
+        r={radius}
+        fill="none"
+        stroke={backgroundColor}
+        strokeWidth={strokeWidth}
+      />
+
+      <circle
+        cx={dimension / 2}
+        cy={dimension / 2}
+        r={radius}
+        fill="none"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeDasharray={circumference}
+        strokeDashoffset={offset}
+        strokeLinecap="round"
+        transform={`rotate(-90 ${dimension / 2} ${dimension / 2})`}
+      />
     </svg>
   );
 }
+
+
 /* 
   ------------------
   Incomplete Icon
