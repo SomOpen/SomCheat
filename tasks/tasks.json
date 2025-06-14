@@ -1,8 +1,8 @@
 [
   {
     "js": {
-      "finished_tasks_progress": "0.0",
-      "unfinished_tasks_progress": "100.0",
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
       "done_len": 0,
       "empty_len": 27,
       "done_indices": [],
@@ -70,8 +70,8 @@
   },
   {
     "ts": {
-      "finished_tasks_progress": "0.0",
-      "unfinished_tasks_progress": "100.0",
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
       "done_len": 0,
       "empty_len": 35,
       "done_indices": [],
