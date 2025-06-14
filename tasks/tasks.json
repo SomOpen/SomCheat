@@ -4,7 +4,7 @@
       "finished_tasks_progress": "0.0",
       "unfinished_tasks_progress": "100.0",
       "done_len": 0,
-      "empty_len": 25,
+      "empty_len": 27,
       "done_indices": [],
       "empty_indices": [
         0,
@@ -31,7 +31,9 @@
         21,
         22,
         23,
-        24
+        24,
+        25,
+        26
       ],
       "tasks": [
         "TASK: Variables",
@@ -49,8 +51,8 @@
         "TASK: Prototype and Inheritance",
         "TASK: Function methods",
         "TASK: Error Handling",
-        "TASK: Nullish Coalescing (??",
-        "TASK: Optional Chaining (?.",
+        "TASK: Nullish Coalescing (??)",
+        "TASK: Optional Chaining (?.)",
         "TASK: Destructuring",
         "TASK: Modules (ES6)",
         "TASK: Async / Await",
