@@ -199,7 +199,7 @@ const _data = await evaluate();
 async function calculateTask() {
   const result = [];
   const calculateTaskProgress = (task, totalTasks) =>
-    ((task / totalTasks) * 100).toFixed(1);
+    ((task / totalTasks) * 100).toFixed();
   let i = 0;
   while (i < _data.length) {
     // js.txt --> js
