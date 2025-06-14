@@ -30,8 +30,8 @@ const navData: Array<Props> = [
     icon: <HomeIcon dimension={21} color="#6364f1" />,
   },
   {
-    sectionName: "Updates",
-    path: "/updates",
+    sectionName: "Progress",
+    path: "/progress",
     icon: <UpdateIcon color="#1aa5e7" />,
   },
   {
