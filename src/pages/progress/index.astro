@@ -1,0 +1,18 @@
+---
+import BasicLayout from "../../Layouts/BasicLayout.astro";
+import Nav from "../../Components/Nav.astro";
+import Updates from "../../ReactComponent/components/Updates";
+---
+
+
+<BasicLayout title="Updates">
+{/* 
+  ------------------ 
+  Nav bar
+  ------------------ 
+*/}
+  <Nav path="/updates"/>
+  <main class="bg-slate-100 p-2 dark:bg-[#111122]">
+    <Updates client:load/>
+  </main>
+</BasicLayout>
