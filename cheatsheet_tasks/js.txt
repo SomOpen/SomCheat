@@ -28,9 +28,9 @@ TASK: Function methods - []
 
 TASK: Error Handling - []
 
-TASK: Nullish Coalescing (??)
+TASK: Nullish Coalescing (??) - []
 
-TASK: Optional Chaining (?.)
+TASK: Optional Chaining (?.) - []
 
 TASK: Destructuring - []
 
