@@ -315,6 +315,10 @@
       "name": "Neovim",
       "path": "/cheatsheets/neovim"
     },
+    "helix": {
+      "name": "Helix",
+      "path": "/cheatsheets/helix"
+    },
     "tmux": {
       "name": "Tmux",
       "path": "/cheatsheets/tmux"
